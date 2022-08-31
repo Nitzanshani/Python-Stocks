@@ -368,7 +368,7 @@ plt.show()
 print("HERE COMES THE SECOND YYYYYYY - SPEED")
 i = 0
 while i < len(y_high_final) - 1:
-    y_high_final[i] = (abs(y_high_final[i + 1] - y_high_final[i])) ** 2
+    y_high_final[i] = (abs(y_high_final[i + 1] - y_high_final[i])) ** 2         #This is energy calc
     # y_high_final[i] = y_high_final[i + 1] - y_high_final[i]
     i += 1
 y_high_final[i] = y_high_final[i - 1]

@@ -670,19 +670,18 @@ async function jsonResponse(r){const type=r.headers.get('content-type')||'';if(!
 async function load(){try{const d=await jsonResponse(await fetch(API_BASE+'/api/stocks',{cache:'no-store'}));stocks=d.stocks.map(x=>({...x,talk_score:talkCache[x.symbol]?.score??talkScores[x.symbol]??null}));document.getElementById('status').textContent=d.status;render()}catch(e){document.getElementById('status').textContent='שגיאת חיבור לשרת: '+e.message}}
 async function pollFullScan(){const button=document.getElementById('refresh');try{const d=await jsonResponse(await fetch(API_BASE+'/api/status',{cache:'no-store'}));document.getElementById('status').textContent=d.status;button.disabled=d.running;button.textContent=d.running?`מחשב… ${d.completed}/${d.total}`:'חשב את כל המניות';if(d.running){setTimeout(pollFullScan,2000)}else{await load()}}catch(e){button.disabled=false;button.textContent='חשב את כל המניות';document.getElementById('status').textContent='שגיאת חיבור לשרת: '+e.message}}
 document.getElementById('search').addEventListener('input',render);document.getElementById('refresh').addEventListener('click',async()=>{const button=document.getElementById('refresh');button.disabled=true;try{await jsonResponse(await fetch(API_BASE+'/api/refresh',{method:'POST'}));pollFullScan()}catch(e){button.disabled=false;document.getElementById('status').textContent='לא ניתן להתחיל סריקה: '+e.message}});
-document.getElementById('scanTalk').addEventListener('click',async()=>{await fetch(API_BASE+'/api/talk-scan',{method:'POST'});pollTalkScan()});
-document.getElementById('scanTalk').addEventListener('click',async()=>{await fetch('/api/talk/scan',{method:'POST'});pollTalkScan()});
+document.getElementById('scanTalk').addEventListener('click',async()=>{const button=document.getElementById('scanTalk');button.disabled=true;try{await jsonResponse(await fetch(API_BASE+'/api/talk-scan',{method:'POST'}));pollTalkScan()}catch(e){button.disabled=false}});
 ['zigzagFilter','periodFilter','qualityFilter','phaseFilter','turnFilter','cyclesFilter','regimeFilter'].forEach(id=>document.getElementById(id).addEventListener('input',render));
 document.getElementById('clearFilters').addEventListener('click',()=>{['zigzagFilter','periodFilter','qualityFilter','phaseFilter','turnFilter','cyclesFilter','regimeFilter'].forEach(id=>document.getElementById(id).value='');render()});
 document.querySelector('thead th:nth-child(4)').insertAdjacentHTML('afterend','<th class="sortable" data-sort="talk_score">Talk of the Day</th>');
 document.querySelectorAll('th.sortable').forEach(th=>th.addEventListener('click',()=>{const key=th.dataset.sort;if(sortKey===key){sortDirection=sortDirection==='desc'?'asc':'desc'}else{sortKey=key;sortDirection='desc'}document.querySelectorAll('th.sortable').forEach(x=>{x.classList.toggle('active',x===th);x.textContent=x.textContent.replace(/\s[▲▼]$/,'')});th.textContent+=sortDirection==='desc'?' ▼':' ▲';render()}));
-function talkLabel(symbol){const item=talkCache[symbol];if(item)return item.status==='ok'?String(item.score):'error';return talkScores[symbol]===undefined?'…':String(talkScores[symbol])}
-function decorateTalkRows(){document.querySelectorAll('#rows tr').forEach(row=>{if(row.querySelector('.talk-cell'))return;const symbol=row.cells[0]?.textContent.trim();if(!symbol)return;const cell=document.createElement('td');cell.className='talk-cell';cell.dataset.symbol=symbol;cell.textContent=talkLabel(symbol);row.cells[3].after(cell)});setTimeout(loadVisibleTalk,0)}
-async function requestTalk(symbol){if(talkCache[symbol]||talkLoading.has(symbol))return;talkLoading.add(symbol);try{const r=await fetch(API_BASE+'/api/talk?symbol='+encodeURIComponent(symbol),{cache:'no-store'}),data=await r.json();talkCache[symbol]=data;const stock=stocks.find(x=>x.symbol===symbol);if(stock)stock.talk_score=data.score;document.querySelectorAll(`.talk-cell[data-symbol="${symbol}"]`).forEach(cell=>cell.textContent=talkLabel(symbol));if(sortKey==='talk_score')render()}catch(e){talkCache[symbol]={score:null,articles:[],status:'error'}}finally{talkLoading.delete(symbol)}}
-async function pollTalkScan(){try{const r=await fetch(API_BASE+'/api/talk-scan',{cache:'no-store'}),data=await r.json();talkScores={...talkScores,...data.scores};stocks.forEach(x=>{if(talkScores[x.symbol]!==undefined)x.talk_score=talkScores[x.symbol]});decorateTalkRows();document.querySelectorAll('.talk-cell').forEach(cell=>cell.textContent=talkLabel(cell.dataset.symbol));const box=document.getElementById('talkStatus');box.style.display='block';box.textContent=`Talk scan: ${data.completed}/${data.total} · errors ${data.errors}`;document.getElementById('scanTalk').disabled=data.running;if(data.running)setTimeout(pollTalkScan,1500);else if(sortKey==='talk_score')render()}catch(e){document.getElementById('scanTalk').disabled=false}}
-function loadVisibleTalk(){const box=document.querySelector('.tablebox'),bounds=box.getBoundingClientRect();document.querySelectorAll('.talk-cell').forEach(cell=>{const r=cell.getBoundingClientRect();if(r.bottom>=bounds.top&&r.top<=bounds.bottom)requestTalk(cell.dataset.symbol)})}
-async function pollTalkScan(){try{const r=await fetch('/api/talk/status',{cache:'no-store'}),data=await r.json(),status=document.getElementById('talkStatus'),button=document.getElementById('scanTalk');Object.entries(data.scores||{}).forEach(([symbol,score])=>{if(!talkCache[symbol])talkCache[symbol]={score,articles:[],status:'ok'};else talkCache[symbol].score=score;const stock=stocks.find(x=>x.symbol===symbol);if(stock)stock.talk_score=score;document.querySelectorAll(`.talk-cell[data-symbol="${symbol}"]`).forEach(cell=>cell.textContent=score)});if(data.running){status.style.display='block';status.textContent=`Talk scan: ${data.done} / ${data.total}`;button.disabled=true;button.textContent=`Scanning ${data.done}/${data.total}`;setTimeout(pollTalkScan,1000)}else{button.disabled=false;button.textContent='Scan all Talk';if(data.total){status.style.display='block';status.textContent=`Talk scan completed: ${data.done} / ${data.total}`;if(sortKey==='talk_score')render()}}}catch(e){document.getElementById('scanTalk').disabled=false}}
-new MutationObserver(decorateTalkRows).observe(document.getElementById('rows'),{childList:true});document.querySelector('.tablebox').addEventListener('scroll',loadVisibleTalk,{passive:true});
+function talkCellContent(symbol){if(talkLoading.has(symbol))return '<button class="talk-check" disabled>בודק…</button>';const item=talkCache[symbol];if(item)return item.status==='ok'?esc(item.score):'<button class="talk-check">נסה שוב</button>';if(talkScores[symbol]!==undefined)return esc(talkScores[symbol]);return '<button class="talk-check">בדוק</button>'}
+function updateTalkCell(symbol){document.querySelectorAll(`.talk-cell[data-symbol="${symbol}"]`).forEach(cell=>cell.innerHTML=talkCellContent(symbol))}
+function decorateTalkRows(){document.querySelectorAll('#rows tr').forEach(row=>{if(row.querySelector('.talk-cell'))return;const symbol=row.cells[0]?.textContent.trim();if(!symbol)return;const cell=document.createElement('td');cell.className='talk-cell';cell.dataset.symbol=symbol;cell.innerHTML=talkCellContent(symbol);row.cells[3].after(cell)})}
+async function requestTalk(symbol){if(talkLoading.has(symbol))return;const cached=talkCache[symbol];if(cached?.status==='ok')return;talkLoading.add(symbol);updateTalkCell(symbol);try{const data=await jsonResponse(await fetch(API_BASE+'/api/talk?symbol='+encodeURIComponent(symbol),{cache:'no-store'}));talkCache[symbol]=data;const stock=stocks.find(x=>x.symbol===symbol);if(stock)stock.talk_score=data.score;if(sortKey==='talk_score')render()}catch(e){talkCache[symbol]={score:null,articles:[],status:'error'}}finally{talkLoading.delete(symbol);updateTalkCell(symbol)}}
+async function pollTalkScan(){try{const data=await jsonResponse(await fetch(API_BASE+'/api/talk-scan',{cache:'no-store'})),status=document.getElementById('talkStatus'),button=document.getElementById('scanTalk');talkScores={...talkScores,...(data.scores||{})};Object.entries(data.scores||{}).forEach(([symbol,score])=>{const stock=stocks.find(x=>x.symbol===symbol);if(stock)stock.talk_score=score;updateTalkCell(symbol)});status.style.display='block';status.textContent=data.running?`Talk scan: ${data.completed}/${data.total} · errors ${data.errors}`:`Talk scan completed: ${data.completed}/${data.total} · errors ${data.errors}`;button.disabled=data.running;button.textContent=data.running?`Scanning ${data.completed}/${data.total}`:'Scan all Talk';if(data.running)setTimeout(pollTalkScan,1500);else if(sortKey==='talk_score')render()}catch(e){document.getElementById('scanTalk').disabled=false}}
+new MutationObserver(decorateTalkRows).observe(document.getElementById('rows'),{childList:true});
+document.getElementById('rows').addEventListener('click',e=>{const button=e.target.closest('.talk-check');if(!button)return;const cell=button.closest('.talk-cell');if(cell)requestTalk(cell.dataset.symbol)});
 const tip=document.getElementById('chartTip');
 const headerHelp={
 'Symbol':'סימול המסחר של המניה.','Company':'שם החברה.','Price':'המחיר האחרון שהתקבל מ-Yahoo Finance.','Daily':'השינוי מול סגירת יום המסחר הקודם.',
@@ -790,34 +789,6 @@ class TalkState:
                       and item.get("result", {}).get("status") == "ok"}
             return {"running": self.scanning, "completed": self.completed,
                     "total": self.total, "errors": self.errors, "scores": scores}
-
-    def scan_all(self, symbols: list[str]) -> None:
-        with self.lock:
-            if self.scan_running:
-                return
-            self.scan_running, self.scan_done, self.scan_total = True, 0, len(symbols)
-
-        def worker() -> None:
-            try:
-                def fetch(symbol: str) -> None:
-                    self.get(symbol)
-                    with self.lock:
-                        self.scan_done += 1
-                with ThreadPoolExecutor(max_workers=4) as pool:
-                    list(pool.map(fetch, symbols))
-            finally:
-                with self.lock:
-                    self.scan_running = False
-        threading.Thread(target=worker, daemon=True).start()
-
-    def status(self) -> dict[str, object]:
-        with self.lock:
-            scores = {symbol: item.get("result", {}).get("score")
-                      for symbol, item in self.cache.items()
-                      if item.get("result", {}).get("status") == "ok"}
-            return {"running": self.scan_running, "done": self.scan_done,
-                    "total": self.scan_total, "scores": scores}
-
 
 class StockState:
     def __init__(self) -> None:

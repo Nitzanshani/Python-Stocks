@@ -4,11 +4,20 @@ from __future__ import annotations
 
 import queue
 import threading
-import tkinter as tk
 from dataclasses import dataclass
 from datetime import datetime
-from tkinter import messagebox, ttk
 from typing import Callable
+
+# Tk is available on desktop Python installations, but intentionally absent on
+# headless web hosts such as Render.  Quote downloading is shared with the web
+# dashboard, so importing this module must not require a display toolkit.
+try:
+    import tkinter as tk
+    from tkinter import messagebox, ttk
+except ImportError:  # pragma: no cover - exercised on headless deployments
+    tk = None  # type: ignore[assignment]
+    messagebox = None  # type: ignore[assignment]
+    ttk = None  # type: ignore[assignment]
 
 from market_scanner import chunks, load_universe_details
 
@@ -231,6 +240,8 @@ class StockWindow:
 
 
 def run_gui() -> None:
+    if tk is None:
+        raise RuntimeError("Tkinter is required only for the desktop GUI")
     root = tk.Tk()
     StockWindow(root)
     root.mainloop()

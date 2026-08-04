@@ -525,7 +525,31 @@ def _oscillation_events(
     return events
 
 
-def _download_analytics(symbols: list[str], on_batch=None) -> dict[str, Analytics]:
+def _reference_daily_frame(raw_frame, price_mode: str):
+    """Return one reference price per session for close or end-of-first-hour mode."""
+    import pandas as pd
+    if raw_frame is None or raw_frame.empty:
+        return None
+    if price_mode == "close":
+        return raw_frame[["Close"]].dropna()
+    frame = raw_frame[["Close"]].dropna().copy()
+    if frame.empty:
+        return None
+    frame.index = (frame.index.tz_localize("America/New_York") if frame.index.tz is None
+                   else frame.index.tz_convert("America/New_York"))
+    first_hour = frame.between_time("09:30", "10:30", inclusive="left")
+    if first_hour.empty:
+        return None
+    # Yahoo's first regular-session 60m candle starts at 09:30 and its Close is
+    # the price at the end of the first trading hour.
+    result = first_hour.groupby(first_hour.index.date).first()
+    result.index = pd.to_datetime(result.index)
+    return result
+
+
+def _download_analytics(
+    symbols: list[str], on_batch=None, price_mode: str = "close"
+) -> dict[str, Analytics]:
     import yfinance as yf
     results: dict[str, Analytics] = {}
     for batch in chunks(symbols, 25):
@@ -535,7 +559,8 @@ def _download_analytics(symbols: list[str], on_batch=None) -> dict[str, Analytic
             multi_level_index=True,
         )
         daily_data = yf.download(
-            batch, period="1y", interval="1d", group_by="ticker", auto_adjust=True,
+            batch, period="1y", interval="1d" if price_mode == "close" else "60m",
+            group_by="ticker", auto_adjust=True,
             actions=False, threads=True, progress=False, timeout=30, multi_level_index=True,
         )
         batch_results: dict[str, Analytics] = {}
@@ -588,7 +613,24 @@ def _download_analytics(symbols: list[str], on_batch=None) -> dict[str, Analytic
                      "event": event_types.get(d.isoformat())}
                     for (d, _), close in zip(chart_sessions, closes) if base_close > 0
                 ]
-            daily_frame = daily_data[symbol] if not daily_data.empty and symbol in daily_data else None
+            raw_daily = daily_data[symbol] if not daily_data.empty and symbol in daily_data else None
+            daily_frame = _reference_daily_frame(raw_daily, price_mode)
+            if daily_frame is not None and not daily_frame.empty:
+                reference_points = [
+                    (stamp.date(), float(value))
+                    for stamp, value in daily_frame["Close"].dropna().items()
+                ]
+                for label, days in (("d5", 5), ("d10", 10), ("w2", 14), ("m1", 30)):
+                    cutoff = latest_date - timedelta(days=days - 1)
+                    event_types = {d.isoformat(): kind for d, _, kind in oscillation_events
+                                   if d >= cutoff}
+                    selected_points = [(d, value) for d, value in reference_points if d >= cutoff]
+                    base_value = selected_points[0][1] if selected_points else 0
+                    charts[label] = [
+                        {"date": d.isoformat(), "value": value / base_value * 100,
+                         "event": event_types.get(d.isoformat())}
+                        for d, value in selected_points if base_value > 0
+                    ]
             zigzag = _zigzag_metrics(daily_frame) if daily_frame is not None else None
             fourier_models = ([metric for metric in
                 (_fourier_metrics(daily_frame, exact_k=k) for k in (1, 2, 3)) if metric]
@@ -638,7 +680,7 @@ HTML = r"""<!doctype html>
 </head>
 <body><main class="wrap">
   <div class="top"><div><h1>מחירי S&P 500 + QQQ</h1><div class="sub">השינוי מחושב מול סגירת יום המסחר הקודם</div></div>
-    <div class="controls"><input id="search" placeholder="חיפוש לפי סימול או חברה…"><button id="scanTalk">Scan all Talk</button><button id="refresh">חשב את כל המניות</button></div></div>
+    <div class="controls"><input id="search" placeholder="חיפוש לפי סימול או חברה…"><button id="seriesMode" title="בחר את סדרת המחיר לסריקה הבאה">בסיס: סגירה יומית</button><button id="scanTalk">Scan all Talk</button><button id="refresh">חשב את כל המניות</button></div></div>
   <div id="status" class="status">מוכן לסריקה — לחץ על “חשב את כל המניות”</div>
   <div id="talkStatus" class="status" style="display:none"></div>
   <div id="talkStatus" class="status" style="display:none"></div>
@@ -655,7 +697,7 @@ HTML = r"""<!doctype html>
   <div class="tablebox"><table><thead><tr><th>Symbol</th><th>Company</th><th>Price</th><th>Daily</th><th class="sortable" data-sort="zz_score">7% Score</th><th class="sortable" data-sort="zz_cycles">7% Cycles</th><th class="sortable" data-sort="zz_avg_up">Avg Up</th><th class="sortable" data-sort="zz_avg_down">Avg Down</th><th class="sortable" data-sort="zz_avg_days">Cycle Days</th><th>Last Pivot</th><th class="sortable" data-sort="zz_move">Since Pivot</th><th>Possible Entry</th><th>First 10m</th><th>Next 50m</th><th>From 10:00</th><th class="sortable" data-sort="avg_d5">Avg 5d</th><th class="sortable" data-sort="orank_d5">Osc 5d</th><th class="sortable" data-sort="avg_d10">Avg 10d</th><th class="sortable" data-sort="orank_d10">Osc 10d</th><th class="sortable" data-sort="avg_w2">Avg 2w</th><th class="sortable" data-sort="orank_w2">Osc 2w</th><th class="sortable" data-sort="avg_m1">Avg month</th><th class="sortable" data-sort="orank_m1">Osc month</th><th>Periods K1</th><th class="sortable" data-sort="fft_quality_1">Freq Q1</th><th class="sortable" data-sort="fft_phase_1">Phase 1</th><th class="sortable" data-sort="fft_next_turn_1">Next Turn 1</th><th>Periods K2</th><th class="sortable" data-sort="fft_quality_2">Freq Q2</th><th class="sortable" data-sort="fft_phase_2">Phase 2</th><th class="sortable" data-sort="fft_next_turn_2">Next Turn 2</th><th>Periods K3</th><th class="sortable" data-sort="fft_quality_3">Freq Q3</th><th class="sortable" data-sort="fft_phase_3">Phase 3</th><th class="sortable" data-sort="fft_next_turn_3">Next Turn 3</th><th class="sortable" data-sort="fft_active_since">Active since</th><th class="sortable" data-sort="fft_cycles">Active cycles</th><th class="sortable" data-sort="fft_regime">Regime</th><th class="index">Index</th></tr></thead><tbody id="rows"></tbody></table></div>
 </main><div id="chartTip"></div><script>
 const API_BASE=location.pathname.startsWith('/stocks-device')?'/stocks-device':'';
-let stocks=[],sortKey=null,sortDirection='desc',talkCache={},talkScores={},talkLoading=new Set();
+let stocks=[],sortKey=null,sortDirection='desc',talkCache={},talkScores={},talkLoading=new Set(),priceMode='close';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function render(){const q=document.getElementById('search').value.trim().toLowerCase(),minZigzag=parseFloat(document.getElementById('zigzagFilter').value),period=document.getElementById('periodFilter').value,minQ=parseFloat(document.getElementById('qualityFilter').value),phase=document.getElementById('phaseFilter').value,maxTurn=parseFloat(document.getElementById('turnFilter').value),minCycles=parseFloat(document.getElementById('cyclesFilter').value),regime=document.getElementById('regimeFilter').value;
  let shown=stocks.filter(x=>{if(q&&!x.symbol.toLowerCase().includes(q)&&!x.company.toLowerCase().includes(q))return false;if(!Number.isNaN(minZigzag)&&(x.zz_cycles===null||x.zz_cycles<minZigzag))return false;if(period){const [lo,hi]=period.split('-').map(Number);if(x.fft_period===null||x.fft_period<lo||x.fft_period>hi)return false}if(!Number.isNaN(minQ)&&(x.fft_quality===null||x.fft_quality<minQ))return false;if(phase&&x.fft_phase!==phase)return false;if(!Number.isNaN(maxTurn)&&(x.fft_next_turn===null||x.fft_next_turn>maxTurn))return false;if(!Number.isNaN(minCycles)&&(x.fft_cycles===null||x.fft_cycles<minCycles))return false;if(regime&&x.fft_regime!==regime)return false;return true});
@@ -667,9 +709,10 @@ function render(){const q=document.getElementById('search').value.trim().toLower
  const fft=(x,k)=>{const q=x[`fft_quality_${k}`],phase=x[`fft_phase_${k}`];return `<td>${esc(x[`fft_periods_${k}`]||'—')}</td><td><span class="freq-cell ${q>=.6?'up':q>=.35?'flat':'down'}" data-symbol="${x.symbol}" data-k="${k}">${q===null?'—':q.toFixed(3)}</span></td><td>${phase?'<span class="phase-cell" data-symbol="'+esc(x.symbol)+'" data-k="'+k+'">'+esc(phase)+'</span>':'—'}</td><td>${x[`fft_next_turn_${k}`]===null?'—':esc(x[`fft_turn_type_${k}`])+' '+x[`fft_next_turn_${k}`].toFixed(1)+'d'}</td>`};
  document.getElementById('rows').innerHTML=shown.map(x=>{const ready=x.price!==null;const cls=!ready?'loading':x.change_pct>0?'up':x.change_pct<0?'down':'flat';return `<tr><td class="symbol">${esc(x.symbol)}</td><td class="company">${esc(x.company)}</td><td class="price ${cls}">${ready?'$'+x.price.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2}):'Loading…'}</td><td class="change ${cls}">${ready?(x.change_pct>=0?'+':'')+x.change_pct.toFixed(2)+'%':'—'}</td>${zig(x)}<td>${metric(x.first_10m_pct,8)}</td><td>${metric(x.next_50m_pct,8)}</td><td>${metric(x.after_30m_pct,5)}</td><td>${avg(x.avg_d5,x.n_d5)}</td><td>${osc(x.osc_d5,x.orank_d5,x.on_d5,'d5',x.symbol)}</td><td>${avg(x.avg_d10,x.n_d10)}</td><td>${osc(x.osc_d10,x.orank_d10,x.on_d10,'d10',x.symbol)}</td><td>${avg(x.avg_w2,x.n_w2)}</td><td>${osc(x.osc_w2,x.orank_w2,x.on_w2,'w2',x.symbol)}</td><td>${avg(x.avg_m1,x.n_m1)}</td><td>${osc(x.osc_m1,x.orank_m1,x.on_m1,'m1',x.symbol)}</td>${fft(x,1)}${fft(x,2)}${fft(x,3)}<td>${esc(x.fft_active_since||'—')}</td><td>${x.fft_cycles===null?'—':x.fft_cycles.toFixed(1)}</td><td class="regime-${esc(x.fft_regime||'')}">${esc(x.fft_regime||'—')}</td><td class="index">${esc(x.indexes)}</td></tr>`}).join('');}
 async function jsonResponse(r){const type=r.headers.get('content-type')||'';if(!r.ok||!type.includes('application/json'))throw new Error(`השרת החזיר ${r.status}; נסה שוב בעוד רגע`);return r.json()}
-async function load(){try{const d=await jsonResponse(await fetch(API_BASE+'/api/stocks',{cache:'no-store'}));stocks=d.stocks.map(x=>({...x,talk_score:talkCache[x.symbol]?.score??talkScores[x.symbol]??null}));document.getElementById('status').textContent=d.status;render()}catch(e){document.getElementById('status').textContent='שגיאת חיבור לשרת: '+e.message}}
-async function pollFullScan(){const button=document.getElementById('refresh');try{const d=await jsonResponse(await fetch(API_BASE+'/api/status',{cache:'no-store'}));document.getElementById('status').textContent=d.status;button.disabled=d.running;button.textContent=d.running?`מחשב… ${d.completed}/${d.total}`:'חשב את כל המניות';if(d.running){setTimeout(pollFullScan,2000)}else{await load()}}catch(e){button.disabled=false;button.textContent='חשב את כל המניות';document.getElementById('status').textContent='שגיאת חיבור לשרת: '+e.message}}
-document.getElementById('search').addEventListener('input',render);document.getElementById('refresh').addEventListener('click',async()=>{const button=document.getElementById('refresh');button.disabled=true;try{await jsonResponse(await fetch(API_BASE+'/api/refresh',{method:'POST'}));pollFullScan()}catch(e){button.disabled=false;document.getElementById('status').textContent='לא ניתן להתחיל סריקה: '+e.message}});
+function updateModeButton(){document.getElementById('seriesMode').textContent=priceMode==='close'?'בסיס: סגירה יומית':'בסיס: מחיר אחרי שעה'}
+async function load(){try{const d=await jsonResponse(await fetch(API_BASE+'/api/stocks',{cache:'no-store'}));if(d.mode)priceMode=d.mode;updateModeButton();stocks=d.stocks.map(x=>({...x,talk_score:talkCache[x.symbol]?.score??talkScores[x.symbol]??null}));document.getElementById('status').textContent=d.status;render()}catch(e){document.getElementById('status').textContent='שגיאת חיבור לשרת: '+e.message}}
+async function pollFullScan(){const button=document.getElementById('refresh'),modeButton=document.getElementById('seriesMode');try{const d=await jsonResponse(await fetch(API_BASE+'/api/status',{cache:'no-store'}));document.getElementById('status').textContent=d.status;button.disabled=d.running;modeButton.disabled=d.running;button.textContent=d.running?`מחשב… ${d.completed}/${d.total}`:'חשב את כל המניות';if(d.running){setTimeout(pollFullScan,2000)}else{await load()}}catch(e){button.disabled=false;modeButton.disabled=false;button.textContent='חשב את כל המניות';document.getElementById('status').textContent='שגיאת חיבור לשרת: '+e.message}}
+document.getElementById('search').addEventListener('input',render);document.getElementById('seriesMode').addEventListener('click',()=>{priceMode=priceMode==='close'?'first_hour':'close';updateModeButton();document.getElementById('status').textContent=`נבחר ${priceMode==='close'?'מחיר סגירה יומי':'מחיר בסוף השעה הראשונה'} — לחץ על “חשב את כל המניות”`});document.getElementById('refresh').addEventListener('click',async()=>{const button=document.getElementById('refresh');button.disabled=true;document.getElementById('seriesMode').disabled=true;try{await jsonResponse(await fetch(API_BASE+'/api/refresh?mode='+encodeURIComponent(priceMode),{method:'POST'}));pollFullScan()}catch(e){button.disabled=false;document.getElementById('seriesMode').disabled=false;document.getElementById('status').textContent='לא ניתן להתחיל סריקה: '+e.message}});
 document.getElementById('scanTalk').addEventListener('click',async()=>{const button=document.getElementById('scanTalk');button.disabled=true;try{await jsonResponse(await fetch(API_BASE+'/api/talk-scan',{method:'POST'}));pollTalkScan()}catch(e){button.disabled=false}});
 ['zigzagFilter','periodFilter','qualityFilter','phaseFilter','turnFilter','cyclesFilter','regimeFilter'].forEach(id=>document.getElementById(id).addEventListener('input',render));
 document.getElementById('clearFilters').addEventListener('click',()=>{['zigzagFilter','periodFilter','qualityFilter','phaseFilter','turnFilter','cyclesFilter','regimeFilter'].forEach(id=>document.getElementById(id).value='');render()});
@@ -698,7 +741,7 @@ const headerHelp={
 'Active cycles':'מספר המחזורים המשוער שעבר מאז Active Since; זה אינו מספר מחזורים שנצפו בפועל.','Regime':'active מעל 0.60, weakening בין 0.35 ל-0.60, broken מתחת 0.35.','Index':'המדד שבו המניה נכללת.'};
 function showHelp(text,e){tip.className='';tip.innerHTML=`<div style="font-size:13px;line-height:1.55;direction:rtl">${esc(text)}</div>`;tip.style.display='block';moveTip(e)}
 function showFrequency(target,e){const stock=stocks.find(x=>x.symbol===target.dataset.symbol),k=target.dataset.k,candidates=stock?.[`fft_candidates_${k}`];if(!candidates?.length)return;const rows=candidates.map(c=>`<div class="freq-row ${c.selected?'selected':''}"><span>${c.selected?'✓ selected':'candidate'}</span><span class="freq-period">${c.period.toFixed(2)}d${c.harmonic_of?' · harmonic of '+c.harmonic_of.toFixed(2)+'d':''}</span><span>${(c.power_share*100).toFixed(1)}%</span><span>${c.z_score.toFixed(2)}σ</span></div>`).join('');const std=stock[`fft_period_std_${k}`];tip.className='freq-tip';tip.innerHTML=`<div class="tip-title">${esc(stock.symbol)} · K${k} model</div><div style="font-size:11px;color:#91a1b3;margin-bottom:7px;direction:ltr">Weighted period std: ${std?.toFixed(2)??'—'}d</div><div class="freq-grid"><div class="freq-row header"><span>status</span><span>period</span><span>power</span><span>noise</span></div>${rows}</div>`;tip.style.display='block';moveTip(e)}
-function showFourierChart(target,e){const stock=stocks.find(x=>x.symbol===target.dataset.symbol),k=target.dataset.k,chart=stock?.[`fft_chart_${k}`];if(!chart?.actual?.length||!chart?.fitted?.length)return;const w=494,h=210,p=14,all=[...chart.actual,...chart.fitted],lo=Math.min(...all.map(d=>d.value)),hi=Math.max(...all.map(d=>d.value)),span=hi-lo||1,maxX=Math.max(...all.map(d=>d.x)),xScale=(w-2*p)/Math.max(maxX,1),xy=d=>({...d,x:p+d.x*xScale,y:p+(hi-d.value)*(h-2*p)/span}),actual=chart.actual.map(xy),fitted=chart.fitted.map(xy),past=fitted.filter(d=>!d.forecast),future=[past[past.length-1],...fitted.filter(d=>d.forecast)].filter(Boolean),line=a=>a.map(d=>`${d.x.toFixed(1)},${d.y.toFixed(1)}`).join(' '),todayX=p+chart.today_x*xScale,turn=fitted[fitted.length-1],periods=(stock[`fft_candidates_${k}`]||[]).filter(c=>c.selected).slice(0,Number(k)),colors=['#4da3ff','#b37cff','#ffd43b'],svgH=h+periods.length*27+12,markers=periods.map((_,i)=>`<marker id="periodArrow${i}" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto-start-reverse"><path d="M7,0 L0,3.5 L7,7" fill="none" stroke="${colors[i]}" stroke-width="1.5"/></marker>`).join(''),rulers=periods.map((item,i)=>{const length=Math.min(w-70,item.period*xScale),x1=(w-length)/2,x2=x1+length,y=h+22+i*27,label=`${item.period.toFixed(1)} trading days${item.harmonic_of?' · H of '+item.harmonic_of.toFixed(1)+'d':''}`;return `<text x="${w/2}" y="${y-7}" fill="${colors[i]}" font-size="10.5" text-anchor="middle">${esc(label)}</text><line x1="${x1}" y1="${y}" x2="${x2}" y2="${y}" stroke="${colors[i]}" stroke-width="1.8" marker-start="url(#periodArrow${i})" marker-end="url(#periodArrow${i})"/>`}).join('');tip.className='fourier-tip';tip.innerHTML=`<div class="tip-title">${esc(stock.symbol)} · K${k} inverse Fourier · ${esc(chart.turn_type)} in ${stock[`fft_next_turn_${k}`].toFixed(1)}d</div><svg width="100%" height="${svgH}" viewBox="0 0 494 ${svgH}"><defs>${markers}</defs><line x1="${todayX}" y1="8" x2="${todayX}" y2="202" stroke="#91a1b3" stroke-width="1" stroke-dasharray="3 4"/><polyline points="${line(actual)}" fill="none" stroke="#35d07f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="${line(past)}" fill="none" stroke="#ff9f43" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><polyline points="${line(future)}" fill="none" stroke="#ff9f43" stroke-width="3" stroke-dasharray="6 5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${turn.x}" cy="${turn.y}" r="6" fill="#ff9f43" stroke="#ffe0bd" stroke-width="2"/>${rulers}</svg><div style="display:flex;gap:14px;flex-wrap:wrap;font-size:11px;direction:ltr"><span style="color:#35d07f">● detrended closes</span><span style="color:#ff9f43">● K${k} reconstruction</span><span style="color:#ffb873">- - forecast to ${esc(chart.turn_type)}</span></div>`;tip.style.display='block';moveTip(e)}
+function showFourierChart(target,e){const stock=stocks.find(x=>x.symbol===target.dataset.symbol),k=target.dataset.k,chart=stock?.[`fft_chart_${k}`];if(!chart?.actual?.length||!chart?.fitted?.length)return;const w=494,h=226,p=14,plotBottom=190,axisY=199,all=[...chart.actual,...chart.fitted],lo=Math.min(...all.map(d=>d.value)),hi=Math.max(...all.map(d=>d.value)),span=hi-lo||1,maxX=Math.max(...all.map(d=>d.x)),xScale=(w-2*p)/Math.max(maxX,1),xy=d=>({...d,x:p+d.x*xScale,y:p+(hi-d.value)*(plotBottom-p)/span}),actual=chart.actual.map(xy),fitted=chart.fitted.map(xy),past=fitted.filter(d=>!d.forecast),future=[past[past.length-1],...fitted.filter(d=>d.forecast)].filter(Boolean),line=a=>a.map(d=>`${d.x.toFixed(1)},${d.y.toFixed(1)}`).join(' '),todayX=p+chart.today_x*xScale,turn=fitted[fitted.length-1],firstTick=Math.ceil(-chart.today_x/10)*10,lastTick=Math.floor((maxX-chart.today_x)/10)*10,ticks=Array.from({length:Math.max(0,Math.floor((lastTick-firstTick)/10)+1)},(_,i)=>firstTick+i*10).map(day=>{const x=p+(chart.today_x+day)*xScale,label=day>0?'+'+day:String(day);return `<line x1="${x}" y1="${axisY}" x2="${x}" y2="${axisY+5}" stroke="#718398" stroke-width="1"/><text x="${x}" y="${axisY+17}" fill="${day===0?'#e9eef4':'#91a1b3'}" font-size="9.5" text-anchor="middle">${label}</text>`}).join('');tip.className='fourier-tip';tip.innerHTML=`<div class="tip-title">${esc(stock.symbol)} · K${k} inverse Fourier · ${esc(chart.turn_type)} in ${stock[`fft_next_turn_${k}`].toFixed(1)}d</div><svg width="100%" height="${h}" viewBox="0 0 494 ${h}"><line x1="${todayX}" y1="8" x2="${todayX}" y2="${plotBottom}" stroke="#91a1b3" stroke-width="1" stroke-dasharray="3 4"/><polyline points="${line(actual)}" fill="none" stroke="#35d07f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="${line(past)}" fill="none" stroke="#ff9f43" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><polyline points="${line(future)}" fill="none" stroke="#ff9f43" stroke-width="3" stroke-dasharray="6 5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${turn.x}" cy="${turn.y}" r="6" fill="#ff9f43" stroke="#ffe0bd" stroke-width="2"/><line x1="${p}" y1="${axisY}" x2="${w-p}" y2="${axisY}" stroke="#52677c" stroke-width="1"/>${ticks}<text x="${w-p}" y="${h-2}" fill="#718398" font-size="9" text-anchor="end">trading days from today</text></svg><div style="display:flex;gap:14px;flex-wrap:wrap;font-size:11px;direction:ltr"><span style="color:#35d07f">● detrended prices</span><span style="color:#ff9f43">● K${k} reconstruction</span><span style="color:#ffb873">- - forecast to ${esc(chart.turn_type)}</span></div>`;tip.style.display='block';moveTip(e)}
 function showTalk(target,e){const symbol=target.dataset.symbol,item=talkCache[symbol];if(!item||item.status!=='ok')return;const formatTime=value=>new Date(value).toLocaleString('he-IL',{timeZone:'Asia/Jerusalem',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false});const articles=item.articles.slice(0,8).map(a=>`<div class="talk-item"><span class="talk-source">${esc(a.source)}</span><span class="talk-title">${esc(a.title)}</span><span class="talk-time">${esc(formatTime(a.published))}</span></div>`).join('');tip.className='talk-tip';tip.innerHTML=`<div class="tip-title">${esc(symbol)} · ${item.score} unique sites / last 24h</div><div class="talk-list"><div class="talk-item header"><span>site</span><span>headline</span><span>Israel time</span></div>${articles||'<div class="talk-item"><span></span><span>No matching coverage found.</span><span></span></div>'}</div>`;tip.style.display='block';moveTip(e)}
 function showPivotChart(target,e){const stock=stocks.find(x=>x.symbol===target.dataset.symbol),points=stock?.zz_chart||[];if(!points.length)return;const w=494,h=190,p=14,values=points.map(x=>x.value),lo=Math.min(...values),hi=Math.max(...values),span=hi-lo||1;const xy=points.map((d,i)=>({x:p+i*(w-2*p)/Math.max(1,points.length-1),y:p+(hi-d.value)*(h-2*p)/span,...d}));const line=xy.map(d=>`${d.x.toFixed(1)},${d.y.toFixed(1)}`).join(' '),pivot=xy.find(d=>d.pivot),confirmation=xy.find(d=>d.confirmation);const marks=(pivot?`<circle cx="${pivot.x}" cy="${pivot.y}" r="6" fill="#ff9f43" stroke="#ffe0bd" stroke-width="2"/>`:'')+(confirmation?`<circle cx="${confirmation.x}" cy="${confirmation.y}" r="6" fill="#ffd43b" stroke="#fff2a8" stroke-width="2"/>`:'');tip.className='pivot-tip';tip.innerHTML=`<div class="tip-title">${esc(stock.symbol)} · last ${esc(stock.zz_last_pivot||'pivot')}</div><svg width="100%" height="190" viewBox="0 0 494 190"><polyline points="${line}" fill="none" stroke="#35d07f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>${marks}</svg><div style="display:flex;gap:14px;flex-wrap:wrap;font-size:11px;direction:ltr"><span style="color:#ff9f43">● extreme: ${esc(stock.zz_last_pivot_date||'—')}</span><span style="color:#ffd43b">● confirmed: ${esc(stock.zz_confirmation_date||'—')}</span></div>`;tip.style.display='block';moveTip(e)}
 function showChart(target,e){const stock=stocks.find(x=>x.symbol===target.dataset.symbol),points=stock?.charts?.[target.dataset.range]||[];if(!points.length)return;tip.className='';
@@ -800,13 +843,17 @@ class StockState:
         self.loading = False
         self.updated = ""
         self.phase = "idle"
+        self.price_mode = "close"
 
-    def refresh(self) -> None:
+    def refresh(self, price_mode: str = "close") -> None:
+        if price_mode not in {"close", "first_hour"}:
+            price_mode = "close"
         with self.lock:
             if self.loading:
                 return
             self.loading = True
             self.phase = "quotes"
+            self.price_mode = price_mode
             # A new manual scan replaces the previous snapshot. Dropping the
             # old one first prevents two full result sets living in RAM.
             self.quotes = {}
@@ -815,6 +862,8 @@ class StockState:
 
     def _worker(self) -> None:
         try:
+            with self.lock:
+                price_mode = self.price_mode
             def update(batch: dict[str, Quote]) -> None:
                 with self.lock:
                     self.quotes.update(batch)
@@ -831,7 +880,9 @@ class StockState:
                 def update_analytics(batch: dict[str, Analytics]) -> None:
                     with self.lock:
                         self.analytics.update(batch)
-                analytics = _download_analytics(missing_analytics, update_analytics)
+                analytics = _download_analytics(
+                    missing_analytics, update_analytics, price_mode=price_mode
+                )
                 with self.lock:
                     self.analytics.update(analytics)
         finally:
@@ -854,7 +905,7 @@ class StockState:
                 completed = len(self.analytics)
                 status = f"הסריקה הסתיימה: {self.updated} | {len(self.quotes)} מניות"
             return {"running": self.loading, "phase": self.phase, "completed": completed,
-                    "total": len(self.symbols), "status": status}
+                    "total": len(self.symbols), "status": status, "mode": self.price_mode}
 
     def payload(self) -> dict[str, object]:
         with self.lock:
@@ -938,7 +989,7 @@ class StockState:
                     row[f"fft_period_std_{k}"] = model.period_std if model else None
                     row[f"fft_chart_{k}"] = model.chart if model else None
                 rows.append(row)
-            return {"status": status, "stocks": rows}
+            return {"status": status, "stocks": rows, "mode": self.price_mode}
 
 
 def run_web_gui() -> None:
@@ -977,6 +1028,10 @@ def run_web_gui() -> None:
         def do_POST(self) -> None:
             if self.path == "/api/refresh":
                 state.refresh(); self._send(b"{}", "application/json")
+            elif self.path.startswith("/api/refresh?"):
+                query = urllib.parse.parse_qs(urllib.parse.urlparse(self.path).query)
+                state.refresh(query.get("mode", ["close"])[0])
+                self._send(b"{}", "application/json")
             elif self.path == "/api/talk-scan":
                 state.talk.start_scan(state.symbols)
                 body = json.dumps(state.talk.status(), ensure_ascii=False).encode("utf-8")

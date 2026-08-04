@@ -1,0 +1,2591 @@
+[
+  {
+    "symbol": "AAOI",
+    "company": "Applied Optoelectronics, Inc.",
+    "frequency_number": 1,
+    "period": 50.25,
+    "train_days": 151,
+    "validation_days": 31,
+    "status": "broken",
+    "estimated_start": "2026-05-04",
+    "confirmed_on": "2026-06-16",
+    "prior_session": "2026-05-01",
+    "latest_q": 0.0187,
+    "latest_nrmse": 3.5826,
+    "latest_residual_sigma": 0.377103,
+    "residual_trend": "rising error",
+    "observations": 320,
+    "news_sites": 2,
+    "news_articles": [
+      {
+        "source": "Yahoo Finance",
+        "title": "Applied Optoelectronics (AAOI) Soars to All-Time High Ahead of Earnings - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPaG85blo3TFRaMW5hdnZFY0VoWUVQWmZBMnBmejA2QkFQQ21TMlVIa1lKMDVpMGRieWhBdTN4aEZMU29JSDZWYzhjNVpzRHp2MU5XUDZ6R21NaUxhcjl5aVpOb0FFVTlWQ0dMNFJYbWtnTTc4VTh3LWpJc3pkb2ozTE9ZM2NHbERaNG1NMk1ZblBxbzdfN2ZvLTVRdUtqdzdKTl9wY1kyOA?oc=5",
+        "published": "2026-05-01T03:00:00-04:00"
+      },
+      {
+        "source": "MarketBeat",
+        "title": "Applied Optoelectronics (NASDAQ:AAOI) Shares Up 8.7% - Here's Why - MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRFNwUGlrMFlYRTlyc2lvdzZtQnpzbnR1WUxDTF9QWHdmVXVpZXg3M0JwLVJwaEFmOFdHUjhRV0tKNll0QnB2dU9pU2MtR2NDSDRvSkpUUmtVUHFtSGo4dm9ZRVdIaGJ4bUdwLUJEdmJPbXdEcENUR3JqbVRrdE0zanRKOWhUV2tnbFk2d0FNWlU4OGZIWlNaRVYtVWVuaWd6ZWR5RUw0SnJYdjU4ZWMwUw?oc=5",
+        "published": "2026-05-01T03:00:00-04:00"
+      },
+      {
+        "source": "MarketBeat",
+        "title": "Kornitzer Capital Management Inc. KS Sells 10,082 Shares of Applied Optoelectronics, Inc. $AAOI - MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNTC0ycWNMNkVsaFVUWnFzX0hLdExJZnA4V1dOOF9ySTBDcFFPVTE0MmVyY0FZTjNRMVY4V1QtQ2hpcnItTmd2d3l4a0xxckxpVHVmdUNWdVpiRC0yd3hvdkhrMXAxNEM2NUc3RGR1RkVHdHMzSGpNYjlKUF9WamNhZkNuQ0tKaDl4c2RGZnAzeXlLbEd4cGctQkdkdG9sNVhjUVNWTXZCb0t3ajMwbGhXanNJX2swMWpaWnZwVzVMRFZQa25GYkpvd0xKYjFja1d0MF85YWpyNDFGSnpEdTAwNTlZd1FEUQ?oc=5",
+        "published": "2026-05-04T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "AAOI",
+    "company": "Applied Optoelectronics, Inc.",
+    "frequency_number": 2,
+    "period": 28.71,
+    "train_days": 87,
+    "validation_days": 18,
+    "status": "broken",
+    "estimated_start": "2025-04-08",
+    "confirmed_on": "2025-05-02",
+    "prior_session": "2025-04-07",
+    "latest_q": 0.0161,
+    "latest_nrmse": 4.5333,
+    "latest_residual_sigma": 0.136604,
+    "residual_trend": "falling error",
+    "observations": 397,
+    "news_sites": 0,
+    "news_articles": []
+  },
+  {
+    "symbol": "AAOI",
+    "company": "Applied Optoelectronics, Inc.",
+    "frequency_number": 3,
+    "period": 22.33,
+    "train_days": 67,
+    "validation_days": 14,
+    "status": "broken",
+    "estimated_start": null,
+    "confirmed_on": null,
+    "prior_session": null,
+    "latest_q": 0.3025,
+    "latest_nrmse": 2.7686,
+    "latest_residual_sigma": 0.131049,
+    "residual_trend": "falling error",
+    "observations": 421,
+    "news_sites": null,
+    "news_articles": []
+  },
+  {
+    "symbol": "COHR",
+    "company": "Coherent Corp.",
+    "frequency_number": 1,
+    "period": 50.25,
+    "train_days": 151,
+    "validation_days": 31,
+    "status": "broken",
+    "estimated_start": "2026-04-15",
+    "confirmed_on": "2026-05-28",
+    "prior_session": "2026-04-14",
+    "latest_q": 0.3943,
+    "latest_nrmse": 2.2008,
+    "latest_residual_sigma": 0.240438,
+    "residual_trend": "rising error",
+    "observations": 320,
+    "news_sites": 2,
+    "news_articles": [
+      {
+        "source": "Yahoo Finance",
+        "title": "Coherent (COHR) Expands SiC Capabilities for AI Data Centers - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOd0ViZjN3eWM3TkQ1bWJSUE4weVliY2dod3paXzFiSkxEUDFCWVJ1YTBMbkZJRzhLeVF2c1ZJbEtaZGhzV2RsOGxZNGJPNlQzZUItbzdXTXgzMHYwUENMQnl0RkFneWt3b09KSHNOa2cxVnN0djFsWjlnYkduM2doTmJzZVFCTFA5eTdZdGV1YUZ3SERuRDd1Z2pNTXdrVWVGYVp5TkRtdlBNeFE?oc=5",
+        "published": "2026-04-14T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Is There Longevity in Coherent's AI-Backed Growth Strategy? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQbTIyTEtPakp3QjhtdHRZSFNKOHgzQkN3bkxpTFZOYjREem5pcmhmbFlMdHgteFNoN21LUDBlNWNLTUJxR2xoZ3BKTG9kRW9DcUprMjBxQ1RTX09nNktBRlZHc2Rod3lqdVFkTEFRVUVLTHNPN3lRWE80TXJqQmJQM2dSR01FRTFvWWZKQmRNS3BYcTJtSjZZRkNWdlNlaXZ5alFtWTB1anU?oc=5",
+        "published": "2026-04-14T03:00:00-04:00"
+      },
+      {
+        "source": "富途牛牛",
+        "title": "Research Alert: CFRA Maintains Buy Rating On Shares Of Coherent Corp. - 富途牛牛",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQUzU5a0RCeUJLUnZoc2hwSTh2eFppQ1hXNTdXT1JxaVNQaXgxRzNNZjNjamJuRnFKNlpMa3J4bWlWdGh1Q0NsUHBmMnM2ZlB2OGFfczAwMndVRDl1OEZkTHFiaDBPcHk3UUZPYURXUFZ6cm9RZGN2OWZmNkJzeHBhRlh5a0kyOHhNeWhLYnhDOXhVVE5VcWItbVBDaTl1RU05dHk4eVN3?oc=5",
+        "published": "2026-04-15T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Is Coherent (COHR) Quietly Repositioning Itself at the Core of AI Power Infrastructure? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNNFcwampMN3BJVWt5RjVDOHpPSmFSZmdPVlZfd3RkVEV2ajZOVzdnS0FiakFwZ05HdHUxVWZuLVhuRVdVRS1fMXhSenNnU3VkV1BMZFpLQzlJc2VGLU9TZmM4Mjlya1NIcG1CZ3NYUnNBN0VuWUtLYU0zOVhYWGZJazlCYlJEd1Ewa3poR2lPQ2w1VFlaejJ3bjVyOVNKNVVTVm1mRXd0R1dUYUc4NVRvMg?oc=5",
+        "published": "2026-04-15T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "COHR",
+    "company": "Coherent Corp.",
+    "frequency_number": 2,
+    "period": 18.27,
+    "train_days": 55,
+    "validation_days": 11,
+    "status": "broken",
+    "estimated_start": "2026-03-31",
+    "confirmed_on": "2026-04-15",
+    "prior_session": "2026-03-30",
+    "latest_q": 0.0263,
+    "latest_nrmse": 1.9857,
+    "latest_residual_sigma": 0.126077,
+    "residual_trend": "falling error",
+    "observations": 436,
+    "news_sites": 1,
+    "news_articles": [
+      {
+        "source": "Seeking Alpha",
+        "title": "Coherent's Hidden Bottleneck Is Powering This Rally (NYSE:COHR) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTzZlOW5mRkFNYlB3QnJiYUUwSzg0M2wybWVXVkdFT1BBUUI1Z2NBYi1VcnpiNlB5MGY1SDVXYmx2M1pJVUx5Q0dhM2Q5emhuOWFxOGFvckRXSS1aUEtCM280ZjNQWTZ3TE5QQmZDMWNjZFFaTERwWjIxdW14STAtY1FyMDVVcXdtR2dWNF85eHktYVViN2c?oc=5",
+        "published": "2026-03-31T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "COHR",
+    "company": "Coherent Corp.",
+    "frequency_number": 3,
+    "period": 28.71,
+    "train_days": 87,
+    "validation_days": 18,
+    "status": "broken",
+    "estimated_start": "2026-02-02",
+    "confirmed_on": "2026-02-26",
+    "prior_session": "2026-01-30",
+    "latest_q": 0.0179,
+    "latest_nrmse": 3.845,
+    "latest_residual_sigma": 0.114189,
+    "residual_trend": "rising error",
+    "observations": 397,
+    "news_sites": 3,
+    "news_articles": [
+      {
+        "source": "TradingView",
+        "title": "Bystronic completes the acquisition of the Tools for Materials Processing business unit of Coherent Corp., gaining access to new markets in the medical and semiconductor industries - TradingView",
+        "url": "https://news.google.com/rss/articles/CBMi0gJBVV95cUxPUDFBV3lUSnVIUkVLY19jU1p2dlAyTXJHZEtyVTc1bFJtU3FZY3dDNUNmZ2kwY0tWV1ZzcUVHeW9sU3RFdl9jQlNxZXlyclNwb2F5TkNSNU5GdXNuRm1XQ1pwTEhyNU5VeFVJWE53eGpUWTlqYnE1VUVCUnd0VlFlcDJaZXZUNXJFZUx4X1J1UDh2SWFtMV9ISG9rMkJ2ZWhYVF9UYThEam9UZkc3MUdSTFoyYXVhVEdVeENkRkJ5RmstY3VXaGdLSkIycS1jS25XbkxmSmc5WWEtQWg5cjExb0pLYmpYbm5FaU0wN1RuWjFva2hINVFFcmNYN2gxdUF0LVlOcXhoTkh4emR4WldDb0w3Q25YMDZORVZ1OFl3Y0VQeXZTQW1aVTBYQ3lGV3FxcXlCM3FNTHZhVTdGNkRXTGl6RkpLbExhcHYwLWkzTGFHQQ?oc=5",
+        "published": "2026-02-01T03:00:00-05:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Coherent Q2 Earnings Preview: Buy Now or Wait for the Results? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOLXpTZXlEU0tLVnpaRWhWdDg1YUc1Y0xOOGpvcDlUNXFHbnVYeTd2YXVmdFhsak91bVVmU290X2xWRFI0elk1SGtienhfUWd6NTk0ZW1qVWdPNXhIUnEtam81cXNqamFxTUVoRnVLS2xLREZjUHlPM3h1OVJjbGxJdlUtZnE?oc=5",
+        "published": "2026-02-02T03:00:00-05:00"
+      },
+      {
+        "source": "STT Info",
+        "title": "Bystronic completes acquisition of Coherent Corp.'s Tools for Materials Processing business unit, thereby gaining access to new markets in medical technology and the semiconductor industry - STT Info",
+        "url": "https://news.google.com/rss/articles/CBMi7wJBVV95cUxOLTJ5dkVXcWp5TGNtVEdwemYxQVNaQUxrVGw0UjI0WnZCUGk3NGx6ZjBGU05OSnMzNk9kMnVCa0pYc1o4TXlHTDBrc1ZmakdVbUpzMWlfVGpDRkg0cEJEUGdSdWpiZE5CYk5ac0tJLXlnd1FaWjZNSW9xRTV6R3Nna1JRaFdTZl83c2ZMdTdvZVdVU2FKUFFmTmxraXB2eUxuZWdsOW5NZEprYXhhQzdoemNlaHVXZnpJVnZSRkwtU0Q1MmtUX2JHVHJRbkZhQnFOMWlwdC1OTjh6d0RieGlXZUV2QzJ0WG1uU3F0aVpxTEVlNkhuWEVZN2tteUZKcENvdWZsVUZQaU5ybTBVSExLbUpLcHpqUUEzVkZrSld4WlRPa1FNY3I1UDFUejNMNDNfUThGblNIc0pzalowREN6ZjRsQV83b0hrQWZXNHN0VkdnTVlRZWU3d0czcEtlX2FlNy1NbzhZSWwwNlNNZENF?oc=5",
+        "published": "2026-02-02T03:00:00-05:00"
+      }
+    ]
+  },
+  {
+    "symbol": "BA",
+    "company": "Boeing",
+    "frequency_number": 1,
+    "period": 28.71,
+    "train_days": 87,
+    "validation_days": 18,
+    "status": "broken",
+    "estimated_start": "2025-11-21",
+    "confirmed_on": "2025-12-17",
+    "prior_session": "2025-11-20",
+    "latest_q": 0.0263,
+    "latest_nrmse": 1.9808,
+    "latest_residual_sigma": 0.039166,
+    "residual_trend": "rising error",
+    "observations": 397,
+    "news_sites": 3,
+    "news_articles": [
+      {
+        "source": "Responsible Statecraft",
+        "title": "Trump buys millions in Boeing bonds while awarding it contracts - Responsible Statecraft",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAycE5CM0JUcUlEZkk1c3NncnZxTzB5UGV5M2JfVjBKLWlDSFU0a3ZhU0dzZXREN0NSRkUwMldWYy1ENi1hRG1YVVJMYnRVX2dJTTRkOS1NcEpLMTNvV0RDSDhYVQ?oc=5",
+        "published": "2025-11-20T03:00:00-05:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "What Role Do Global Partnerships Play in Advancing Boeing's Strategy? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQdHJ4QnJhcVZKOV96MG5wZzRxclNzNTRJSGJMT3U4c1k0ckpJTG5KTnU0SVpuNWtBVDI5ZFFuVllGbXdEb1pNdmFkcWcxZmIzaEtTU3ZIRzJTYWVPeWo0dG8wdnhveDI0ckFiNkhoM2RjaEJrUXZveDBKTjJwZldVMWVPYlZnalNnWE9qQS1R?oc=5",
+        "published": "2025-11-20T03:00:00-05:00"
+      },
+      {
+        "source": "Investor's Business Daily",
+        "title": "Boeing Aces Another Big Win, In A Big Week, But Stock Slide Continues - Investor's Business Daily",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOalg1V3lNb1JhMUJESGUtNHFCVkVFTGlqX0tXcENmMDY1SzdiVVdVYjBoekRETEs4dFpHTG9jOGJwV1RkOE1ZLWVhZ3hKRW5WdmU2ZG5CakNZQjdaRlJFaHNiWmNSTzZnM0NybzFsMEVROVNDWERWdUZ6WmRqZXRRRGdqeHloaGg5WjFUaXNVZzE?oc=5",
+        "published": "2025-11-21T03:00:00-05:00"
+      },
+      {
+        "source": "Investor's Business Daily",
+        "title": "Flying-Taxi Firm Lands Saudi Deal. Boeing Wins Big Order. - Investor's Business Daily",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQdThkNWZLR0xlWURqOTJqLU5pV0VXdm9uRERoMExuMWZuOGltNXNXVEkyVkktdlNBa2ZTZ0JBRTZ1TkdNRm1YeEFveHRQbjZrdDRuTXZpUmNqN0JWMlJKaDVZenMzTXBqNzR1cXZxN2hZUXA2NDJBdE5LekxkMWIweEd6NHVZdGtkeW9FdmY5RQ?oc=5",
+        "published": "2025-11-21T03:00:00-05:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Will Boeing’s (BA) Dubai Airshow Wins Mark a Turning Point for Its Growth Strategy? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9JdnBMUzk5YUx5VktoZVl6RlowRWhmdXJWSDlkajVfbVZ4OUtUYk1MX2pXb1E4TFhJSzhhVkZxem12cTVqa1JTV3RKeTF5VFpodXhDMDhXSGN0OXY2T2otZGNpdzFUZ2N2YWJRRzhWUGVJM1I0UWJ5dUVVOV8xT1E?oc=5",
+        "published": "2025-11-21T03:00:00-05:00"
+      }
+    ]
+  },
+  {
+    "symbol": "BA",
+    "company": "Boeing",
+    "frequency_number": 2,
+    "period": 15.46,
+    "train_days": 47,
+    "validation_days": 10,
+    "status": "broken",
+    "estimated_start": "2025-11-20",
+    "confirmed_on": "2025-12-04",
+    "prior_session": "2025-11-19",
+    "latest_q": 0.0384,
+    "latest_nrmse": 0.8616,
+    "latest_residual_sigma": 0.037335,
+    "residual_trend": "falling error",
+    "observations": 445,
+    "news_sites": 5,
+    "news_articles": [
+      {
+        "source": "Barron's",
+        "title": "Boeing Is Getting More Orders. The Stock Is Going Down. - Barron's",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9XU2tELVZweUNXem1pZ2cwSkFtQlpaQW9mRXNRZVE0ZGhTM19TQlJEbEVRQ2hscUgyQk9MNXQtT2tkR2RrXzdDUGpPVlNsd1ZObEMzRVJFeEFhNG5wTjl0Q1FseG1zRGNwUE43d3pGRXZUOEhna3c?oc=5",
+        "published": "2025-11-19T03:00:00-05:00"
+      },
+      {
+        "source": "Business Standard",
+        "title": "FlyDubai orders 75 Boeing 737 MAX aircraft in deal estimated at $13 billion - Business Standard",
+        "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNSjhJNDhKajllcVhLNDNjdWdfSmZvZ2xDeldHZkRzZmlFNnlQTjV4ZjdwV2FhVzAweEpWOE1PWDVBVHE5ZHlMMTJabWNUNGZoMWk1ZFlhZ3VDNEFqZ1FIZk9FWnV6Y1gzRmxYcHRBNHlhU1B1dUxqYWpPRmRIZS1KRVk3OE85cHBGMFlGa2otSEhVRjVzdnR1TlpNeFVhRVhrTlMxLWpkTUROT2xYeUk4SVlpbmRQS3pfdWo5ZGdnSGRlZVgxMTdXODdQcVBPTHVvODQ2SDNDVUJHQy02dVNN0gHkAUFVX3lxTE00WXpoaFpoUERLQ1poTFNseDJsNnczLU54dmJVTlduUjRrRXZud2JmcVdMWGFpbWRHLWxicnM5NTVOODhXczNFdTF5TnZLLW1OUFhCOXpPODc5MHpVaWo2aXJhUVlzcHdvaWprYkFDZjV6dFJCQUVRTWRfeGc0RWxyaW9JclZZdGZsaFRrYWhwUXY0UmMwbWpqNU9ScWYyc3Z4ZDhabldnZHlTMUlvaGp6NGk1eEtQMGhya3FoMm5tU1p2V09WdGZzRHNTZEhIVEZyVi1DTWJRUGRRbG5lU3U2Tm5ZNA?oc=5",
+        "published": "2025-11-19T03:00:00-05:00"
+      },
+      {
+        "source": "Reuters",
+        "title": "Boeing blunts flydubai fleet setback with new jet order - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNU0dIWjM0T0FCNDdSNDYzTU4wTWFPMGFFcHR1S0xWR3pJOTF6SExMTXJDVVY1cVFjNkZhWTFUZ3VkaXJGYWFJU0ZkWXRfSUg2YkRkdDFwR3laVTZMeXFFemo5dS1teGZUYTFaMG9lcHF1UmdfWVpkVDVZT3JGMkFhM0V4WVpRYWJnWU90Vzg2YVJMYldDSFd2dHZ1Y0hydXBGLU9XNTE0UzJ0Ry1WZk85RWd6Zlo0VTBn?oc=5",
+        "published": "2025-11-19T03:00:00-05:00"
+      },
+      {
+        "source": "Responsible Statecraft",
+        "title": "Trump buys millions in Boeing bonds while awarding it contracts - Responsible Statecraft",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAycE5CM0JUcUlEZkk1c3NncnZxTzB5UGV5M2JfVjBKLWlDSFU0a3ZhU0dzZXREN0NSRkUwMldWYy1ENi1hRG1YVVJMYnRVX2dJTTRkOS1NcEpLMTNvV0RDSDhYVQ?oc=5",
+        "published": "2025-11-20T03:00:00-05:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "What Role Do Global Partnerships Play in Advancing Boeing's Strategy? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQdHJ4QnJhcVZKOV96MG5wZzRxclNzNTRJSGJMT3U4c1k0ckpJTG5KTnU0SVpuNWtBVDI5ZFFuVllGbXdEb1pNdmFkcWcxZmIzaEtTU3ZIRzJTYWVPeWo0dG8wdnhveDI0ckFiNkhoM2RjaEJrUXZveDBKTjJwZldVMWVPYlZnalNnWE9qQS1R?oc=5",
+        "published": "2025-11-20T03:00:00-05:00"
+      }
+    ]
+  },
+  {
+    "symbol": "BA",
+    "company": "Boeing",
+    "frequency_number": 3,
+    "period": 12.56,
+    "train_days": 38,
+    "validation_days": 8,
+    "status": "broken",
+    "estimated_start": "2026-07-07",
+    "confirmed_on": "2026-07-16",
+    "prior_session": "2026-07-06",
+    "latest_q": 0.481,
+    "latest_nrmse": 1.4542,
+    "latest_residual_sigma": 0.056243,
+    "residual_trend": "falling error",
+    "observations": 456,
+    "news_sites": 10,
+    "news_articles": [
+      {
+        "source": "StockStory",
+        "title": "Boeing (BA) Stock Trades Up, Here Is Why - StockStory",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNcDR0Y0Q0WGdWZk1rWFA1TmY1ZDk3QktkTHdMelk5cC1oTWhTWnNjZ2tJYXJKVnBOcEdmekhkUDA4R2Z1SGs4X3BfcEJMYkI0ZXdVeEUwd0E3ejloSmF2eldISHhlMEZ2dEY1M1JOcHBWdDRta1NSMV9WYnE1WkJBLXl2MVQ4dExtUmlrdU1SNExRc0FVVWhTY1FrRkJWUQ?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      },
+      {
+        "source": "Investor's Business Daily",
+        "title": "Boeing Takes Big Step To Ramping Up 737 MAX Output - Investor's Business Daily",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1RQmsxUWtackFXNDZ1R1VNcFF6TGdEMGJFcTdEWVYxWjdpOUhaMTdNTzRyUEFDZ0JFYnZ6NWdjUFFudXlLam5OcVRJUFJXQjZyZ3J2cWpqQ0RiZXJBcHk5Sy0tbFdoanJYbC1uTFRfZjZJR1lrX2liWk5UR00?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      },
+      {
+        "source": "Investing.com",
+        "title": "Baird reiterates Boeing stock rating on strong delivery momentum - Investing.com",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYW12cXlpWWZaTnF6WTF2eTBHRXVYR012Wk54X3NncVlfRFBYR01oMTFCdnMtcE1YcG1mX0ZpQjYwRnh2N2prRlhiNXVTUk5mcmtTbGJrdl9wTndwb0VMd3RlWGM3c2hCWHVUVFFCYWJfSkhxYThwN3NabzlnNWZxNUNfNzVjeWhZeHZVSWZ6djF6ejhqUWRUZG41OFpaZV9EVFBERmhKeGc4d2FVMm42UEZUX1hIYjZYRGZSY2VpajJPUQ?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      },
+      {
+        "source": "TradingKey",
+        "title": "Boeing Co Stock (BA) Moved Up by 3.29% on Jul 6: Facts Behind the Movement - TradingKey",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNdm1OTzBJeXRoamNodktlYkxMR3VDUXdPT19jM2lTSi1oMWpISzFSekNkWnlCVGVCX2NaMEtWZXRmcTZBX3NDcWZ6c3BBeEQzeXh0Sng0czBqM2dqbmJWUlJOTFJyVkw3TndETng3b1Q5eW8tQ1Zfa3JBc0hhWFpCMEtWakNYQ1N4?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      },
+      {
+        "source": "MarketBeat",
+        "title": "The Boeing Company $BA Shares Acquired by Hodges Capital Management Inc. - MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWFF4MTRVUF91dktjZVRvV1hTNDlSR3k5LW9vdDRPVWFpZWJZZF9LRnVfcEVvZnNEUDRGY3U5WDkxZXdzWXJYNzBoRUM5emJHVzBTWjlJaTBTV0NTLU5IVjFJcm11V1g1S1FSUmxEbWxmb1djVml1YVYzQzVFYmVfRG5aajBvWXJaRXRWbDBjT3BEZmlXajM1ZW1GZ1dwamNpcURoaUtpWEhlNFR3bTVUUGstU1FoUDBJaDhWbzlaMTc0akhWQm45bFk5TQ?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Is It Worth Investing in Boeing (BA) Based on Wall Street's Bullish Views? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOZThIYS1FUmpRVHozNkNVYW9tWmNGc0dWWlZtWXlpeFdNSHBxNEVDSUY0TFZxbFE1eHF1UDNUNnFQa2tBakVLdTNnYTFaTEFpTTFMNWFTdVpnSmJrYk5aZktWT21aeDdhaE5zT1VGZEQwT3NVOWIxM2l0VmJ3Q1lMMS1vLWV6N1hkVUJPNFoyMFg2VXhFa0c0NkFRNmw?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Boeing Launches Fourth 737 MAX Assembly Line to Support Higher Production (NYSE:BA) - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPRXNJOTVZbzN4WGR3TWdOTm9paW5FQ01Cc05tUXp2QUNEelZGQkF3V1d2MjZvX2FPUmFsOENQeGJtZm9NUHlhX0c0NXRUZm5ncFlPRVdfZV8yQzZFZXBRa3daYkR2blJJVldxUDlYd282YUN4QUF2eVhGZmZHd3laZ0RtZjFmc3dsZUN2UXhLcHFKV294TnphNFlVQQ?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Boeing Stock Surges 8.6% in a Month: Buy Now or Stay on the Sidelines? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQQS1pbXhxVWx2T3BuMEREOFRxWkNWTlZZaWJVSTliZVU1MlppYm9ZSGlFbE5mTUdMVUxOTWIydW44OEI5WS0ySTJ0VVlodHJWRlpCM2xjbTNGVTRLWmRHdDQ1TTRJcjV6UnVtblhPcXkzY0lJbjR6MGlVdWVFQUE2S2JLWlE4cW43TG5OamVRTUNldw?oc=5",
+        "published": "2026-07-07T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Unlocking The Factory Floor: The Math Behind Boeing's Recovery (NYSE:BA) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPcWRoVHl1U1lESldGSlhBWUNweUp1VGtCSXFPc1M0aFBzYjlmWmQySTd6Y2luYmRsU1ItTGNCMzRqMXIwSlUzVl82dDlkNzc2VVZQQTFMTkFKVC14djZoY2RWNUxmVG1lWUFHTmtUTHhmb0hydTVFbGVtSWI4dy1qWnRjeU1iWGVCanZHaXdmZ2xYbng0T2k5UWZqQjZtZk0?oc=5",
+        "published": "2026-07-07T03:00:00-04:00"
+      },
+      {
+        "source": "24/7 Wall St.",
+        "title": "Lockheed Martin Vs. Boeing: Which Stocks Is A Better Buy In July - 24/7 Wall St.",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdFFxdDR2Nl9rQmNXclBwR3BaZ0RnVzhZQmE3TEgzblNwellqX1RZUlNadW1ZZ3Zka1dHYzBaZ2N2TjY4SnNNN0s1Z3ZhRXZhazFaeVFkdnR6MXJkejhGaTJuYVRwY01aNzFaVUN6Q0tsR3VnejNCWlliY2RoVHg3MkdHNGprWkR2a01rWkZna3pxU0hieUwzZk5vd1V5VW5WbzFpX1BrMU1zQQ?oc=5",
+        "published": "2026-07-07T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "AJG",
+    "company": "Arthur J. Gallagher & Co.",
+    "frequency_number": 1,
+    "period": 25.12,
+    "train_days": 76,
+    "validation_days": 16,
+    "status": "broken",
+    "estimated_start": "2026-01-20",
+    "confirmed_on": "2026-02-10",
+    "prior_session": "2026-01-16",
+    "latest_q": 0.0167,
+    "latest_nrmse": 4.2611,
+    "latest_residual_sigma": 0.032215,
+    "residual_trend": "falling error",
+    "observations": 410,
+    "news_sites": 1,
+    "news_articles": [
+      {
+        "source": "Seeking Alpha",
+        "title": "Arthur J. Gallagher Stock: Benefits Of $13.5 Bln Acquisition Of AssuredPartners (NYSE:AJG) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNTl4NWVIYlMwNll6TnRiVG9DYmlWMFRTdW9FNEpibDdZNWUzN3JTR1NpZjZQSWNMY2x1UnlPcjFGZFFXWVU4S2szZTRZdnlZci01NE1GTld0d0NHZVRhak45R2JFREtFVFdieFZNVGlzX2libzFxWS0zbEtpbndyV0RHWnJoVjU0MGtmbk56UDU0U0dXMWtEOUthUExCaDFhbUFNTmlqeExSQk41SnBORw?oc=5",
+        "published": "2026-01-20T03:00:00-05:00"
+      }
+    ]
+  },
+  {
+    "symbol": "AJG",
+    "company": "Arthur J. Gallagher & Co.",
+    "frequency_number": 2,
+    "period": 16.75,
+    "train_days": 51,
+    "validation_days": 11,
+    "status": "weakening",
+    "estimated_start": "2026-07-16",
+    "confirmed_on": "2026-07-30",
+    "prior_session": "2026-07-15",
+    "latest_q": 0.4296,
+    "latest_nrmse": 1.8754,
+    "latest_residual_sigma": 0.034978,
+    "residual_trend": "falling error",
+    "observations": 440,
+    "news_sites": 0,
+    "news_articles": []
+  },
+  {
+    "symbol": "AJG",
+    "company": "Arthur J. Gallagher & Co.",
+    "frequency_number": 3,
+    "period": 33.5,
+    "train_days": 101,
+    "validation_days": 21,
+    "status": "broken",
+    "estimated_start": "2025-10-01",
+    "confirmed_on": "2025-10-29",
+    "prior_session": "2025-09-30",
+    "latest_q": 0.0132,
+    "latest_nrmse": 6.0505,
+    "latest_residual_sigma": 0.029826,
+    "residual_trend": "rising error",
+    "observations": 380,
+    "news_sites": 0,
+    "news_articles": []
+  },
+  {
+    "symbol": "AAPL",
+    "company": "Apple Inc.",
+    "frequency_number": 1,
+    "period": 50.25,
+    "train_days": 151,
+    "validation_days": 31,
+    "status": "broken",
+    "estimated_start": null,
+    "confirmed_on": null,
+    "prior_session": null,
+    "latest_q": 0.474,
+    "latest_nrmse": 1.5425,
+    "latest_residual_sigma": 0.040722,
+    "residual_trend": "falling error",
+    "observations": 320,
+    "news_sites": null,
+    "news_articles": []
+  },
+  {
+    "symbol": "AAPL",
+    "company": "Apple Inc.",
+    "frequency_number": 2,
+    "period": 22.33,
+    "train_days": 67,
+    "validation_days": 14,
+    "status": "broken",
+    "estimated_start": null,
+    "confirmed_on": null,
+    "prior_session": null,
+    "latest_q": 0.0335,
+    "latest_nrmse": 1.2041,
+    "latest_residual_sigma": 0.044144,
+    "residual_trend": "rising error",
+    "observations": 421,
+    "news_sites": null,
+    "news_articles": []
+  },
+  {
+    "symbol": "AAPL",
+    "company": "Apple Inc.",
+    "frequency_number": 3,
+    "period": 14.36,
+    "train_days": 44,
+    "validation_days": 9,
+    "status": "broken",
+    "estimated_start": "2026-05-26",
+    "confirmed_on": "2026-06-05",
+    "prior_session": "2026-05-22",
+    "latest_q": 0.0341,
+    "latest_nrmse": 1.1603,
+    "latest_residual_sigma": 0.049097,
+    "residual_trend": "falling error",
+    "observations": 449,
+    "news_sites": 11,
+    "news_articles": [
+      {
+        "source": "foreignpolicyjournal.com",
+        "title": "Apple Inc. (NASDAQ: AAPL) Stock Hits All-Time High as Price Touches $309 on Strong AI Narrative - foreignpolicyjournal.com",
+        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPZ2JCckJqbUdyTV83clBiRWJ4dnAtb3J2U3llc0toMmxxamN6c0ZWR1RjNmJqZnZucnZ3TzN4Skc3N1RhZXpjam9kanU1ZFU2WkpjZUR4ODVmWVFLOVZWeGYzYXpBYXVjY29zZXhPSDBMRTRSSnlXRndmRnROUmdSckdkNm91bWxjR3lrcTkyd211SW5vZDl3UkpLMWx3SFVzOVhrSjgwdHh4cllTbklLd2RITFRWYVQ0ODliWlRrOHZLY2pnT1YyTzl1a1VJQnk2Y21rR3d3?oc=5",
+        "published": "2026-05-22T03:00:00-04:00"
+      },
+      {
+        "source": "Barchart.com",
+        "title": "Microsoft vs. Apple Stock: The Numbers Reveal a Clear Winner Heading Into H2 2026 - Barchart.com",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQYi15S01JMndVdVIwblV5dFZ3V0ZQSTVTZ19mZi1VckY4bjVLLU10LUphc1FUeVU5dmh1Z1p3LWMtVEhVZE9ZYk9fRWFDT21xd3BpSkc5TnQyS3dBOExDTnRPOTdMbXBuM0RBVVZ4elZaZ2E3cENKaDBzeTdscVlENXZkbFlYWEpaUy02V3o4Y2RxSlFBNE9Eck50SGx4NHNnOHNSMkRLczhNQ2d6Z1VkcmU0YklLRkVxSlMzUUhxNG0?oc=5",
+        "published": "2026-05-22T03:00:00-04:00"
+      },
+      {
+        "source": "Investing.com",
+        "title": "Apple stock hits all-time high, reaching 311.18 USD - Investing.com",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNblV4YlNFQXJIc0d6aGtLSDBQOUljckdiemdkQlpsMWFnRHd3N0VTNGttbWh0WEFWQXVYRkhyVXdLVTlKOC0xSGVpS3JEdktBc040T21HS0ZlMVF2NVAyT2NYNTNnc3liNFN0RDFlbDJqNXd1RnI1ek5Wd2lqczNmV1MtZS0xd1hkSmlHTlYxeE1EeFhBMl9QM3pHTlYwTDRYVWItOWpSQXc?oc=5",
+        "published": "2026-05-22T03:00:00-04:00"
+      },
+      {
+        "source": "Traders Union",
+        "title": "Apple stock edges higher as $110B share repurchase authorization supports sentiment - Traders Union",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPMEN1SVpPcWdoVC1wQTdMdk1Sc2xMX24xNVI5YW9hY2lpUjhRRWU5Y3ZUMHBzOXVsMm5vY3A0TkQ1aTZ6QWJYVmRxT1E5RGNoQUpvSGhQbXJHTWZHMDdwUDVwd0QxX2Y1OWdJVnM1R0pJdkdhV1NLVXR5NUV0NFZLQVJwS2FUUF9LZk92LWRqajVWOVhNcWc?oc=5",
+        "published": "2026-05-22T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Apple Inc. (AAPL)’s Durable Growth Narrative Keeps Getting Stronger - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNRVA0WGdnUWJYRzBUWDFyQTdCck5BcWd3cndyWDg5WTl5a0NrVW1NYUFhNFpGM1NORlVrTDlYbGZ3ZHJ3by1Xc0pTODlDc2FBdi1VWVhFenV1Z3UweW5ZWDJUdi1IZEFBSVNGTG5oMVpyUjZHN3p1aHRmYkxOdGtKaGhleHctU3ZoalNTSldBYk92T3BMTzd3VllR?oc=5",
+        "published": "2026-05-23T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Apple Is Priced Like Everything Has To Go Right: It Just Might (NASDAQ:AAPL) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPUG9LMkhXblRleEpMamdKMi03bHh2aGtRclhFYVpLcUJJNjFtYWo2TnRtUzhQLXBLSWFZbDhhMlQ2RC11WHd6N09GT2lac2ZOWTh6VVc2d0I0aXVBVXVFaWc2a1R6SE5QRmRIT1RZUGh5c21rQW9Dd3duQU9sSjFqZ3VsWFN2cTRubmg2VmYyVmZmVGdXQVNyWnFHNGl6MkJIY09RaQ?oc=5",
+        "published": "2026-05-23T03:00:00-04:00"
+      },
+      {
+        "source": "po-news-eg.net",
+        "title": "Apple Inc.’s Durable Growth Narrative Gains Further Traction - EPS Consistency Score - po-news-eg.net",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPRmM2RmtGMGRmX2NhTkZTTTZaeVVieTlnX2VQMmdBWjJxRXNvbVpqRG1tbVNVbTd5QVdBcVNhN0M3Mm1FY09wdENqY1RoZDhnS1lZRHROT0RFcDhHWDVtNmlDMVRuMTF5Zml1MmVWS2JRSXNCcDk3X0tjcHcxT0c4dkJVcHVSa3BsX2JLVjYwdWV1eWQtNWR2TW1BdDNoSlVn?oc=5",
+        "published": "2026-05-23T03:00:00-04:00"
+      },
+      {
+        "source": "foreignpolicyjournal.com",
+        "title": "Apple (NASDAQ: AAPL) Stock Price Trades at Premium After 59% Rally, But Valuation Picture Is Mixed - foreignpolicyjournal.com",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOYUEyblo1b1Q5ZGg5MkNrUTBILUdhekNaVll4bVpfUEZFWTNpNml1c1dSY05icVBjZmgwOWJBZVVCcGhaRVRIUXktZkVUeklDMzNaMno1N0FQRUllbDc0QU9KRHRLOTZSa0d2QkZrb2dDX0UzUl9STzU4NHdkVXdYNTYtUVh2NDhhZko4b2pwNG5KS3JKb01LTU9lQ0YtTS1ZYmdXSGJUVHlzVGlaVGt0QXpVZmdQS21sWXB3OUYxU1BKZEFrU280SkJBTFVadmp2b0xMT2ZmMDliUQ?oc=5",
+        "published": "2026-05-25T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "3 Reasons Apple Will Be Booted From The Magnificent 7 By The End Of 2030 (NASDAQ:AAPL) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVWQwMXFjLTRGWlVDbWtvZDc1LVFsb2NJV25DeW1sNTMtYnJkWkFlbEhjc1dQZUtQN2RhZVM4N0VSaVNHbFA2X1NmSXJlX19LRmZxZ0RWSC1KZFBoS2Y1LXlCVlV2QWx3NDA3d1hOSGZPWGVTWEowNHBOYnNBRVpDeUs5WFVZNEFzc0pyalZibV9tRkxrblF2S1VsWU43ZllXRVI3TzB1Y2FGZ0YtYmc?oc=5",
+        "published": "2026-05-25T03:00:00-04:00"
+      },
+      {
+        "source": "TIKR.com",
+        "title": "Apple Rose 14% in 30 Days. Here’s How Much the Stock Could Rise in 2026 - TIKR.com",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOTZWY2hKS3haTXM0NGtmX3g4eUJwVVhJUHBHZThHQUxuZW9QdkFxNFVDMjVlbFNLR1AyVUpUTFVwOWRSZnljQ3pmTmJUUFVpaG5sZzdia1gwRTQ0aERUd0xmM1QzUy1Dc2FhOUdXWFdKNHdCVW14OVdSZFA5T244T21KSm1rS3lKblNodVJXd1docS1fa1pxY2NR?oc=5",
+        "published": "2026-05-26T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "MSFT",
+    "company": "Microsoft",
+    "frequency_number": 1,
+    "period": 12.56,
+    "train_days": 38,
+    "validation_days": 8,
+    "status": "broken",
+    "estimated_start": "2025-10-27",
+    "confirmed_on": "2025-11-05",
+    "prior_session": "2025-10-24",
+    "latest_q": 0.0282,
+    "latest_nrmse": 1.738,
+    "latest_residual_sigma": 0.117734,
+    "residual_trend": "falling error",
+    "observations": 456,
+    "news_sites": 20,
+    "news_articles": [
+      {
+        "source": "Barron's",
+        "title": "Microsoft Stock Has Barely Budged Since July. Earnings Are About to Change That. - Barron's",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSkZmaHd6ck5qckRxbUIxZmNUYUxaZ0lNNUppTXl5TXdBTkp5bi1kdm5lMzlQZDFpWHdOb3JfVEd1WXlWdV9TS0stWmJIb0c2RktBTHk1OHZnLWxrN2ptX0lpdzJEcm0yMGxVYy1RSmFBNXBRaWx6Q081Q1NBZk1Hc251QTRVUjFLOU8ycg?oc=5",
+        "published": "2025-10-24T03:00:00-04:00"
+      },
+      {
+        "source": "uk.finance.yahoo.com",
+        "title": "Stocks to watch this week: Microsoft, Alphabet, Meta, Apple, Amazon and Shell - uk.finance.yahoo.com",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPUU1Gejd1dzE3cVJOVDgzWXZ5OUZkdlRibUJyMnNhckRURTdWaEFLeXFFd2R4OEpJUndwajhYSlpBQi1mamd1NE1OTHp4VlN2MjBKVHVRWU11SEhFOU9WM1o3YTg1WGY3OGowbHRPcm1NMXZ2MW9PU0RZQmNoYXBrMU1RQjQ3MVZ5cTctVWhqOUhmU0FQcnVGS0Q2dG1tdVc3RUJST2tlWXBoOU0?oc=5",
+        "published": "2025-10-24T03:00:00-04:00"
+      },
+      {
+        "source": "Morningstar Australia",
+        "title": "Going into earnings, is Microsoft stock a buy, a sell, or fairly valued? - Morningstar Australia",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQNTB1SFNsUll4WkxvMG5Nc296NW5PQU1EMWVMUXkxTmJOMldyYjdDc0szc05Cd1NLQ3JFT01TYldiRUwzMnI0SDNQT2JXZ1g4T3R3VWtVamZxYUFVSFdVM3EyTFYxRE1KZGFlUnBHMlZHbXpvWmx4N0JLQW5MNTMtb3NNMUtVdXE5ZHZSc2tMd25idnpwSFNNNnlTR3JqVkZKR1Z1ag?oc=5",
+        "published": "2025-10-24T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Prediction: 1 Unstoppable Stock Will Join Nvidia, Apple, Microsoft, Amazon, Alphabet, and Meta in the $1 Trillion Club In 2026 - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcGxnQ1dmVzJlZjdYaXc4RnVHbWRpanhVRGFzbDZCbGhYTlYzSXAtaGs0eWxBTXI1RUgxdVFjTHlvQm9HWDdSTnV6SWpTOVpKdk5BX0RvR0tta0lSendpTTJmaFc3MmV0cTNQTGRjWGkxNGFKMU90WWprLTdKTU80RUQwcklSMG5j?oc=5",
+        "published": "2025-10-24T03:00:00-04:00"
+      },
+      {
+        "source": "TradingView",
+        "title": "Here's What Microsoft's Chart Says Heading Into Earnings for NASDAQ:MSFT by moomoo - TradingView",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaG1LcUQ3anFxRlZkelBFTVdRMVVQWW82VndwNDZOdzZsUEIzZjBINHJ0eHo2R0VPbXJuRlhYWGVXc0k3eWpEb01LN2lvd3doTl9UZVIwWk1hVC03Q1RJZVBPcjBmeWgwLVhlSm1rV1BacWZUcHhvVTNJOHRTbTFTY3k5VzUxbXZxMXlyU1g4eXFvOVFNVFV2VHAyVlFUd0hmYmtWci1TQXU?oc=5",
+        "published": "2025-10-24T03:00:00-04:00"
+      },
+      {
+        "source": "The Motley Fool",
+        "title": "Meet the Magnificent Vanguard ETF With 43% of Its Portfolio Invested in Nvidia, Apple, and Microsoft - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOY014YnJDcDJDOEZSRDBCNVk3VkxJdjhHNHJLbFhhUW1ZbW1yTEV2NVcyc0JYZjRlMnpfR1NYYWRDR0ZNRHk3M2QtZ3hmNHh1SEFDNFRuYlp6TjZSMWZKMF9UMnhlYXc2N1o4dVpFdFU2WERpNXRXeHVfSzFObkJBd2tlVFpndnp6cTZUcVdXVlR3QQ?oc=5",
+        "published": "2025-10-24T03:00:00-04:00"
+      },
+      {
+        "source": "Indian Startup News",
+        "title": "Microsoft CEO Satya Nadella's pay hits record $96.5 million (Rs 846 crore) in 2025 - Indian Startup News",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOdVJ4emV3Ql9XcTA1Um95YTVjTmFnNktrNExqdzNKSFhScGpsN2lvZ2NSR0JhY3NmcUUzNDBPUE1RRFNfbjN3THF3S3lRM1piaEFLZG9FLWRSeFdpcEIzcnZ1MjlOc21VQzZjd0ZXX1JoZzJwU1FTM3J5T2RxbUFUNTV2MlZXRWpuYlFpZDhkMmdHV3Fwbzl2SjVtcmhWbURGWS1yVzRMdmpjbDJXakZxeFFYSjFWWGo2SThUdUN30gG-AUFVX3lxTE51Unh6ZXdCX1dxMDVSb3lhNWNOYWc2S2s0TGp3M0pIWFJwamw3aW9nY1JHQmFjc2ZxRTM0ME9QTVFEU19uM3dMcXdLeVEzWmJoQUtkb0UtZFJ4V2lwQjNydnUyOU5zbVVDNmN3RldfUmhnMnBTUVMzcnlPZHFtQVQ1NXYyVldFam5iUWlkOGQyZ0dXcXBvOXZKNW1yaFZtREZZLXJXNEx2amNsMldqRnF4UVhKMVZYajZJOFR1Q3c?oc=5",
+        "published": "2025-10-24T03:00:00-04:00"
+      },
+      {
+        "source": "Business Insider",
+        "title": "A laid-off Microsoft manager shares why he's ready to say goodbye to Big Tech after 2 decades - Business Insider",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSW54aVlENlhRMExneTNfVlJmczF6T0N2alluYlVyNXJwcGdNU3F6cDFPNnVVQi1HNm5Hck9NcEV3SVFpQUdpZ2hobDQyb3J3UE04Y2lUVWlUY1pNWXZBRGQxRWtaOVVFeFNzdWw3T0tMQUd4VXFUUG9RbzlNUUswOS1nNnM5RnFnaC0ybDdkRWZOU0lDb2RsbUhENGo?oc=5",
+        "published": "2025-10-25T03:00:00-04:00"
+      },
+      {
+        "source": "Investopedia",
+        "title": "Microsoft Reports Earnings This Week: Here's What Investors Need To Know - Investopedia",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMlVYMDAzZ3VyajkwVlRjVXNqR3RWWFh4Q05Cd0thdThKRlliMmlSbXhWUjlibmVua2pTNGVsRUxMZnEtNnRUSjFnYWU3cnR6ZzU4Szh5c3pvSmQ5S1N0QUZiNkpzZWR0QlBxRnNmb1dGc1ZqdERwUzRscmJFcFM3RlA4ZXFjUy1HLVdGeURHYlAtQmtyOGdGV1NaRjhHb1FwMGdldUFVRVFYZzRy?oc=5",
+        "published": "2025-10-26T03:00:00-04:00"
+      },
+      {
+        "source": "The Motley Fool",
+        "title": "Prediction: This Artificial Intelligence (AI) Stock Will Join Nvidia, Microsoft, Apple, and Alphabet in the $3 Trillion Club by 2027 - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQVlVtTDNKLWtUYUFVeGlDeU5KbnMwMDZHRGxaYnBrTEgyQlI4Qk9TRnpEcFpEeDdSdTljRUxYNkEtcXFrYWJ4ZGxndWNPMUsxdkFnWE5NVk1GeGo0cGhtLWh4aU8wTDNZcmEzNXlOS3haM2ZobVFaTUJsS1FPd1VXend1LWozS3JSMzlDMHlR?oc=5",
+        "published": "2025-10-26T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "MSFT",
+    "company": "Microsoft",
+    "frequency_number": 2,
+    "period": 28.71,
+    "train_days": 87,
+    "validation_days": 18,
+    "status": "broken",
+    "estimated_start": "2026-05-20",
+    "confirmed_on": "2026-06-15",
+    "prior_session": "2026-05-19",
+    "latest_q": 0.5012,
+    "latest_nrmse": 1.3713,
+    "latest_residual_sigma": 0.112596,
+    "residual_trend": "falling error",
+    "observations": 397,
+    "news_sites": 19,
+    "news_articles": [
+      {
+        "source": "Yahoo Finance",
+        "title": "Does Microsoft's Stock Belong in Your Retirement Portfolio? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNVm9fRTZFTWZ5NEJDUHRadnd4UHVoaFM2YVd1SlV6M1RuMlI1cllyUXR4b3ZVRXVtSlBYMF9qWDJCR0JLcmlLMTRxbTVmaS15ZGlxdy1aSWF3VmNrZHcwTnc5aS1US1hYR19WOTZzMlBITE5HQmR5aE9LWHB1WnR6eXpUb1U4dEU0Zk1RaDZ0TkFBTUxMVE1aMEdreFhZd1RxOHkxLUhZUQ?oc=5",
+        "published": "2026-05-19T03:00:00-04:00"
+      },
+      {
+        "source": "Barchart.com",
+        "title": "3G Capital Exits Microsoft Stock in Major Portfolio Shift. MSFT Is Still One of the Best AI Plays Now. - Barchart.com",
+        "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOM0lPS0ZlZG0xWTloazY3ZUZmdmpNT01IUzZZekR1LVlSY2JiSTJXM0ExUjFabXdjRERkRk1kZXRLc2RPaWNCRHZCWHh0Vm9jcFFKbFZLd18xX29iYjdOMVBmbzhDNjlmUEVrbHI2ODVCUzF0NHJqVHBoQmV2WkhZTGVaUjd3bi04NVF5UlE1ekpRTHJyODJJdnE1RkhvakRtLXZVWjFWaWZzTDFjWFRoVExmZEJNaHU1bDFVSUNuX3U5YzAzMmZ2ZWJQQ19fRWcyVFlfZG1yMDljM3BU?oc=5",
+        "published": "2026-05-19T03:00:00-04:00"
+      },
+      {
+        "source": "StockInvest.us",
+        "title": "Evaluation of Microsoft stock downgraded after the last trading session - StockInvest.us",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOM3hsNWhWYmJTeVJSSlRBdy03Z2gtS05BUEd1M1B0ZnRoSGRCNlRCVG5OZFBheHJsVkdHcmh0aXcxR2ZlbGRLbUswR29jMWpZUkdkU0NKdzdWeHNDUExsM24tcWpuTERkZEdMMVZ1ZlE4cnZKTU9rYUEyZ3p6QkpMMndpT2RyT3pLandDNVVibUNZTzM2WEVoV1pQTFFqYnd4Y3NUSTlEWHBKVmRDM25HbmUwSDNSY0k?oc=5",
+        "published": "2026-05-19T03:00:00-04:00"
+      },
+      {
+        "source": "TradingKey",
+        "title": "Could Microsoft Stock Reach $1,000? A Complete 2026-2030 Forecast and Evaluation - TradingKey",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVE5zc2htQTVzbjJmTjdYN3cyc0RMd2w4S1dmaEFrMjQxZmJsVUtJdlR1bzFvZDZ6Wm4wLUVLb20wQkZjSy0zdnFRR29Jcl93U0lQVnlZUnZBRlplbXEzTHp1NExxWTRiVGwtX3hLZTNNSVdXNF9uZUxNbWpBRnNKVHE4SzczYkFQUWl3eTVoVU1GRWkweHFYaUtVcDFMRzNTQkNsWDZNS0VUWWlBZlpnN25DaWh3ZXRGRVZZTHdwREgxSjZ6?oc=5",
+        "published": "2026-05-19T03:00:00-04:00"
+      },
+      {
+        "source": "Benzinga",
+        "title": "What's Going On With Microsoft Stock Tuesday? - Benzinga",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOMGlEaFFUcG9YWEgtdWQzeW1YcnhiYXNXSmhxNmJHNDRrZmVwcW5Ib3RIUUV6V3VhQ3N1TXhfeDAtMzhhRTRNQW1yQ2k3VEJ5cHgyVmRMSlFEY214akFDSnhGOWpXdVBZcUoxdGVJbzNOYTBBVkktTVEwcnRuMzdQU0JsVEFnZUd2Q1pXdHJvRUtmckoyNjBLU2xmTWdxeEU?oc=5",
+        "published": "2026-05-19T03:00:00-04:00"
+      },
+      {
+        "source": "24/7 Wall St.",
+        "title": "Microsoft at $420: Buy, Sell or Hold? - 24/7 Wall St.",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPSGYyc3BidXhfQmhQQVd2UDQtQ1o3Q3lWeVFSZHo0Z1BlSWFkQjZ3bG9lcGR2SWo4UDVsREp2di1VdFJNUTFmVjhJTVBQdmVRalJBeTV2S2FxQUVEaFdiZUNybDN4Z3NrZktTaHlLaW0zSGRTcjlTXzBEOFFGRnhFbUdnTQ?oc=5",
+        "published": "2026-05-19T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Why Microsoft (MSFT) Stock Is Trading Up Today - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPaWM2NkRhd3BCUEFvekJEWGhWLWFVZ1Rqa0EzdGFUTmZjeU9RT25YcTc1cHY1bUNnTzZ3d3hXOEMxSFh2em9FX2JOaktNcEVkYjhuT0F5MnVYR1Y0eU1aM0NqMUY0Wi1aeUhsWkVOamlOb0NGTENyN2s4cDYzQk8wOXNiMU93T3NOMlc2YXFyczBDMWk5OEV6bFFXSlhhdw?oc=5",
+        "published": "2026-05-19T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Prediction: Microsoft Just Became One of Big Tech’s Best Values - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQX2xOMDlGMkg4UWJBamNsUlYzdmhPai16T3JQQlZKVk1lVHAxSDJPdGJFdThCVl94b3N1ZGdLZVg4d3VRdDFLcFNkRVNyLVNIdzdubVFuUktGcjV6TDk1UTlOellBLUN5Z1RsSDNXYm1MQ2JqdXBFb2V2ZUt1bDNKRTQ1ZXhqSFRjWnhhOWFpNm5KSUFJMW5xQjQtb01JbGoweW9v?oc=5",
+        "published": "2026-05-19T03:00:00-04:00"
+      },
+      {
+        "source": "MarketBeat",
+        "title": "Microsoft (NASDAQ:MSFT) Stock Price Down 1.4% Following Insider Selling - MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSmdVR3lBMVRRekpxTzRXOTU4ZmVaTC1QZXlMeVB4MFptNk1fWDcxOEhjT3B3TjNBXzZIOTVPLWRxRlI4bW92R1ZWeEktSEFEZjctenJTWFh0WFlBUXRtZVdjcU1OLXRUV0VoaEl1am9wQWc0WUwwbkZRSWExQ0M5RWZRZzdDa0VBaGI3YXVjQlFyRjNkZ2NldEc2STlSTzJyQ3JEY092dXZRZnpyVXNjMmFnWVg4WDM5NHN0VA?oc=5",
+        "published": "2026-05-19T03:00:00-04:00"
+      },
+      {
+        "source": "theglobeandmail.com",
+        "title": "Should Investors Buy Microsoft Stock Instead of Amazon Stock? - theglobeandmail.com",
+        "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOMmgwUFVaTEdCdm4xNU1HZmlGcmxUMkRPUnNrZWxadTY3alJTaFoteEpkV1pPb0xoTWZ0TzZ1N1FzNjR0dlNNZWllbEl4cFdDa0pVNFJ6SHVBVnVrVlhhanR1cnZWeHk3Rll4bFlQT3dsM3VfZzg5SkdkUS1SLWV0N2tJNl80VG5iX0xpOHpmTUxCRWtCeWVYbmh3VEM2SUlIOWZSTVUyY0VpUGJiU3pSYzltVXBQeTRKcWJiQkxOZHlGNHd6Y0RrTWNxMDdRSzFqeWdYZzlKc2JicTFNcFFF?oc=5",
+        "published": "2026-05-19T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "MSFT",
+    "company": "Microsoft",
+    "frequency_number": 3,
+    "period": 15.46,
+    "train_days": 47,
+    "validation_days": 10,
+    "status": "broken",
+    "estimated_start": null,
+    "confirmed_on": null,
+    "prior_session": null,
+    "latest_q": 0.0299,
+    "latest_nrmse": 1.5466,
+    "latest_residual_sigma": 0.105037,
+    "residual_trend": "falling error",
+    "observations": 445,
+    "news_sites": null,
+    "news_articles": []
+  },
+  {
+    "symbol": "NVDA",
+    "company": "Nvidia",
+    "frequency_number": 1,
+    "period": 40.2,
+    "train_days": 121,
+    "validation_days": 25,
+    "status": "broken",
+    "estimated_start": "2026-03-10",
+    "confirmed_on": "2026-04-14",
+    "prior_session": "2026-03-09",
+    "latest_q": 0.0238,
+    "latest_nrmse": 2.3765,
+    "latest_residual_sigma": 0.029032,
+    "residual_trend": "falling error",
+    "observations": 356,
+    "news_sites": 33,
+    "news_articles": [
+      {
+        "source": "Barron's",
+        "title": "Nvidia Stock Is Threatened by War in Iran. Chip Stocks Are Still Rallying Today. - Barron's",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNMDhDLXFvSHVJVjI0ZzlsNWcteHpkM1lYTHZLclVfdzJDWEllWExrc1Atd0VybFotWGJjTldvQmZrcFhCckk4a0NHWW51MGg2RU9JT1VfVWZvWm5ZejJ4VVJjOHRQVFQ2dTJBTkpkOTdmRV9hVGgwcTNGOElJTmpGdw?oc=5",
+        "published": "2026-03-09T03:00:00-04:00"
+      },
+      {
+        "source": "The Twelfth Magpie",
+        "title": "£1,000 buys this much Nvidia stock… what might it be worth in a decade? - The Twelfth Magpie",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPV2NqdTFjUFpxZGV1WjR2YXlpdXhwbkhoNGxWSzVidTN0UnJuU3VMUFVhZ0FpeTFsdUhfVlhXNTNaSlFqeDJWS1V1MEFscldQbE5la1NhSXdBd0xmaTVJWkRlQ0JrTGNaVXlsbWM2amtGUi03UnVZV3piY2R0dlREQS1kZHhranhHX2JlQURDdkxUanJydDhnaFQ4SWJaWDh3RXg5RzkyeXNkamUwUUE?oc=5",
+        "published": "2026-03-09T03:00:00-04:00"
+      },
+      {
+        "source": "Investing.com",
+        "title": "Nvidia stock rating reiterated at Buy by BofA ahead of GTC event - Investing.com",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZ2ZyOTRwZ3BLMnNveHJ5b0ZfZ2Z1UHlPOTg0YUd6bGM1N1kzcmM1SDJ4dnB1QXo4b0k0Nk5xWTdCNkJUT1Y0UVhWNU5qT0tFYjF1VU0zSksxTnhVWmN6Q1AzbjE2Z2h5ZkRtZUdaYW10SFdRVFRObFFBMTNER181dThSTkN1V2p0aFdudWstbzNRNDBPaXRVMFM3bFhDQ05iLWVTU1VQVVZmb0c4dWh3R0ktdzdBRjA4czEyUHZkNEt3UQ?oc=5",
+        "published": "2026-03-09T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Is Nvidia Stock Your Ticket to Becoming a Millionaire? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZzk0LWVyTi1CVHpFeDlFSlVIdFUxdEVhWjFMcFdJbjl2alNobUNmRkU4YXRrWXZwQUEwYkVEVVBrV05RMGc4Q3dIX3AyMUlFS3RjX2hTWFZGbEdvYWw3RUZudVlaalU1cEJTYVJGbThJRkhrWm1tZ1ZsSDJvNGVuX3hETkgxUE1HbUVWYTRzQQ?oc=5",
+        "published": "2026-03-09T03:00:00-04:00"
+      },
+      {
+        "source": "Forbes",
+        "title": "What's Behind The 60% Rise In Nvidia Stock? - Forbes",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNbVlYSk9ZenUyTS1jekp6RzVZeURteGYzVkpHMzhLcEJxTVY5S0dmc1NPWVVFaTFXR0lKZExpMlNXb3B0eFVlVHVNX2E0R1NzZU5MZEtjTG1ZNmxGckhOUjVYQzRpMVFnUUhuM3NVV0UyYTZfWlFLYzRxaEROR3liOE9aaVdsemdrVHlScW4xbFNERGt4VEtTOEE0a3lfVnND?oc=5",
+        "published": "2026-03-09T03:00:00-04:00"
+      },
+      {
+        "source": "TradingView",
+        "title": "Why Nvidia stock is soaring despite broader market sell-off? - TradingView",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPOXVMN2ZVakE5MndibDRZa0xRR3U1V1ZDZW0zaVRWRzZwMnNFcFNzcVptd0I2TnA1NUlqVTZoN1dnSUhvUnNXQzZ6ZlYtOUI1d3BGWUFLOGpreXJEcVVlS3ZzS0FWVnRySFNIVzFXaG0wX051N0FqQ3lhWDZjRXhtVkF1OEh3d0Y2UTRkcU1LSHlOUUVUUDQ5STR1QUx1TkNkWkZ6XzhHbThXMDQtb2JLY25hSmlmWlE?oc=5",
+        "published": "2026-03-09T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Better Stock to Buy Now: Micron or Nvidia? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE4xYnUzZjJXRGk5dXFLVldvdV9DemYwaUlTVzJ3UTlBQ0VHRXNGYm53eW5oemhSU3BiWGh1bFo1ZFpVd3ZpRU1kcGxHaTR5dkY4MTBZSi1pNlVwU0pJVmg5NFN0R2FpSl9vaC1HZjVUWFdxT05lV0ptWGxUM0h6QQ?oc=5",
+        "published": "2026-03-09T03:00:00-04:00"
+      },
+      {
+        "source": "The Motley Fool",
+        "title": "Is Nvidia Stock Your Ticket to Becoming a Millionaire? - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPTGVmVEh3QVZseHoxemMwLUV3TXkxR3ZxVTlDRUpDZFJFMnN6UEtrT0tkWEMyR2dFaUYxYmlTN1dGcGx1Qk1NbE9WdUFnVWloaUxvRzJkYmsxQ205LWtISVBVb0N3Vjd4VGp5eUlqTksyQXhsTUpOVWd3SUhDVDVoQTBKdHZ0TzZXWFNCeTBoaDZYS0w0dllXag?oc=5",
+        "published": "2026-03-09T03:00:00-04:00"
+      },
+      {
+        "source": "Investor's Business Daily",
+        "title": "Nvidia, Palantir And How To Invest In The Volatile Fog Of War - Investor's Business Daily",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNdVhhSTJtU0k4SUhQZlplNDUtbnpOUGhaQnRPSUhHUWlWTzhMYTM0aFo0WGhWUmRqTllkcU0wdm5tM1JZTFQ2Ykh5Smt2N3c0bHAzUjBkMlJDTWw1WDMtLVNUeXA2VmhEbzd2N005ZnZMOC0zdWNZMWI0bGJGQmljREFaWUktYXIycmZyYWdTZ3hMTFVURlRGZ3JUaE1admMtaHlvV29yUHhGWnBIRVlVZnR0U1FseFU?oc=5",
+        "published": "2026-03-09T03:00:00-04:00"
+      },
+      {
+        "source": "Investor's Business Daily",
+        "title": "Nvidia Partner Transforms Into AI Factory — And Eyes Breakout - Investor's Business Daily",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOaXYxVGticmZVU2tVWUtzZktaaFBWbTlwenY4T2trbnRQLVFISXNzU3lNQmVnTWFIZ0lIUjBzZ2FuSE1kME5VZVNvcnVZbDNYZW5iMlpNb1BMd0RFZUUxbkVFZEFRalh5RzlEVTh1eTBPc2xjaU1adkxKMGFLNWx3ZmRKVnJIWTlmNmR4SnZrOGxPRXdLejdnM1MwSDc5aVhDTlhTdkpOeFhHc28?oc=5",
+        "published": "2026-03-09T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "NVDA",
+    "company": "Nvidia",
+    "frequency_number": 2,
+    "period": 18.27,
+    "train_days": 55,
+    "validation_days": 11,
+    "status": "broken",
+    "estimated_start": "2026-02-10",
+    "confirmed_on": "2026-02-25",
+    "prior_session": "2026-02-09",
+    "latest_q": 0.0307,
+    "latest_nrmse": 1.457,
+    "latest_residual_sigma": 0.034052,
+    "residual_trend": "stable",
+    "observations": 436,
+    "news_sites": 34,
+    "news_articles": [
+      {
+        "source": "TradingView",
+        "title": "Nvidia Stock Rises Ahead of Earnings -- Next Catalyst Isn't 2026 - TradingView",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNR0VvcnBqcFY5MF81X3JONG9Hb09Ma2JwQ0JjckZwVDlIUkh0eE5JcVR1MGJnelV2WFhBeUFTUGdqZWhPZjlEMzA1bldiSzVwczI2cERJZTItbXFVZzBXSHVrelpvczVnN2JEWFREbjdEazRoWWFha1Z3VXd0ek5rbDV1Vkc2REp5cmhzSEsxQWhWZnJBX2ZOTnRKV2c5dXNRSEhWdFc4UDc3SjBKcjZTSmtIQTVHc3lTdnNueTd3?oc=5",
+        "published": "2026-02-09T03:00:00-05:00"
+      },
+      {
+        "source": "TradingView",
+        "title": "Why Nvidia stock is rallying another 4% early on Monday - TradingView",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPT2RlSUpOdTZ1VVB5SHMybUswblVCTC1ieEI4X3p3WklJZkhueExRYTdiNDk0Z1BvRVV5MlE0a3hZd2J2UVhaaXlFb3RYMzFxT3IyV0Rjbl8xcmF2M2pXbW9hLXZ5RzlfaTVmT1lfcVRBb2x5SUFrU3lnUGdaTnRlRGZDZlVyVzk3elpDSGd0QnUzaXg0SFdtRWFkMHBfaDZBMXdFcVREMVVrT2UzVFRkUw?oc=5",
+        "published": "2026-02-09T03:00:00-05:00"
+      },
+      {
+        "source": "The Motley Fool",
+        "title": "Could Nvidia Reach $300 in 2026? The Answer May Blow Your Mind. - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNaXYyWFR5b0c1Z1J0VHpXc2lOZXlVTUNTaWJGbVozVFJmZlBkRFk4MlMxNTBmWlpocFN6Y0MwYzE0R3hCVHdoVGlGajhPNkdPRHNvbVRhSVFSeVZxOHlSc1cwTm16cFdaWUtxTnpRdzE3TjVwWUQ5Y1g3M3NMQUU2dzZZNnUwZ2JEb2I1WS1qVlFNQzh3emRrZA?oc=5",
+        "published": "2026-02-09T03:00:00-05:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Nvidia: Ready To Impress (Earnings Preview) (NASDAQ:NVDA) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeTEzb0l1Mjk0RzJIbW5xSWdmcTYwaEtRSFQ2MDJoWFYyT0w5bUZqaGZHNWhWRDdLRWtKNlZ0QUp3eUFIblRpSTdvOG9BWGtGQWU2R2VXcmxNUkxjeWRIN1pXb3g0dEpqREpEUGJTYjBWaWNEWU00T2JTc19nRDJacWl2UEEwQTdG?oc=5",
+        "published": "2026-02-09T03:00:00-05:00"
+      },
+      {
+        "source": "Quiver Quantitative",
+        "title": "NVIDIA Stock (NVDA) Opinions on CEO Jensen Huang's AI Buildout Forecast - Quiver Quantitative",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUllzNmpub0xZNmthUmNLTlRxa0tOWmMyT1NQNDBhNXBfaU43bUlucW5kbHFLa05BZWVfeDVINVlIMFplNThsWTRPMFdjQ0VRaTY4WWpMTWd2dVNQSUNsNnpVMmNkUVlIdUVjdWhCYjhfWWVXS3EwQlEyZmdXLTVJYm1IbTlyTm53N1dfOEtURUlsd0lURHdKMEtvSnF0aElfbUlGa0NTdHVHVXJLTGtV?oc=5",
+        "published": "2026-02-09T03:00:00-05:00"
+      },
+      {
+        "source": "The Twelfth Magpie",
+        "title": "£5k invested in Nvidia shares at the beginning of the year is currently worth… - The Twelfth Magpie",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZUw1cXlmYl8zV28zU2ZBT2NXWG5uQ0lxREtPMjJncGtYNDd4WGpzemk0RGRCVTRPOGhJbk9MajR5V1g0Q2kwdk15UUIxN21kOVlfVTFiU25KZDZtQVJZaDNPc2lHc2xCblZOWkV0bXFZVXYtTk9HeDVZZS1sem84SW9zc2pTWUFRVmF4MGhsZi1lVUo5ZG1md0xyV0htaGdZekpYVzlKQnJ6OVlERDk2cS0tSV9YOVF3S3c?oc=5",
+        "published": "2026-02-09T03:00:00-05:00"
+      },
+      {
+        "source": "Barron's",
+        "title": "Nvidia Stock Pops. It Should Benefit From OpenAI Spending, Analyst Says. - Barron's",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQWVJTU3haSm1XbXQ5aTBjOVBpZUFKRXIwQllkc2VpM3BOOUN4N2FXQUdwWTRmVVN2OHdsTDg2WnZ0SnNLbllFemNteFpEUjAzRmJmaXRFVUdxMWVocVRLaUlSM21MT2FDQUp0ZDdZTFRfdE4xNGRlN0ZLNmVNRVZpZzY0REIwSjIwRl9SN3pB?oc=5",
+        "published": "2026-02-09T03:00:00-05:00"
+      },
+      {
+        "source": "Investor's Business Daily",
+        "title": "Dow Jones Futures: Nvidia, AMD, Tesla, Broadcom, Apple Are Big Movers - Investor's Business Daily",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQMVFuLW9RVWVTV09IMmxQM3ZJMWtUbUNzUXl3VmUteERhTElyeUlvTzNhZ1hJcXlSM0VNSDVnbXUzUzlhTUlfWlF5T3FEcU1mMHAxeUZUMndZT0hTMlFVQXJzNUtCa3hDdXdCWVBwMTlnb2VUR2gtN1l0TkthNFBfck1OYXVuOEJqaHd5ZURUd3pRZ2pXVVR4U1pxbkZMLU15MVBOZ1FfbG1FQV9KSDgwV0ZRWUI?oc=5",
+        "published": "2026-02-09T03:00:00-05:00"
+      },
+      {
+        "source": "MarketBeat",
+        "title": "NVIDIA (NASDAQ:NVDA) Stock Price Up 2.5% - Here's Why - MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNcXRaSHBGUE5QWUxmN3cxWjlVWHloWTBDN1B3bjV4OTd5SVJZTWZpaUx6OF80dEhUaDhudXVjWUt1WlVLUUxTbzZjZkdtczBZbWJTT0tXSG9jQjJWY29SQVhMV1JkNW9fRXR3cmFwV1R1OUtmWFRnZy1OTlk2YVNkbXBjX2ZXZWpNT2EwY2YxWE9pV2xYZVpJNlZNcnlScDN1?oc=5",
+        "published": "2026-02-09T03:00:00-05:00"
+      },
+      {
+        "source": "The Motley Fool",
+        "title": "Better AI Stock to Buy Now: Palantir or Nvidia? - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPNjVfSmREczExNUJqb2dkb3kwQmlTdngwTVg3amFWT09lMzRIN3dRMG5fdzY3V3NVT2FKWXQxcDM1U1ZiMlg3bFg2UDcySk93VFJiMEgyNUFWcWZoWEMzaGdON3NWaGZuT0J2QWVPUERJYmVEV2pXQ2VwM3ZwelhRZWNWY1paYUtpbDZhUDdLQ2JGUQ?oc=5",
+        "published": "2026-02-09T03:00:00-05:00"
+      }
+    ]
+  },
+  {
+    "symbol": "NVDA",
+    "company": "Nvidia",
+    "frequency_number": 3,
+    "period": 15.46,
+    "train_days": 47,
+    "validation_days": 10,
+    "status": "broken",
+    "estimated_start": "2026-02-18",
+    "confirmed_on": "2026-03-03",
+    "prior_session": "2026-02-17",
+    "latest_q": 0.0295,
+    "latest_nrmse": 1.5864,
+    "latest_residual_sigma": 0.031355,
+    "residual_trend": "falling error",
+    "observations": 445,
+    "news_sites": 33,
+    "news_articles": [
+      {
+        "source": "Investor's Business Daily",
+        "title": "Nvidia Announces AI Partnership With Meta Platforms - Investor's Business Daily",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOZThfcjEydy05T0pYaFJ6R2FZbHc2VVFUcEJIeVNrMU03N3o5c0poOGREZTAxNWhhWmJjZkNDTlJMMTFJMHRTcC1Bdk1UWVlKZmlLVC1SSnBqZVFNVG5SWVNKbjFpTk5mNTlGQ2thTjdqMGhpMlZlYXRPLWxQaVNFUC1CNmpfenQ4OWIwV1Jn?oc=5",
+        "published": "2026-02-17T03:00:00-05:00"
+      },
+      {
+        "source": "MarketWatch",
+        "title": "Can Nvidia’s stock approach $400? Here’s why earnings may mark the start of a big rally. - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQdVprYVJxNXNlbldKM1lHcmxvenJxdzFnLXJuWDdPTjRnc1FXTXpyZzJ5UWVMMVVoUmxfSEV3T3ZRVEgxNDJES1Y1aWNrbWdxd3hUNnl3RUx4YVp4b2tia0Z0N3RJNTRGVW90XzhRdGNpb1phYjNYSHNtRGxQU091QWZLSXpRcG9NNExQNVFURW9SODBoamU2bFlQN1NpNEUxLVVJMDRRYXU0UWlSdmpPS2dRSmJPWG5jUW5KbXh3aThkemE1?oc=5",
+        "published": "2026-02-17T03:00:00-05:00"
+      },
+      {
+        "source": "Barron's",
+        "title": "Nvidia Stock Falls. There Are Reasons to Believe It Will Rally. - Barron's",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9fUEJLWDhGQk9tcXpRTHFlZExnRGlGQU9tS19zVUYzamc0bGVLUmxRbFFxVVBMMTd4Y3Q0dy1VSzVKSHRWOUFnelI5a2M4cFdmSmM4UzFURHFGcGhtUkVNQUxiSmZnZEZsVEIwVzlWUlduaUYzMy1VUg?oc=5",
+        "published": "2026-02-17T03:00:00-05:00"
+      },
+      {
+        "source": "Investing.com",
+        "title": "Nvidia Stock Looks Undervalued as Analyst Targets Keep Moving Higher - Investing.com",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVEpLbWxsN2lqQjJJTGV4TkJ1T2xiLXVfSTBTSWh0UTE4Si1iREdMSWI3cE02c204aWFoUEExR3M5c1hiZ2VVUEZlUlZlRHhtU1RfZlkyaklMSmtSYWM3Z1c0U2YzenUzNzZkTHB0MFFnNjhOT3hDWFl0bzVSZ2J6dGhLeHAxS2hZUDByR3E0Z1dENDFkbW5ENW9oeURtbVJSbEVnZmZ5OTJrT2VBNjQxYkVHQQ?oc=5",
+        "published": "2026-02-17T03:00:00-05:00"
+      },
+      {
+        "source": "CNBC",
+        "title": "Meta expands Nvidia deal to use millions of AI chips in data center build-out, including standalone CPUs - CNBC",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBiLXZYX1ZjaTRaenZCcmpJT0FZTksxVFpNOWhYOXBHenZDUjlKLXBoTDJuOHluYzRiSWx0YVV6Slljb3NBem9CLVlJUHlTR1FIQk15ODZGRm4yaXduckZ6YW9DNTJoYkZveDFwS3Y1amFOTkRiSi1lNDYxZlQwMFXSAYQBQVVfeXFMTVBJeVBlbFhKZDhpWE56QTZ4VDFJYjlrSk50eFgtQzViYUduMHRZRmJ2amNRdjZDeVFmUnpfNE54LUhqR2ZTSWR0eXBDcE13Q2wxekszejRCTFlKSHRZWDlWZDgzb0pqZjE4QTdrd0FhZDhQSTNHWDZDMlQtNUYya1RTVkJO?oc=5",
+        "published": "2026-02-17T03:00:00-05:00"
+      },
+      {
+        "source": "Investing.com",
+        "title": "Citi says buy Nvidia stock ahead 2H26 outperformance - Investing.com",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPdDNlVDV0NmxnZl9XRXNHQWFiTnI3bHZJck5ZeFlYWU9rVlUySUVZdUZ2eUhURTNpVHZoMlhKcVh6RXAwcnpwOTdVSWxkbnItbHFVdExpYmhubXJ3N3doNGZNemtoRUhudUxuclF0bkFIbTdqYU9LNHRRVzJDaWxUdFlMRnZILXh2V0RuRjdqdFVKb3ptNGtCM0x2WHRUVXV4aFJaOWNraXBQOU1CSmdB?oc=5",
+        "published": "2026-02-17T03:00:00-05:00"
+      },
+      {
+        "source": "The Motley Fool",
+        "title": "Nvidia Earnings on Feb. 25: What History Tells Us About Nvidia Stock's Post-Earnings-Release Moves - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNV2pnLWNzX0FZNzBJODh4Y29kWThMQk9oeTFFbWNGMVdiZVJINkN6SGFFdVNuNF9ZaFU4WDkySi1iQndaMThwanBQQnhBb04tRXdlM0xOdUllSkEwLUc5Y2RzR1MtMlkzRjJ6MTJla1ZocE9WZU42RmlybW9JeEdjV1d1M1VVanBSci1Zbg?oc=5",
+        "published": "2026-02-17T03:00:00-05:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Nvidia: Closing Out FY26 With A Robust Growth Opportunity (Earnings Preview) (NASDAQ:NVDA) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcTJtYlc4cHh4c2h6OUpscWR4VWRKQlJOTzRLeW5NVjhWcnNrNWx0RWlDUlVrOV91Mkx4bmJzZ2M2NmRObk16aFpCaVM1cEFlS2tBSE9jeks5dDJ5RW9hdzU4NWs4M3BReG5kbmxyd2xFeU0xQzVibXdtd2w3aVJzdWFwWW1ZOGVLSUVoQmJGVFZKUnBGSVktTU1zd0ktSklVMzRSa2RqQWZSb29GdHA5Q2FqUTA?oc=5",
+        "published": "2026-02-17T03:00:00-05:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Nvidia Should Double-Beat Again (Earnings Preview) (NASDAQ:NVDA) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNOExETDhwWTdkalBjOWgzU0d0WVBTZVNVVnpZaXF3NnFWR1padlRWdzI2dUpxVXE3dzBSTklicjN6TG5BMmNQRjgtclVKdFM5MlNObkM3MU84NmdaeHVWMUNDbDVTV1k3QmpSeHVnRU52ZVZScU82VUJ1TTdVZl9tSjNsb0wwc1FLVU9rT3FId2w4S3M?oc=5",
+        "published": "2026-02-17T03:00:00-05:00"
+      },
+      {
+        "source": "MarketBeat",
+        "title": "NVIDIA (NASDAQ:NVDA) Stock Price Up 1.2% - Here's Why - MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQWTNld0VMNDgxdGMtV0d3Z0JtbGZ5Tml3TWZLaWNHZVFqRDNwTV9ORFE2TnFVY2hwcDM4SWFXQnZuR1RBMjdHSVZHdzBMM0FSeHl5cHBKb1lQNHlpY2VBVEZoQVNJcy1kb3YwOVBsZmtjaDdYc00zNjhveUZFb2NpcTA2N1lCWkIySldjTGswTEQ2b0R6VnQyN2wzTlV1eGRQ?oc=5",
+        "published": "2026-02-17T03:00:00-05:00"
+      }
+    ]
+  },
+  {
+    "symbol": "AMD",
+    "company": "Advanced Micro Devices",
+    "frequency_number": 1,
+    "period": 33.5,
+    "train_days": 101,
+    "validation_days": 21,
+    "status": "broken",
+    "estimated_start": "2025-07-31",
+    "confirmed_on": "2025-08-28",
+    "prior_session": "2025-07-30",
+    "latest_q": 0.0218,
+    "latest_nrmse": 2.7647,
+    "latest_residual_sigma": 0.115355,
+    "residual_trend": "rising error",
+    "observations": 380,
+    "news_sites": 2,
+    "news_articles": [
+      {
+        "source": "Yahoo Finance",
+        "title": "Can AMD Stock Hit $210 in 2025? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1tQ0c2UTgwZGZBWnlOU1Mxend3ay1LbWt4YlVtT3lPV2R6cWl4M0hUWjFJSkxwbnBxcFlqWHc2THN0bHMyWjhXTjdPSlZyaE5XUjE0elIxaU5VZmFzZV9keDloZlpNanBSY3duaVJXTWNkMjRDYzB3?oc=5",
+        "published": "2025-07-31T03:00:00-04:00"
+      },
+      {
+        "source": "GuruFocus",
+        "title": "AMD (AMD) Stock Dips After Price Surge for AI Accelerator - GuruFocus",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOaER4VGMxaW9XaG1GSEYydFhVVUxLd0FjcXhOV1JsYlBMWUxnOEZiN2pBR3M2c0pjZVBOSUlMclUxUzdyVDhoQXczSDJkXy16dVNHZFB1dFNId3hpb0xmVngxXzRJeDg2Z2pGTnlKa0lobkRsSnlaQ2V6dVp1OHVER3JqSXd4bVJRVDV6ekd4YjYwbENzY3VlUXZVd3NXUXZoTlRoczhIemFiZw?oc=5",
+        "published": "2025-07-31T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "AMD",
+    "company": "Advanced Micro Devices",
+    "frequency_number": 2,
+    "period": 18.27,
+    "train_days": 55,
+    "validation_days": 11,
+    "status": "broken",
+    "estimated_start": "2025-03-25",
+    "confirmed_on": "2025-04-08",
+    "prior_session": "2025-03-24",
+    "latest_q": 0.0236,
+    "latest_nrmse": 2.4136,
+    "latest_residual_sigma": 0.093797,
+    "residual_trend": "falling error",
+    "observations": 436,
+    "news_sites": 0,
+    "news_articles": []
+  },
+  {
+    "symbol": "AMD",
+    "company": "Advanced Micro Devices",
+    "frequency_number": 3,
+    "period": 14.36,
+    "train_days": 44,
+    "validation_days": 9,
+    "status": "broken",
+    "estimated_start": "2024-11-19",
+    "confirmed_on": "2024-12-02",
+    "prior_session": "2024-11-18",
+    "latest_q": 0.0237,
+    "latest_nrmse": 2.3961,
+    "latest_residual_sigma": 0.086193,
+    "residual_trend": "falling error",
+    "observations": 449,
+    "news_sites": 0,
+    "news_articles": []
+  },
+  {
+    "symbol": "AVGO",
+    "company": "Broadcom",
+    "frequency_number": 1,
+    "period": 22.33,
+    "train_days": 67,
+    "validation_days": 14,
+    "status": "broken",
+    "estimated_start": "2026-03-11",
+    "confirmed_on": "2026-03-30",
+    "prior_session": "2026-03-10",
+    "latest_q": 0.0376,
+    "latest_nrmse": 0.9127,
+    "latest_residual_sigma": 0.025612,
+    "residual_trend": "falling error",
+    "observations": 421,
+    "news_sites": 10,
+    "news_articles": [
+      {
+        "source": "Investor's Business Daily",
+        "title": "Broadcom Stock Sees RS Rating Rise To 83 - Investor's Business Daily",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9aNzVlX1F3WFhoWE1aY1pEaGdhRGZLSV9KSFc0UDhCWE9Vdmo2TkxpQk51eE5kZ0Z4andMSXA1dlQzZkIydGRJZVZZUG4wVEIybzJjN2FienRzU21WWHVPakFuSlIyV3gwU3NqZGR0Q29reFZuSjVYV0NPLU4?oc=5",
+        "published": "2026-03-10T03:00:00-04:00"
+      },
+      {
+        "source": "StockStory",
+        "title": "5 Must-Read Analyst Questions From Broadcom’s Q4 Earnings Call - StockStory",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPTDdRdXFiYXA1YTh0b01BVWtWbXJwdGxJbl9KRXBkT09NNVVqNmFmODVCUHJSMGI5RFZSNkdWbS1OQ0RGX3hEWVB5ZVJTOHJZVlhCSnBRa0ZBZUgxQmswQS1YRW90dXBmQ2tHR0tkcDNBV3BqNHp4eXJTaDJ5VUt2UDZZemNlV19BVUFUS0pTQmFPbEFEN0NQYjNBZ0hLdEsySl9oaExRbzBxNm4tcVBlRmZuWkZUQWFpOE9lSGhHZ0FXUE0?oc=5",
+        "published": "2026-03-10T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Broadcom: A Once-In-A-Generation Opportunity That Won't Last (NASDAQ:AVGO) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPLU1KV3BFd2RRaS1IQ2pJdDZNSmRKS2RyQmxOSlU2S2I5TEY2MTIzUVZEOVNLVEdzaERvSWw5ZWNPSEtlajFDbGNIUXNEOFpCMGM5TExfSEYwb24tU1RxRnZzTzRLNUN4NXdUdThPdU84bWhSb0hFV0tsRmdQcWNwUFBBNVBmel91cU5US1pWck5uV2VjNk1jM05FMFFnVlJM?oc=5",
+        "published": "2026-03-10T03:00:00-04:00"
+      },
+      {
+        "source": "The Motley Fool",
+        "title": "Broadcom and Nvidia Just Delivered Blowout Earnings. Which Is the Better Growth Stock to Buy in March? - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNV1Y5cGV4OFlvd2NqQkc1ZWhzVzNuSHVPVTFKOFhTTmpFc3BHVWQzVkxJRmlRQmRiLWlDRnkxNWpFZEZLZnBUa0VQUkY1RHVQTFdrSHB6LXVIWHNsWktCb0JDOFVENG4zZGdlZGY4aGdCajA5empmWXU2TjQyTVotNlQ1SnZ4OGFwM195Rmg0Wk0?oc=5",
+        "published": "2026-03-10T03:00:00-04:00"
+      },
+      {
+        "source": "BNN Bloomberg",
+        "title": "Hot Picks: Tech rotation highlights Nvidia, Broadcom and Microsoft - BNN Bloomberg",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObF9iREo3Y1Jvc0YtdDU3bW5abGRTVE9mcXRXOVRqUWFITnhFV3hmcUo2WFRlbmVLdHNDWVZsbUFrUFFEQVNOSDE3RHFCM0hCMV8yaU01aEtRbldYQzZtdGVRSlFKeXZ2b2d4ZG5QeVY1Z0hFeDk3Z3JXRVV1UXI2VTkya0Y1TGVrNUxCeUhNMG9kanVvb3ZoeEhQU0JTZ3Z5aWV4ZE9TaWtIQTZ1TUhoaHdQVk5FU1hCbFFzUGUtWUg2X3BlOFRVVg?oc=5",
+        "published": "2026-03-10T03:00:00-04:00"
+      },
+      {
+        "source": "NAI500",
+        "title": "AI Chip Sales Surge 65%, Broadcom Ushers in a Moment of Value Reassessment - NAI500",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPN3lvSlFUa093Y0VDMGY3em9jenp4Z0lkWGZvQjJXeTlPbEkzaTEwSC1Ybi10S3pHamVka3pkU211OHFHX2s4OWs1ajcwZ0doY0JvbENibUtaUE13d201MTUwOXItQkhSVDg5cDhHR3E2ZjlCTWxMSVA2NWF4dDhzMFZZaUZWUFRON1VHYUVIZTFQcUpMa3NkUDZ5MmN0RnF2U0lBWjY0cEo?oc=5",
+        "published": "2026-03-10T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Down 20%, Should You Buy Broadcom Stock on the Dip? The Answer Might Surprise You - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE83bW1lVE9RUm1jTm9kQWEwNEdvY3VDSUF0bkUyWDc3WHlRQ3NaUTJsOEJuUm5ZWUxaZHdjMHRqUXlMaHQ5SGU0N3RGR1hsUlN2V1FoM3loVDl3VE9UVTB6aWZHNEkyN2dMN2tSa0NQVUZ4SmVvNGhFTThTZnU?oc=5",
+        "published": "2026-03-11T03:00:00-04:00"
+      },
+      {
+        "source": "Stock Titan",
+        "title": "Broadcom Taurus chip doubles AI bandwidth per optical lane - Stock Titan",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOQ09taFJNdzdldFZLTUU4Ym8wQ1BqeHM5MjRnYk8tNmd0ajVZZnJtc0g3M09uSkJVWF96M3VKbFAwUGhXSklhaFgzb3hETzlxX1BFbHFDaURmV0hXY2JmcHB2QTFKSVQ4MDE2X1NwSndFcWRQUGZfMHFBQlQ5WXZpbldFdTNLMUJIZlJEVDR3aTVJcTFSd0lNR190cXRjMC1YalR5ckxvTUdRVFpFREcyTTIwZkNWczh0S3l3OQ?oc=5",
+        "published": "2026-03-11T03:00:00-04:00"
+      },
+      {
+        "source": "Zacks Investment Research",
+        "title": "Zacks Investment Ideas feature highlights Applied Optoelectronics, IREN, QQQ, NVIDIA, Broadcom and Nebius - Zacks Investment Research",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNOHE5YlVKOXQybHM0QnlZTWJKNW5OM1NheVdjSkN0cFV3OXF1cHZkSDBZSndseldwWW04OE5JdnVTdjlGTHg5VkNuc1BRT183aDVWaUg1eW5WdTJkaHg5OUV0RzBLbHdydE05VXhMWWJwUWxieGVMcmN3dHFtcUw3enlGWW9OYXdERVJUOEU1VjZwa2lYaThGdXFiWDJNMC1Ub2kyTERmbjF4eWtTWWFkSWxZUTVfT2ZEcTNJdmJPYTBhdEtsUkpfdUlxQjBwZmlSeGpieUJqazJqdw?oc=5",
+        "published": "2026-03-11T03:00:00-04:00"
+      },
+      {
+        "source": "The Motley Fool",
+        "title": "3 Reasons Why Broadcom Remains One of My Favorite Growth Stocks to Buy in 2026 and Hold for the Next 5 Years - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNU3R4YXE0YTJFOVFZbzBud1pyeTBtZmQ4YUJiT1ppWTJMN3JSNlJCN3BFcEU3RFpuQlBnXzRpajVHaFV0TktwOEdadXBrUEpoM3lFMFNENzBTSGg4U0NFa1MwbXBwOURlWkJpVTVVTkdzSkMwWE8xQkgxLXF0UV9COHJrRQ?oc=5",
+        "published": "2026-03-11T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "AVGO",
+    "company": "Broadcom",
+    "frequency_number": 2,
+    "period": 28.71,
+    "train_days": 87,
+    "validation_days": 18,
+    "status": "broken",
+    "estimated_start": "2025-10-24",
+    "confirmed_on": "2025-11-18",
+    "prior_session": "2025-10-23",
+    "latest_q": 0.0146,
+    "latest_nrmse": 5.2381,
+    "latest_residual_sigma": 0.03949,
+    "residual_trend": "falling error",
+    "observations": 397,
+    "news_sites": 5,
+    "news_articles": [
+      {
+        "source": "Barchart.com",
+        "title": "Broadcom Stock Could Soon Generate $100 Billion in AI Revenue Each Year. Should You Buy AVGO Now? - Barchart.com",
+        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOOHdJNWZSaWwzMU9rUy1oVms0LXZyX2RQRDJabFl5NjNHaE1EZXBMLVUtUFV4TkR3cTFlSi11emZDWTNSeWNnam5jeUszTlBnOWFfQkIySUt5UGFSZVhROG96aVBUbVNhQ1ZpRmVjemFOUm55Y0didFJlSzVRdXBmTHp0NzJ2SG1BZTQxR3lLWkFiN004X21nZ2xMX0lhdndOT25vaGNaam9QLU1IdUdwcF9HWU1MMUtwekVZdmxxUlREMGtqZWxmOUxKRV9mM3JMNC02VzNn?oc=5",
+        "published": "2025-10-23T03:00:00-04:00"
+      },
+      {
+        "source": "Forbes",
+        "title": "Could Broadcom Be In Trouble? - Forbes",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQb1daVXZTNnJKMVVlVGhqa2Iwc0hUNWNGVC12dGZhMzJPSWJvUDBlUzBFQXplNVhNeUk3WWE2VUs5V2ZWZUFYbHVaWlg0V0JNaGsyOXRsTmo5LXd2NXpqTm5BdzdsdGc2My1yM1A5cm1wZnBlVmFFSXJ0aC0wWmZFYWt4alRUUmZtbVlKQklaS0M?oc=5",
+        "published": "2025-10-23T03:00:00-04:00"
+      },
+      {
+        "source": "24/7 Wall St.",
+        "title": "Intel to Take on Broadcom: 3 Reasons the Stock is Surging 8% After Q3 Earnings - 24/7 Wall St.",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQUWVLOUstOUQ1eE8ydmhCTE05TUVEc3FaaUFldWpNSVJhblg2UDRxTHFyN0RGb1psOWVEMy1zNzU4Wkxodk5FaGNWd3hVdFNxbVR3U001X2Faa0lZUXA3NzFXWkpCV1RMeGVyTmVwMVVvYmNsZkwzNmxsWWpiSFJBMm1IdnVXRjZaeFRZX2VqOU8xSnA2NWJVWXozWVFXeEhqdWJMem40TE1wREdLZEtRVVRCMEdRSmRsRGk1dg?oc=5",
+        "published": "2025-10-23T03:00:00-04:00"
+      },
+      {
+        "source": "Investor's Business Daily",
+        "title": "Broadcom, IBD Stock Of The Day, Gains Custom AI Chip Business - Investor's Business Daily",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUHlRWXVacUQ3OGRrVmtScWtKSGdndjNUejFlNFBhaE5oZmd4Wi1aNUV1OWdEdUlCQTZ5Y3lVaThJZHdSd2tMY0dsWjREUFZfQVo2ejR0UDVHS1JWRDZJeWRuQjRPeXVVVk4xSkFlLWZnMG5BVUo0NHpya1JxbTc1QWE0dlQ2dXlsZTB5cFZ1bExUWDNhVDNsRDA4NW1vU3NFTEptSQ?oc=5",
+        "published": "2025-10-24T03:00:00-04:00"
+      },
+      {
+        "source": "TipRanks",
+        "title": "Anthropic’s Google Deal Makes Broadcom Stock a Winner as Amazon Faces Tougher Questions - TipRanks",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTzhkbDJyeWgzTTEzX3pyOVp5czV1QmsxcEc5YUdHRmo0SmNpN3g3NnlYUWNuS2lxYlk0Y1VHcTRBOXBzTktrVFhMNVYzTmxBTEFJVzNoOEJDTzI0LUtxa1RyUVVQNU11UExCY1pPSGw2THY5NFhGNVctcnl2ZnU5QlQ5bWllNmdLc1k5YW9OSVZ4U0VMTF8tVV80Sy0xS2tSSGdVQWJSYVlPeU1Hc0s3UnViX3JtWjg?oc=5",
+        "published": "2025-10-24T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "AVGO",
+    "company": "Broadcom",
+    "frequency_number": 3,
+    "period": 10.05,
+    "train_days": 31,
+    "validation_days": 7,
+    "status": "broken",
+    "estimated_start": "2026-01-27",
+    "confirmed_on": "2026-02-04",
+    "prior_session": "2026-01-26",
+    "latest_q": 0.036,
+    "latest_nrmse": 1.0193,
+    "latest_residual_sigma": 0.02574,
+    "residual_trend": "falling error",
+    "observations": 464,
+    "news_sites": 7,
+    "news_articles": [
+      {
+        "source": "The Motley Fool",
+        "title": "3 AI Chip Stocks to Buy in January: Nvidia, AMD, and Broadcom Battle for Market Share - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNd0R6NlZqMHgwV0tPbUQ3WXhURVJJdTAyeG00bU9uSDBqUDY0VFB0Z3Z0T203LUlNNFZPUjhuTDlfQVp0Z0ltOWRtdEJGTzZXQ3BYYlZnQUhKeHJ4SG1mYlFLLVZXY2hsNGJHUmM0Z0pmNzA2TFkwcElzWlpDeEZUYlJaeVBYNTFtUVB0a1hpd1NrMjFpaUk0?oc=5",
+        "published": "2026-01-26T03:00:00-05:00"
+      },
+      {
+        "source": "Rolling Out",
+        "title": "Broadcom stock rises 2% as new options trading begins - Rolling Out",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9sekR2WnBLcFFwR3JIbkYtV2ZRS04zNzBmUjdLUTRZSndoM2dGSDRYU1FLTmZVRXRDNnRqUDJnOXlVR2ZEYjJEUl9lbE5OYnlkN3RQUlRET0ZIdEhBYk5nM2kzZF9uejdPSnVUVnFiV1RuR2Q0SEpQUEJDUQ?oc=5",
+        "published": "2026-01-26T03:00:00-05:00"
+      },
+      {
+        "source": "TipRanks",
+        "title": "Cathie Wood Loads Up on Broadcom and Crypto Stocks, Trims Meta by $8M Ahead of Q4. Here’s Why - TipRanks",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQbDF1bmxxU3NzTnZQajFtbWR2bEY1eEMyc0g0TGFNNGhOeEluS0ExZGFreVdTUVRhbi1JUWtiUno4WkNEQzJtTERFYVdJZFdzWHpuZ1dwOFNhUjJKbWhRQ254NDZJU3hWZzhMR05FU3ptRmItR3pENzV6SDNtWjUxQjh6X0Z6eWV5aVVVREJnV3hKelpkd01LRkd0UVdDWnd6aGVna2lEVzlVa0dHbVhkWnB5Wmw?oc=5",
+        "published": "2026-01-26T03:00:00-05:00"
+      },
+      {
+        "source": "The Motley Fool",
+        "title": "How to Buy Broadcom Stock (AVGO): Your Complete Guide - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNeDlFYml6VU1rb3I0U09Rc2tlektkZE5HNFJsZkNpWDRFalktSS0xOXB3emhwNmQzc2IwOFEwNkhRUk1tX094NHhOSGRTYnJQRWhHdFdfSkZ4NWZOZEtrTFFMVmhmeFVSODFlNW5MT2s3NzNmRW5QVG1NZXdkc1dFb2p6RWtqM0p4REw5RQ?oc=5",
+        "published": "2026-01-27T03:00:00-05:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Marvell Stock Rises With Broadcom on Hopes for Microsoft's AI Chip - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxORVZmTEFKTlMyWDA4MXB6SHRYTEl3Z2dSTkRSR252ZXpMRm1vRkRlZ0ZUZ0s2aktwMG5fT241TUItYWlSVDMtOXJCWmRmam1BNTFEYUd4MFZSc1FRbU40WkNuVHJ4WjlvNTFNclQ3Q01zaTk4V1FzeXA2WDJDR3BPTnl0cXh3VDQ?oc=5",
+        "published": "2026-01-27T03:00:00-05:00"
+      },
+      {
+        "source": "ts2.tech",
+        "title": "Broadcom stock price climbs 2.4% as tech rally rolls on; Fed, Big Tech earnings now in the crosshairs - ts2.tech",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQTEhNYl9fenJLNEQxMzBiTVhMb3ZaLVVhMGNyZm04QWswTjU5c09tTU9FY2FtaGtDRHMyaVdZWHBYaFEtbGlhRTJIVlBVaEJQYUFkYTBXY3BZSnBlOTI2MC01ZDFLRnFyT3Zmb1pBdGlTSC1JZjhLYnRFWjZQdU5hWi1KLTduaUJKS3Z5RjJ0clBKU2tmY1FsSHlWN3g0UjFoa2VTSFR2a0FWbXNzTjh4dGwzUEVCYklobVlj?oc=5",
+        "published": "2026-01-27T03:00:00-05:00"
+      },
+      {
+        "source": "CoinCentral",
+        "title": "Bank of America Analyst Names Nvidia, AMD and Broadcom as Undervalued Compute Stocks - CoinCentral",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQY1UxWUI3NnBsTmR2WjR5VndYYmRmVV9mSEZaYlA1ekpBdHdnTGU4TlRWaDJYSGdGclMxcS0tbU9Rd3RpV214MUVIbUZQQ1lyaHZ2SGZ2R0poQ0hoRnRRLUlFUGdmZzlXMGJpR3V6R1EtWjhQRUNPRGw0UGVsZmctQkpWSHUyaEdib21janRkdTRabkZHeG11TVZ0SDYwN1FoZWxvTTlxN0hlQWxI?oc=5",
+        "published": "2026-01-27T03:00:00-05:00"
+      },
+      {
+        "source": "Blockonomi",
+        "title": "BofA Analyst Identifies Nvidia, AMD, Broadcom, Credo as Attractive Investments - Blockonomi",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOci1tR29kMXZLVHhnZldiRnZkdy00Q2pLWmRGUXRIT28tRFVCWGpIYko3U1J5aXA0R0dKZU5RaWpQRld6X20yZ1JkZG8wcEF5Z2xFRmE2Q3N1bHV6YmczbURKM3hNeXl0Mzg4eHB3WFgwTHA3dHphd1BEVk1lT05NQXRhajN5YmlkVmg4UjY2NFpXNlJVRWpmbVQtQUtha0tV?oc=5",
+        "published": "2026-01-27T03:00:00-05:00"
+      }
+    ]
+  },
+  {
+    "symbol": "MU",
+    "company": "Micron Technology",
+    "frequency_number": 1,
+    "period": 18.27,
+    "train_days": 55,
+    "validation_days": 11,
+    "status": "broken",
+    "estimated_start": "2026-05-29",
+    "confirmed_on": "2026-06-12",
+    "prior_session": "2026-05-28",
+    "latest_q": 0.2949,
+    "latest_nrmse": 3.454,
+    "latest_residual_sigma": 0.107042,
+    "residual_trend": "falling error",
+    "observations": 436,
+    "news_sites": 12,
+    "news_articles": [
+      {
+        "source": "Yahoo Finance",
+        "title": "Micron Technology (MU) – Among the 10 Best Reddit Stocks to Buy According to Billionaires - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQelU3djA2TDBTekFfa3pRcHV6X3lUUTdMVG5lZ1NRdE83Mi0zdjhtV0RSRGVxOUp4ajNYUUprOVlSSU4xX2V0UUZvczNraEx4OExlR19qRExoRWVRblhsTEZZYVo4dElyZmNyQ2d0VzJpd2lyUndNR3lrYW1nTGlNUDNXNEk1NUJaakNuZlRDSE8xdlF4WlhRbEl3?oc=5",
+        "published": "2026-05-28T03:00:00-04:00"
+      },
+      {
+        "source": "XTB.com",
+        "title": "Stock of the week: Micron Technology and the financial anatomy of growth in the era of AI - XTB.com",
+        "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQYnd2UE9pMHBpbENxbEhnRnBfcnk2Z2Uycnp1dzBuMS1XMVBQY1hXa19YbXo3UWp5d2ZweVBRcTZ2U2FXYnJaTjg2Xy0wVU5SQnQ2ZU1WTDRfU1FXVllGNjZRTDZxMWZfRDhEbFIwVGw2eXVDa3dQSDZQSW9yLUl6c0lxTDBhaUNRcUVLQUJsTklWNHBaNm00TXBSZDVpclg2aWxXQzhLTzVCR1UwS0lnOUVSTzdoRXdISFdpcDZEUmswc0xmY1hQNm9OdlRza3YtTmtwbkQ2UjhHZFJsY0dN?oc=5",
+        "published": "2026-05-28T03:00:00-04:00"
+      },
+      {
+        "source": "Benzinga",
+        "title": "What's Going On With Micron Stock Thursday? - Micron Technology (NASDAQ:MU) - Benzinga",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQU25zMVEtbTh4bzlUQlhrWFE3MlV0R1NVMUdNd2lJRC1qZG9xUm1EaTJudXduMmE1TGdxZWxEZjZ4VW1zX0k4Y3ZJQjNiUG1md0JmOWk1ZEh4TGYxbW5Wc1RKVDFjUmhrTWhJbnVKU184ZmVFNnVYaTlpalBDNXpxdUxXVFJUTVRzeG0tVmlEVGpUcTJSU0Nhb2UtUnZsU0pRWHJHSGJIMFpHOG1fNXVoU25GUVhtTDZoWGxOdnBxS1g?oc=5",
+        "published": "2026-05-28T03:00:00-04:00"
+      },
+      {
+        "source": "Moomoo",
+        "title": "DA Davidson Adjusts PT on Micron Technology to $1,500 From $1,000, Maintains Buy Rating - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUVFIbHFOOURMM3FHMllrQllvbURkbXBYSGdraC1GS3JoMktwUkd5OEhfUi1uaUlYZ1lwS1Q0R01ZREJMVHo0SHp0WEpyUTNxdldJNDktV3pQSmFzQjdaR2FEYVAxR3JORFVFdElTeGNuRHdiNVVQZGtaQ0FRZDNSelpsb19fSnFkU0czTzRLeDJZTDNPc1hJY3hMeEV6TVE?oc=5",
+        "published": "2026-05-28T03:00:00-04:00"
+      },
+      {
+        "source": "NDTV",
+        "title": "Micron Technology’s Massive Surge: How Far $100 Grew In Just A Year Amid AI Boom - NDTV",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPZ0huSmxLVUw0ckxIRUFwTnJLUzFicnJXOTdseXlOMUtlTDQ1NUFnalE1b2hQbkYwSldWamJoMUR0TTJtX0k1cWVXREpTaDNqajVZcEwybDJsVHM0WlpRMHl6X3F5TzBzaUdYdUJLdDNBZVp4VXlBSUo0SjJyeGlPdlVLOF9QcnlJaFpNSnZhVEpxOXRicWZCdk1ocWVHQWI5NC1DeVNBOXFLeml3VjFScmFhRGJ1aGtncHlR0gHDAUFVX3lxTE5CRVhmRUdGcVI1SGhMWHZZRlAyRVp5cy1YNEtHVlktLWRoa2plTmVrRkdPY0F2b2RaYmNyUGd4NVpseFhkTERnM1dEV19xUjQ0NktwTHJiT3hKNTh2ZWswUDJhLWFHNnQza2NPd21RSWZuZTE2UUVzb3VBcnFMR1RRRGtSeEw1RVpsZWdPcTN4OThEZ01hcXhqdlJIZnpBcXF2Vy1qZWx6dFk5dGNuWDMwQ3lZN3JTZG8zTDU3T1VzMEVBcw?oc=5",
+        "published": "2026-05-28T03:00:00-04:00"
+      },
+      {
+        "source": "Zacks Investment Research",
+        "title": "The Zacks Analyst Blog Highlights Alphabet, Apple, Micron Technology, Cumberland Pharmaceuticals and AmeriServ Financial - Zacks Investment Research",
+        "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPbDctcmQyaDJjbTJsUThRUWVxbDl3bGk4bUlSTHd6dXc0ak1BaWdUenJ3YmxlQXdvbmZqaVBLOUtZUkZfcWl5dkxrRUxjZUtpMXVMeWhpcmVjQkI2ektnU2NGMW9Fcng4aUJvY2g0MmlHa1AxTGhvY0cwcmQ1VjZaV2hUdlVVbzVVVVF5VGEyWk1GZWlhNF9TTU1TVWxlY1ZwSVZ1Z05UVUlNLVY5UEpRbC1WQXV6SzAycGw4UXcyRVdwU1c4NWRkalctMF8xWEVLbHBmVXB1SF91Z19yZjNMcERyYUxWenhCMWVOa0NKRQ?oc=5",
+        "published": "2026-05-28T03:00:00-04:00"
+      },
+      {
+        "source": "Intellectia AI",
+        "title": "Micron Technology: A Key Player in the AI Revolution - Intellectia AI",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNTU1IYWhXaExETDJLdVZ6MXd6S2VQX2ROYjZ0dXRDN0ZZM2Nxd0FXUnBCNzAxN1lMd01QeEhULUk4YXJkMUhJMzkzQUdJaTE5QlVSeHBJYmxhSk5lMFNHMnRJVEhCeUk0bUI4WXdNN1N3dnF0cmVWYS16dUkxdUlyQjJFVlZONEs0bTZqM21B?oc=5",
+        "published": "2026-05-28T03:00:00-04:00"
+      },
+      {
+        "source": "Crypto Briefing",
+        "title": "Micron Technology ranks third in the S&P 500, but its valuation tells a strange story - Crypto Briefing",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBoMG43cjdiTlNuTUlHZUpPRkhIMnYzcE1UY0JfeldJWTY3MkNkTk9TYVZLMFUxN1lMWjhXUGF4c3M2M1BLeWZ2cm96Yzc3M0xfdTFNN2xMeWRTMzhKeUpOdkx5MUNMNElNZzdvMTlkOUczQXlxZmpNd3JR?oc=5",
+        "published": "2026-05-28T03:00:00-04:00"
+      },
+      {
+        "source": "International Business Times Australia",
+        "title": "Micron Technology Shares Surge Past $925 on AI Memory Boom and Upgraded Price Targets - International Business Times Australia",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0tUFBaU2xGNDBCakMzdXhRS1ZWXzU2REs0Mk1YSWNkYWhSNEE1aTJsbk5TclcxZ3Zsd0RKTFhJdEQwWmlyMlhEcEZpcjNRaU9NNWdTUUw1c25CTVp6YXR6NEhsMXFObU4tbkhEa3BqTDBfejBPa0V0N1d2bUFJLWc?oc=5",
+        "published": "2026-05-28T03:00:00-04:00"
+      },
+      {
+        "source": "Benzinga",
+        "title": "What's Going On With Micron Stock Friday? - Micron Technology (NASDAQ:MU) - Benzinga",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNcnJ5NGYzcHIwY2lXOHlKbTZrUG9wNmNNN0ZXYWUtUVl1alhhQl9yekJXcXV0UnpEdGk2ajAxWHlUTlR4U3ltai04UHNSOGZ6bTdUWlh3TDd0Nk4xVHFQVjlfeFlPYWRLSWdqVGdLU1pFY050Z1cwUW55M3dMemdRWlhzcHAwLXI5bi1sb0JMdnFUMmpiOHpkR3lqZ0pyLXBaQmk0UQ?oc=5",
+        "published": "2026-05-29T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "MU",
+    "company": "Micron Technology",
+    "frequency_number": 2,
+    "period": 9.14,
+    "train_days": 28,
+    "validation_days": 6,
+    "status": "active",
+    "estimated_start": "2026-07-27",
+    "confirmed_on": "2026-08-03",
+    "prior_session": "2026-07-24",
+    "latest_q": 0.5891,
+    "latest_nrmse": 0.8163,
+    "latest_residual_sigma": 0.058168,
+    "residual_trend": "falling error",
+    "observations": 468,
+    "news_sites": 13,
+    "news_articles": [
+      {
+        "source": "Investing.com",
+        "title": "Why is Micron Technology stock sliding today? - Investing.com",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOVVFxNWU5WndNTC05WGVnNDBvb283WGtPZXR0SG9vUF9vSVg1Yzk4c053UDVEYlZEb2dZNk9SX29Ed2xWT1E3X0dsWW5kQUl3aWVNMjRjT3J1T2YyYzh6NmljbS1NOXZDUUlySi1HQXdVdWtZSnd0RnBzaTFwV2dkOHRzQUI5RVloTHdaZVlhZlZpS1NycjJtOWplYVYzSlBaOFdEeDFhb1pGdw?oc=5",
+        "published": "2026-07-24T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Micron Stock’s AI Scare Misses The Bigger Story (NASDAQ:MU) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNd0hacEhzMHE4anJjLVh3ejlPS3A4SUVidC1vRkpUejhHaHlGZWpoWWlhNE1YUjJyX2lBS0lkcGtNci1MeERzOEEyS0MtVk5zLTdqQlRxT1ZwejRtMmtJTGZFRUJlQjVQcDNJdm1JSWhvTmljMkRtVURTTHpmZ1gtWGVEdUZWclNDeXlSSm1SYw?oc=5",
+        "published": "2026-07-24T03:00:00-04:00"
+      },
+      {
+        "source": "TradingKey",
+        "title": "Micron Technology Inc Stock (MU) Moved Down by 5.50% on Jul 24: A Full Analysis - TradingKey",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMGV4djBKT0hVYXhvZ0FXRUlLVVBFMm1Ld0dWd05SbHg1RmhVV1BMWHlnN2x5c19XS0syeDBzVEtUdmViMWR3VkZHVFhUYzE5X2NWUnRGa1gycnQwRVRCcU12enpuMmVmbk1GZDRyLXpMcmlHUkg0azVPTTZNdFVQNkVadVdmeERo?oc=5",
+        "published": "2026-07-24T03:00:00-04:00"
+      },
+      {
+        "source": "Benzinga",
+        "title": "What's Going on With Micron Technology Stock Friday? - Benzinga",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQR1IwSXVBNVJqNXNwMEFmQXBoRU8tOWxJRXZXaUZNUGVUbWZpelNPanpGQUpBdDdpZzMtSjRyN3VDcmYySm85amFoZ09RR2dFSkZURUQ0aEtGemRFVHZxTmYxbVRzdlhZZUd4cmtNTHB2ZWZ1amdpLTZKcXZUMHd0ZjdFbTkwM2xzS25tT0xoZXA1ZnpiREtnV3pSbDJMdzZGOWpIQThDSUU?oc=5",
+        "published": "2026-07-24T07:10:53-04:00"
+      },
+      {
+        "source": "Kalkine Media",
+        "title": "Morgan Stanley Finance LLC Introduces Enhanced Trigger Jump Securities Linked to Micron Technology Stock Performance - Kalkine Media",
+        "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQdXkxZU9tTDVualQ1Q3lwYW9OTWZGZkdRdW5BeVRNaUUwdlhINDkyYXdSVjFSMG1Pd1ZlXzZuYnc2LWM3V29tWUJ3dWdYeWl2SGwxVG1leVMzTTU0dlFoYzlmMkJiT0VCZE92dGFqX2hBVWFmS0JaQmJmQkdvYVRVNjE2LXRib2c1YzdtUU91UHU5eVJjcDh0c3JubmxFVXE1NGpfT3E4VnFNNnIzSllIdmRYaVRnNGJVRndYbVkwTzdEUmF3cjJLWnlTNWdmMzhidS03cmxDOE5iUkk0SVlxWDFpaDRGMWozT2tPRnV5WmdzMV91eVE?oc=5",
+        "published": "2026-07-24T11:20:22-04:00"
+      },
+      {
+        "source": "Stock Titan",
+        "title": "Micron Technology (NASDAQ: MU) trust plans new 40,000-share sale after recent disposals - Stock Titan",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPOFNPU0ZMNkk2Ulhmb3BFdktZZWxJUjdYazRmQ2hBS2xxVmgxN3Rtd2RZZkwyX1pPclJZUFBHNDVXeXMzLWhSaXVVd1lCRVN5bmtNMTJFajJzbVd3QWgtTGdISnFTU1FOTDZaYXZXemk4Yy12MmpZWHFhNXZHZ1h6LWVHYUQtai1JWlhZT05DTzROYlkxekRlel9sN0c?oc=5",
+        "published": "2026-07-24T16:04:42-04:00"
+      },
+      {
+        "source": "Traders Union",
+        "title": "Micron Technology stock falls as technical pressure builds after construction breakthrough at Boise facility - Traders Union",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPbGU4SDUwQUl2di0yemhLQWpXcWJwSHZLcTNsS0pWRDhZSDdwYkc5b0RlM1E1SENJUW5PRDY1Q3N3Z2c0V1B1X3dMVUpWSElnUUxySTRPMUVCRFUxLTg3eV9GczlNRGZfWm9pX19pLW1hTy1MRnpZSVVreGgxT3p5UjIydjh6bVlMc3QxQXVTS00yeFRZQlZDUjdMVVc?oc=5",
+        "published": "2026-07-24T17:59:22-04:00"
+      },
+      {
+        "source": "GuruFocus",
+        "title": "Micron Technology (MU) Stock Falls Amid Competitive Pressures - GuruFocus",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMk00UzlVZ0VjZVVUdU1tZkVodHBMck4tZnhpa0MzcWQxV29ubjVodVF4bUlUM0xLMzBxSXoyTjRHVmNCLXdnNmprbzMweXVaazJvRjMyNnZrSFVYSkxMbzNIZGZYbFZyMDZleE53S2pCMUVTSGd4Z3pTclhUMG9CcVhGT203LXJJUldsX2d5aEtJUWFNUzFfdlVyQlFHclpCWTlsS05iOWN3eGVmOExF?oc=5",
+        "published": "2026-07-24T19:49:34-04:00"
+      },
+      {
+        "source": "foreignpolicyjournal.com",
+        "title": "Micron Technology (NASDAQ: MU) Stock Price Surges 16% In Five Days While Signing Deals That Could Reshape Its Business Model - foreignpolicyjournal.com",
+        "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNYUNJZXJuMkwwV3BleEhReEplLWRTVjlURHlyTmdBNGFfbFhNUzUzamgwVmlKVF9YOFFhdzhscWVncndOVzVZSzUzbjA5cklPS1FJWFRfQjY0NHNfTGFEU2JjOWFkbkFvcHhDLWtuTWZqc3BPaFoxandpbnE3Q1ktM0RYQ2dmbU1VOHE0S0Y3akVoOUdwaVEwc09CN0lLTHcyS2g0Nl9kcHNVcnREXzRwLVFTTFBDTW1XZzlEVzlfSUhRdmJ0VTZKczF5OEpRWkU3eERWZHdGamdkUmFJY1BEVGd5eFpmX1lOTUJsUkZqRHVfNFZ0endrZVdiWV9zZw?oc=5",
+        "published": "2026-07-24T21:03:00-04:00"
+      },
+      {
+        "source": "Moomoo",
+        "title": "$Micron Technology (MU.US)$ - Moomoo",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOMzNmOXltMXV6Sm50eVZPS2RNdks1ZnVKSDVHRm1XSUttMkg1d2d2UE9CWGR0MWpGdm05RXZ4RXNBTFQ2S2ZsU2x0V0c1Z0ZINE83T0lQNllsZHFIT1ZvR0UzdkRkSlpsdHpvRENhQTBlMlVaQ194b2VfT3FLbTJRbXBZYw?oc=5",
+        "published": "2026-07-25T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "MU",
+    "company": "Micron Technology",
+    "frequency_number": 3,
+    "period": 13.4,
+    "train_days": 41,
+    "validation_days": 9,
+    "status": "broken",
+    "estimated_start": null,
+    "confirmed_on": null,
+    "prior_session": null,
+    "latest_q": 0.0241,
+    "latest_nrmse": 2.3352,
+    "latest_residual_sigma": 0.101704,
+    "residual_trend": "falling error",
+    "observations": 452,
+    "news_sites": null,
+    "news_articles": []
+  },
+  {
+    "symbol": "TSLA",
+    "company": "Tesla, Inc.",
+    "frequency_number": 1,
+    "period": 50.25,
+    "train_days": 151,
+    "validation_days": 31,
+    "status": "broken",
+    "estimated_start": "2026-04-01",
+    "confirmed_on": "2026-05-14",
+    "prior_session": "2026-03-31",
+    "latest_q": 0.032,
+    "latest_nrmse": 1.335,
+    "latest_residual_sigma": 0.137677,
+    "residual_trend": "falling error",
+    "observations": 320,
+    "news_sites": 1,
+    "news_articles": [
+      {
+        "source": "Seeking Alpha",
+        "title": "Tesla: Finally Catching Up To Reality (NASDAQ:TSLA) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPLTdwNC1ia1dWTFlzNEFJbU1YV0RHZ2hKQmlPZXdMVTF5X3VvME9rN2RnM2lsMnlBMVB3eE1DRDJzSkpnNHpVa0liNVo4bmtlNmFYeDFPTC1nRTRUM3RMTVRNdEljQkZvNG85VmczaTk3akpSRlBvSTBsY0NvNk5uSW9hcw?oc=5",
+        "published": "2026-04-01T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Tesla: This Is Not The Right Time To Buy The Dip (NASDAQ:TSLA) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOOGwybENNNU1FbDRJWFVldGl3WXhmZUwxRXVxR01VSkUtanRFY0Niejdpb0hINEJJZjVUd1p4VktBTTUzWWpxWWRQQ2lrbDFDT0kwMnVFMTFLcmM3TlRIdUZJR3dfNDNkZmh6a1VoTVBVSTFZOGR6T2MzOGY3ZXM1cGNPN1VWQWk5ZGRZRE5sVk5pdw?oc=5",
+        "published": "2026-04-01T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "TSLA",
+    "company": "Tesla, Inc.",
+    "frequency_number": 2,
+    "period": 28.71,
+    "train_days": 87,
+    "validation_days": 18,
+    "status": "broken",
+    "estimated_start": "2025-12-15",
+    "confirmed_on": "2026-01-09",
+    "prior_session": "2025-12-12",
+    "latest_q": 0.0273,
+    "latest_nrmse": 1.853,
+    "latest_residual_sigma": 0.103119,
+    "residual_trend": "rising error",
+    "observations": 397,
+    "news_sites": 2,
+    "news_articles": [
+      {
+        "source": "Yahoo Finance",
+        "title": "Barclays Says Tesla (TSLA) Deliveries ‘Likely Won’t Matter’ for the Stock - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQTW9yMkwycWVpMFBQN280YlFST2lOLW5DWVd0a2VLZmJjbnNERWdNc2lqZW5ULU5PRFVseEQ1SzlQeHJfN0U3QWRFWkNyck96R0hHM1hUd2luU1pfcnhfQjhUZ1ZBemhQZWZDZF9yZE9YZEJCRk5FSFQ4dnhacHBNeUZ2Q0JNM2F4?oc=5",
+        "published": "2025-12-14T03:00:00-05:00"
+      },
+      {
+        "source": "CoinCentral",
+        "title": "Tesla, Inc. (TSLA) Stock: Early Entry Forms as Robotaxi Deadline Raises Autonomy Stakes - CoinCentral",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQaVRneUhCVXFVM1JoVGRaNXpMbElHbEtXeW11VDJDc2M4cXdJYnJ0c3FfQ0lwZndNcTNuaGRxVVdCWjB2YTBFdXc1aXU1TFZSR3dUWFYxSmZ2Xzk1UThvVzAzQUd6WjMyRlkzRTRfdWFRRXRHWF9pNldrOVJoN0pQUm9EZ2piSG5CTU5nRHNGbmszcmNseVpWbnUzeW5SZEhyRUV1UnFMcmdGQkE?oc=5",
+        "published": "2025-12-15T03:00:00-05:00"
+      }
+    ]
+  },
+  {
+    "symbol": "TSLA",
+    "company": "Tesla, Inc.",
+    "frequency_number": 3,
+    "period": 16.75,
+    "train_days": 51,
+    "validation_days": 11,
+    "status": "broken",
+    "estimated_start": "2025-07-30",
+    "confirmed_on": "2025-08-13",
+    "prior_session": "2025-07-29",
+    "latest_q": 0.0224,
+    "latest_nrmse": 2.6466,
+    "latest_residual_sigma": 0.074858,
+    "residual_trend": "rising error",
+    "observations": 440,
+    "news_sites": 0,
+    "news_articles": []
+  },
+  {
+    "symbol": "META",
+    "company": "Meta Platforms",
+    "frequency_number": 1,
+    "period": 40.2,
+    "train_days": 121,
+    "validation_days": 25,
+    "status": "broken",
+    "estimated_start": "2026-03-11",
+    "confirmed_on": "2026-04-15",
+    "prior_session": "2026-03-10",
+    "latest_q": 0.0282,
+    "latest_nrmse": 1.7409,
+    "latest_residual_sigma": 0.066494,
+    "residual_trend": "rising error",
+    "observations": 356,
+    "news_sites": 9,
+    "news_articles": [
+      {
+        "source": "Quiver Quantitative",
+        "title": "Meta Platforms Stock (META) Opinions on Moltbook Acquisition - Quiver Quantitative",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQcVplLTBXdUZ3UXJHQ3NkUUNoQ3A1VUtjWHd0M0NWbng1T3Jkcm5kX1RrLXo1RWVRN1d3OE41YXFZN0xqSGJnek10V3RfNnVmOFVmYVFheXQ2TG5SamxUc2Y2Z3pick10Uk1OVnBXNHJvdFNyX2lhN0g2WDdVdUstaUg4c3VONHU2aFAwd3RubGp5WFpEN0h3VHBCamRnZw?oc=5",
+        "published": "2026-03-10T03:00:00-04:00"
+      },
+      {
+        "source": "Investing.com",
+        "title": "Meta Platforms AI Spending Surge Could Reshape Its $1.6T Valuation - Investing.com",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNcGVxTmRZV1JsNGtOZ1pxd3piMjY1ZFRxRWNGdk1zRFpYdjh0cVJlTmgydXc2Si0wTmtERVBRMV95QWtRYXBrYkFjdTBneFR2c2M0MGh5MU5PazdpX3dwYk9jSU5WeVo4UldLbXZUeXQ5LUFHb29vZFZXTFRhamNaQ2o0d092M2c3ZXhnZEpvTVdOLVQwRVlBMjZZaHdyUHg0VVJUSnZIWmlob2JhcFE?oc=5",
+        "published": "2026-03-10T03:00:00-04:00"
+      },
+      {
+        "source": "The Motley Fool",
+        "title": "AMD CEO Lisa Su Believes Its Deal With Meta Platforms Will Be a Triple-Digit Billion Dollar Deal - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPXzJnUTJabVFPU1ZBSmdFN0kycFlmNkUtM0hXczkxaDdjOGZnUGpIa2t3V2tLaUI3M1VnaEdicjJEZEJnTjdITWZQZmJsRFJZOENSVlN0RldKMnpRVWp5NHQyaUNrM0NsVlV6ekxOMF8xaTZvRWFtZnJzSUFySHBsRjJKZ3FBV1N4Q0lWdUVBd01xeDA1bm5hbw?oc=5",
+        "published": "2026-03-10T03:00:00-04:00"
+      },
+      {
+        "source": "CoinCentral",
+        "title": "Meta Platforms (META) Stock Acquires AI Agent Social Network Moltbook - CoinCentral",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPOGdLazViVUE1U1V6U0JyaXc1WjM3RlhEb2FkaGJPQmtydFB0c0VYbDVubjNLZWhEN2IyX2VOa19pRUtZYVVlamhhNlgzOVB1U1daekJrSmx0N2xOTFU2TzNwQmxkOURHLXZEbmZ5cUE3emJBS2tHWTEtY1puRTlfYVVUamJheS13Nm9Talg0RU1uOHh4THNJ?oc=5",
+        "published": "2026-03-10T03:00:00-04:00"
+      },
+      {
+        "source": "parameter.io",
+        "title": "Meta Platforms (META) Stock Snaps Up AI-Focused Social Platform Moltbook - parameter.io",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMFlJYkFNeW5aT3oteFRvLWpfWFJiaE03dVd6bnRaMDRvcjdDMlAwai1EWXBPcHhKU081ZWRKOGZVLVJBZmduelZPMWxuZlhMUlQxVzJZS0Y2VmpseklsNXhRaTdZck92R0VhVnRYR3plRW9rNVJpWUczVWd4N0pLam16dU9fUlpjVHFVS1pxTWx5eU1pSnVZ?oc=5",
+        "published": "2026-03-10T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Will New Custom AI Chips Propel Meta Platforms to $750? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE8tMHFJbG4yT0ZpNGpCWWl1RkRMendqQ3R6U0RLNUFYT1U4cTY5UmJ1b2FVVTg4U3FDZDcyZktUOXFlVUlSNW5ONEtmRGRqUmRhc3hwYmlmcEtKQmM3eTNiNXNvZHdmMjY2eTFDWlBnUWxyT0V6VF9naTJ5Vnh4dw?oc=5",
+        "published": "2026-03-11T03:00:00-04:00"
+      },
+      {
+        "source": "The Motley Fool",
+        "title": "Meta Platforms Is on a Spending Spree -- and It's Massive. Here's Some Telling Perspective. - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQYXFKTTN1azM1a0lpWGJ4MWNXWF8xYUhoRzcxX0JyOGYyQTJmYzQwU0xGZTlDUmZERkdIMU9YMWc1Z3Voc0tOYWNMWGFFbGRscGNkSEIwVVh0OWlkQnZ3UHVYZUxDQV92ZFpqZFJ6U3lZVzczMjlwankzdEt3WTZDNUNpVHpyMFlyRE44dUZycVNadFp6enZUQQ?oc=5",
+        "published": "2026-03-11T03:00:00-04:00"
+      },
+      {
+        "source": "24/7 Wall St.",
+        "title": "Will New Custom AI Chips Propel Meta Platforms to $750? - 24/7 Wall St.",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTGxYZUhvOVhlYWpzMDBzZWFCN3cxRTBEdmhLUlF6aGh1QVFTM2NqU3RBM0ZjV1pFOWlhbVJIRWN3dlFfS21yaGRKSG5aMEFpTUFIXzZPeDNkLVJEQXl3bmZDb3lwYk1PUU1YMm80WHQ3OEpIbFpyRXdpS1JMOGc3Q1kxZUd1bkRQRUNlVnBDZ2V5NnYxQVExbmpRczlxUQ?oc=5",
+        "published": "2026-03-11T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Google, Amazon, Meta 'aggressively focused' on building alternatives to Nvidia: Wedbush (GOOG:NASDAQ) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSHd2UmphWFVhNFQyVlRkZUwxWk1nZ1g1VGJiaG9RYTBJRUI3bkhhU3RTZ3VqMU1qR2R3U2Vxb1BLbFpQWmhkQnhSRWJxNmp2VTB3eVU4b0RpWjhZb3FtdVFGZXZGY2VjbC1oNUlUa2Z2XzF1bVFLUFR5SlV2dnh3cm9NOVBveXozWC0wRng1VEVZNFhrQVo5bUJvakhuWlFsVkRSZEsyZUFXZjBXRXNZdFRRX3JOTjBmTFdRRA?oc=5",
+        "published": "2026-03-11T03:00:00-04:00"
+      },
+      {
+        "source": "Blockonomi",
+        "title": "Meta Platforms (META) Stock Climbs as Moltbook Acquisition Strengthens AI Agent Strategy - Blockonomi",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOZzFsWks1U01ZTmdOOUpJQ0lYZTc1a1ZvZGpBYkdiYmljX0RrY0MxbVpPcV9yRGFHeUhuckpGTnJQYUxtc1JvX3BVdnpqTUt2UWRzYWhxTUZmWWswdVUyS3o1el85YXpIRnhHM3ExcDlNbWVLeFFaaG9kN1lrcHpxREQtR190MFlzblE1RUdJdWZJWDZSZ19DSEZjQTFJZTdsbTFOS3o1SkgyMVJ0NXVn?oc=5",
+        "published": "2026-03-11T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "META",
+    "company": "Meta Platforms",
+    "frequency_number": 2,
+    "period": 22.33,
+    "train_days": 67,
+    "validation_days": 14,
+    "status": "broken",
+    "estimated_start": "2024-12-16",
+    "confirmed_on": "2025-01-06",
+    "prior_session": "2024-12-13",
+    "latest_q": 0.4691,
+    "latest_nrmse": 1.5656,
+    "latest_residual_sigma": 0.05826,
+    "residual_trend": "falling error",
+    "observations": 421,
+    "news_sites": 1,
+    "news_articles": [
+      {
+        "source": "The Motley Fool",
+        "title": "Better Bargain \"Magnificent Seven\" AI Buy for 2025: Meta Platforms vs. Alphabet - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPUzY1R1pzMXdJZ2hCaDg5RU9yX2o4bzBXaEpsZlFJbDBxakdtV0xMZ3c5bjBWZjlBVkhlMGNZaUxvSjNTY2cxZjBUUlk4c1B2NFRjekZ0T3VKaXFPa2ZuY01vUTBBSjVQTzUyb09aQ1d4Z3IydnJ0dVZGRlRNOWJfOExIMnJUV2p2MzRxVzA3elZtdVl0T0E?oc=5",
+        "published": "2024-12-14T03:00:00-05:00"
+      }
+    ]
+  },
+  {
+    "symbol": "META",
+    "company": "Meta Platforms",
+    "frequency_number": 3,
+    "period": 12.56,
+    "train_days": 38,
+    "validation_days": 8,
+    "status": "broken",
+    "estimated_start": "2026-01-16",
+    "confirmed_on": "2026-01-28",
+    "prior_session": "2026-01-15",
+    "latest_q": 0.0198,
+    "latest_nrmse": 3.2676,
+    "latest_residual_sigma": 0.037312,
+    "residual_trend": "falling error",
+    "observations": 456,
+    "news_sites": 5,
+    "news_articles": [
+      {
+        "source": "Quiver Quantitative",
+        "title": "Meta Platforms Stock (META) Opinions on Reality Labs Layoffs and AI Pivot - Quiver Quantitative",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQeFZMeUItdVRJamkzeGlPWjA4bzJocDJfVVJ4b0JGWGVZVTB0TXhRdUlJeXFOV21PMnRyNVkxdXVvVnN3RzEtNzFKSWZCU3F5cDFockVCRXk2UEN5OUlBYzFJa1VGb0dFR09RTVNwNU85Njd2Vnp2T0l4UnhqLWNQWGV6UFdaN0VjZmQ0c0VOcUtlM3hwOUJaWVU1Xy1kbWY4QnZPVHBjdVdjSVR2LU9J?oc=5",
+        "published": "2026-01-15T03:00:00-05:00"
+      },
+      {
+        "source": "Benzinga",
+        "title": "Meta Stock Rises: What's Going On Behind The Scenes? - Benzinga",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTkh5ejZDeEtCSTloU055Q24ySWRYZ0lMOC1OOE1McXlwTUlGU1Y2UkswQzFBVzdGUTI5R3RjNWZaSE9Cb3AtcFROT0hsOEdQQmEyVFVybmVkRUxoYWVyclRSX0hDcktJMkRfWGE0S0RTZTcxX3JJN3lZTG1GZldlQklTaG5sSlgyZjZNczlJdUdBWDdNcVgyOEZVX2wyUTlLVU5nQmNBOWNrQU1lT0p3?oc=5",
+        "published": "2026-01-15T03:00:00-05:00"
+      },
+      {
+        "source": "Trefis",
+        "title": "Can Meta Platforms Stock Withstand These Pressures? - Trefis",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPT0t1NGN6NTZjSW5pazlRVlVoeTNOWnp5Xy1UdG42eDhLS0UzdGhKN1hiWU5pU1ZReEpjMGtuLW9LV2pDbTZOSVlINVhwYnVLRHprYUZnQVNieUNQb2pLalBfU3o3d2dTaWY4MXNHM05KQVBueWRubm5JWGltQy1lSnBHeXJuLWx6cnNsMUNNYldwMFhRb1AxX1Vtc1dQMVBMYXU1SWRsMEQ5RzZpbzZ6bQ?oc=5",
+        "published": "2026-01-16T03:00:00-05:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Why Is Meta Platforms Priced 36% Cheaper Than Its Hyperscaler Peers? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9qb1oxV09RS1dnY080TS13YlVIcXV0SmNzT3F0UHJyeW5pQWFKdXBFMUVrQXBLdHpIWS1lSE1vSTU1amttQlQydmNPRXh1aFJMZ1ZZRGxSUzhfNzVxNXE2RVNDcTBwcjlobExLSkd5QVBpRFlkb243ZXpHTHJHWXM?oc=5",
+        "published": "2026-01-16T03:00:00-05:00"
+      },
+      {
+        "source": "Forbes",
+        "title": "3 Risks That Every Meta Stock Investor Should Know - Forbes",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNUHNrY0RHV1FaQW5rUk5lVEtlRng3WTVFT0FxbUNyR2hrTFRraklWSkVZdDVWVFZCbGJtUzhpcDVrLUlobHd3QXhtYXFQRm9laVFuY0RqREFsd2E5NnBDbmVibWRZQnFoV28yS3c0YnhhTkxxNWtyclJHdF80UlptWVg4em0xZEU4SFZFUFlYTjI4UDZWT3M2c0hQN2otM0pLczJJMzlFcE95dkRndXc?oc=5",
+        "published": "2026-01-16T03:00:00-05:00"
+      }
+    ]
+  },
+  {
+    "symbol": "AMZN",
+    "company": "Amazon",
+    "frequency_number": 1,
+    "period": 50.25,
+    "train_days": 151,
+    "validation_days": 31,
+    "status": "broken",
+    "estimated_start": null,
+    "confirmed_on": null,
+    "prior_session": null,
+    "latest_q": 0.0318,
+    "latest_nrmse": 1.3517,
+    "latest_residual_sigma": 0.050516,
+    "residual_trend": "falling error",
+    "observations": 320,
+    "news_sites": null,
+    "news_articles": []
+  },
+  {
+    "symbol": "AMZN",
+    "company": "Amazon",
+    "frequency_number": 2,
+    "period": 20.1,
+    "train_days": 61,
+    "validation_days": 13,
+    "status": "broken",
+    "estimated_start": null,
+    "confirmed_on": null,
+    "prior_session": null,
+    "latest_q": 0.0344,
+    "latest_nrmse": 1.1327,
+    "latest_residual_sigma": 0.06977,
+    "residual_trend": "falling error",
+    "observations": 428,
+    "news_sites": null,
+    "news_articles": []
+  },
+  {
+    "symbol": "AMZN",
+    "company": "Amazon",
+    "frequency_number": 3,
+    "period": 28.71,
+    "train_days": 87,
+    "validation_days": 18,
+    "status": "broken",
+    "estimated_start": "2026-05-15",
+    "confirmed_on": "2026-06-10",
+    "prior_session": "2026-05-14",
+    "latest_q": 0.0278,
+    "latest_nrmse": 1.7885,
+    "latest_residual_sigma": 0.063133,
+    "residual_trend": "falling error",
+    "observations": 397,
+    "news_sites": 30,
+    "news_articles": [
+      {
+        "source": "bloomberg.com",
+        "title": "Amazon’s AI Success Sends Stock Racing Toward $3 Trillion Club - bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbkZPaEVGeDAycWQwaTRRRjlNWWZjZ0ZENnBlNmY3Yi1pdFcyZEM5a0h5Zk9IdlJkaVdVb1Y1OEQ2ZkczTjEyVElBMGpPdnFzdDFDS05OaXM2X0pHaHJ6Z2dnMGs0SmFwX2tHTHRLSk1uTDR0eklQUC1ESDUzUnYwUlNLS3UxVlZMb0xLeVR3S1d3SFRPSmxTV0h4VkNmVXV6d2VZSW5SMl9oZ2V3R2g0VGNR?oc=5",
+        "published": "2026-05-14T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Amazon.com (AMZN) Plugged After $200 billion Projected Capital Expenditures - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQ19BSlRfRG9iMzh5UFZUeEI5U3NUSjhGbm1iXzRXcjZ2WHpnSU05VHlqR3NGQldIRWRWWGdqUjBFYzBZWUhVZnZjODJPeU03ekM1OHl5Ung0aGY1R3lHVk5RTFhPek9PV3NaMG9TOFJvdmNDZGdIWU51WVNrVTlJZ1ViMlpoX3prVnNDenlBdW9nY1N2RmZ3?oc=5",
+        "published": "2026-05-14T03:00:00-04:00"
+      },
+      {
+        "source": "Investing.com",
+        "title": "TD Cowen reiterates Buy on Amazon stock, cites grocery expansion - Investing.com",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPTUJPbzVVYTRvbHlRZGxqaU1vQ1I3eDNpT1FiSVduSG4wY0lOYTRHcWtLT3RsQWZROUVjUzQxdEJvRXVnNHdjMXNNM0pURVZWZ0g3a3pGMEhUYmpJcVNWYjNTdV9KVWhJNXRxaHZSMGt6SW03Q3gxd21NRmIyOEZtRkpqdUpZYlpRS3Exdm90TjZpVGVwcFlyT1ctVVZyam5TSlNiNnZYY2JnOE02U19LV3ZUSXlralVHQjh3NkdJSkQ?oc=5",
+        "published": "2026-05-14T03:00:00-04:00"
+      },
+      {
+        "source": "Los Angeles Times",
+        "title": "Amazon’s market value charges toward $3 trillion on AI momentum - Los Angeles Times",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObUR0Q1RTRDFhLWtPQTkyTUpsNjZZUy1HWlNXTW9GTWhieDBPN0E4WU5BOXdEd1luMzVOSTZ3RHE5SEFLUklwVUtSTkhsdWY4WmZ1d2Rad2FyTTJMak1qWVFheTBtSFRvLUJMUEh3ajdZTUpOU3hWODBmSHlTNWQ4UnlSWllTRnlkc0ltOEoxOVJaSU1SZXZRYUhuUmVwamZTS2gwU1hrbmJjS0Zjb2p5eg?oc=5",
+        "published": "2026-05-14T03:00:00-04:00"
+      },
+      {
+        "source": "Quiver Quantitative",
+        "title": "Fund Update: 2,821,825 AMAZON.COM (AMZN) shares added to GENERATION INVESTMENT MANAGEMENT LLP portfolio | AMZN Stock News - Quiver Quantitative",
+        "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPRnpEc1E3S3Q3cjBPblI4ZS1oQUoyWTJJbkdtaVZEWUJpUmo3Z21xUnBwQ0t6Y0Z3d2RzRkdpeHhUMWZMSnpXNlUtemRmN0hlU3Y5Vm50LVQzYWJiLWFDelIzYm5YSDdhemFsaE5kUy15a05OQ1pEdk9XMXptbE9kTjdqX1NtSzdGQ013QlplOC1oR255aV9CYnFmT210bWhMYmtwRG1tYjJKWjVvcFdYOFFqWi1DU2xiTlRkelJHcWhwS1dKZkdVZk9JbXg3b2NrSFl2NDhQMTAxOGx5ci1j?oc=5",
+        "published": "2026-05-14T03:00:00-04:00"
+      },
+      {
+        "source": "MarketBeat",
+        "title": "Amazon vs. Alibaba: One Is Clearly The Better Value Play right Now - MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOeVA5QXZRT2FldkMyLWg5SXc1eFZrVXVOYTZaaWRYY1hNeTB1RFpmUEt1RmFXcVd0T0NxOVk4SzBOMXJGbGVtdUtuLURDYkx3Y1dQdGJ4djlIeVlWa0kxOWpub3hteG0zWmdOcElucFk4ZVVXZ28ySjlkenhNOEhMTHJ4bVpxNkRVOENZdkNmbHhOblRCOVRlUk5Vc3JsRE1xODlz?oc=5",
+        "published": "2026-05-14T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Zacks Earnings Trends Highlights: Alphabet, Amazon, Microsoft, Meta and Nvidia - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTi1VblFBeVBBeGZ2Q2hPUU1JUHdIV2hqRGxwWG82bjFlTW1xMkhhekJhR3l6ZEo3UmpkbnBTUzhQMTRsYTNrZGh6RC1nTkphR292M2Joc0RERXFDM0FwVTBfUzQ3TzN5Rk9OTzRpS2ExV05QMndtVUZsZnVNTlJzWHhNdjJlUGlfT09LR2xKdHY3WXpoOEF5UUlqRXhuWVhQc1dMRG1jYklhUQ?oc=5",
+        "published": "2026-05-14T03:00:00-04:00"
+      },
+      {
+        "source": "Entertainment Weekly",
+        "title": "Amazon shares major update on search for the next James Bond - Entertainment Weekly",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5LQm1qVkMyQ1Z0b2VLQUhDSkxtUWxZWTg0S1dUZVJSUThFTE5JSmN5X281UGxENU96NWRGSHVMb2swQ3dKQVBtb0JrUzVScHA0NlF2YUg5VFdQUFpESFNmdTFGeEw2WmRyeEk4cXR3ZlVwVWExOW5JYkFJdTZ6dw?oc=5",
+        "published": "2026-05-14T03:00:00-04:00"
+      },
+      {
+        "source": "TheStreet Pro",
+        "title": "Chart of the Day: Amazon Remains on a Charted Course - TheStreet Pro",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPcHlmdUZHSEZVMGJrWU1PdXNCNC1xQ3pZQzNtZnVXcjB2M0JEaWNZUTc5dl85WHY4MXBwLVNQWFFaVkVMenVaVjV2YTlraHM5LXZXZWZJUmcwTG1NYm9sRDBJMDdxTHJTZGpzbzVWVXJOOUh6RGFWUE5ZQzU1c0RzX1BkVUphbmNZNEJQaTJTVXU?oc=5",
+        "published": "2026-05-14T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Amazon: AWS Remains The Growth Driver, Expecting More Record Highs (NASDAQ:AMZN) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQeVZlTnR6M180Q0lIUzVwS3BicmZnYTJHRU9mallLM0kzMElzaDJ3Qm5wQWxjZXhibS1FNXlvTGlDUEk3eG9aemNubmIycWt1UTFiSXdSVnBFQUE0UUU1NHI4VERRNmtDUDBuZzNkckd2M0haaF9yVEFsYVZJck5xaWdZb19TLXoycjhCZnExNTJ4WkcyeDdrQ2xxNWI1LWw5MFY2cjFVZkc?oc=5",
+        "published": "2026-05-14T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "GOOGL",
+    "company": "Alphabet Inc. (Class A)",
+    "frequency_number": 1,
+    "period": 50.25,
+    "train_days": 151,
+    "validation_days": 31,
+    "status": "broken",
+    "estimated_start": null,
+    "confirmed_on": null,
+    "prior_session": null,
+    "latest_q": 0.0246,
+    "latest_nrmse": 2.2492,
+    "latest_residual_sigma": 0.052943,
+    "residual_trend": "rising error",
+    "observations": 320,
+    "news_sites": null,
+    "news_articles": []
+  },
+  {
+    "symbol": "GOOGL",
+    "company": "Alphabet Inc. (Class A)",
+    "frequency_number": 2,
+    "period": 28.71,
+    "train_days": 87,
+    "validation_days": 18,
+    "status": "broken",
+    "estimated_start": null,
+    "confirmed_on": null,
+    "prior_session": null,
+    "latest_q": 0.0204,
+    "latest_nrmse": 3.1064,
+    "latest_residual_sigma": 0.051516,
+    "residual_trend": "falling error",
+    "observations": 397,
+    "news_sites": null,
+    "news_articles": []
+  },
+  {
+    "symbol": "GOOGL",
+    "company": "Alphabet Inc. (Class A)",
+    "frequency_number": 3,
+    "period": 22.33,
+    "train_days": 67,
+    "validation_days": 14,
+    "status": "broken",
+    "estimated_start": null,
+    "confirmed_on": null,
+    "prior_session": null,
+    "latest_q": 0.0295,
+    "latest_nrmse": 1.5856,
+    "latest_residual_sigma": 0.04428,
+    "residual_trend": "falling error",
+    "observations": 421,
+    "news_sites": null,
+    "news_articles": []
+  },
+  {
+    "symbol": "NFLX",
+    "company": "Netflix, Inc.",
+    "frequency_number": 1,
+    "period": 33.5,
+    "train_days": 101,
+    "validation_days": 21,
+    "status": "broken",
+    "estimated_start": "2026-01-29",
+    "confirmed_on": "2026-02-27",
+    "prior_session": "2026-01-28",
+    "latest_q": 0.0176,
+    "latest_nrmse": 3.9275,
+    "latest_residual_sigma": 0.046574,
+    "residual_trend": "falling error",
+    "observations": 380,
+    "news_sites": 2,
+    "news_articles": [
+      {
+        "source": "Yahoo Finance",
+        "title": "Phillip Securities Cite Netflix, Inc. (NFLX)’s Market Leadership and Pricing Power for Long-Term Upside - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQSjk5X09iY0xXN3J0c1pFSmJLazUtXzhlNFA4Q2hIcVhIR2ZUdGxQV18xR2I2bElHdzZmbkNxRmpzNUdOaFkwRmJfaEVQZDRGUDFVVWt5Z05BSkswZGNSWVpYa09IMkV0TTZreWlVUnJYQVVEcUpoa3Uyckg3bHdMMDZ4dUpENTRI?oc=5",
+        "published": "2026-01-29T03:00:00-05:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Netflix Has Further To Fall (NASDAQ:NFLX) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5kV1FycWFyNjliM2ZVb3U5eTNJXzNqZ20tSVBfd3E3ekR5NmR2WUFUOFVaYzlXWXh5dXlBUzRtcTNYOVlNY3o2T3gxN1ozUnBEcm9DUXluWDNabkpqdDVkaDR6dUkxblo1Zk5nYjdhWXNnUkVyRm40?oc=5",
+        "published": "2026-01-29T03:00:00-05:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Netflix And Warner Bros. Discovery Discover A New Path Forward (NASDAQ:NFLX) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQbDh3Zk80ZXVlVi1ua1haQjlIbXoxRG5VUENCUlVXREttS0M1Y2R4VWQ5dTJYVGRwdlE4dXhBQzhLNEhzQjJ2WUJuTHBLMEJPMlBYalBYRGc2em9KZWtQdlBpQktUWmM2Nmd1OFo5R21SMVFWQjlST2NMS1RLMWpNdXV2TE4wNnBrWEh1NDBUbUI?oc=5",
+        "published": "2026-01-29T03:00:00-05:00"
+      }
+    ]
+  },
+  {
+    "symbol": "NFLX",
+    "company": "Netflix, Inc.",
+    "frequency_number": 2,
+    "period": 25.12,
+    "train_days": 76,
+    "validation_days": 16,
+    "status": "weakening",
+    "estimated_start": "2026-07-02",
+    "confirmed_on": "2026-07-24",
+    "prior_session": "2026-07-01",
+    "latest_q": 0.0381,
+    "latest_nrmse": 0.8782,
+    "latest_residual_sigma": 0.028433,
+    "residual_trend": "falling error",
+    "observations": 410,
+    "news_sites": 2,
+    "news_articles": [
+      {
+        "source": "MarketBeat",
+        "title": "USS Investment Management Ltd Increases Stock Holdings in Netflix, Inc. $NFLX - MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPZEx0c3NNaFEtLUFlTVlBal81VmViMVgydlFpVkxCeEtNdHNGX2Q5U2NUem9MM0s5cV9TU0hfSEstT21sNnlYd19SMkMzQWppSHFEVVVUdXlBQl9lWHltcGlQRHV2NEZpeVJZT2FnbVJtX19MMEFaandIbkJLSkR3eENZZnBVWnBjSVZjcVlJLXo1dHExejh5bl9TTklTeU84Vnd1ZEtKLUFJQ0N5QlJ4NDJPWDBCaUh1bDJrbUlqU0ExZlk2eWN2ZVZjOTlPQnlf?oc=5",
+        "published": "2026-07-01T03:00:00-04:00"
+      },
+      {
+        "source": "Benzinga",
+        "title": "Netflix Stock Defies Tech Sell-Off Thursday: What's Going On? - Netflix (NASDAQ:NFLX) - Benzinga",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOV3A3UExHcWtYMXdvNUUwMmQ5UHNTMXRzTlFGVjZhTTZpNk5YOEVBU2FscnYtbkxIN2pva2ZqMWlBNjc4WGJnVTVxX3dZSHUxOVpVb01aTnI4bkJNNkEyakRaNmNxYVl1bHdROExxMERUZklDYXZ0ZjFnemNBVkk5am56TjFfd21mQ193cEJrNlZBeTNSQVpxNTQ2akVQWF8xOWYzSTFpWWRzUVM5My1LOVRoQmpvNVo5TUJF?oc=5",
+        "published": "2026-07-02T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "NFLX",
+    "company": "Netflix, Inc.",
+    "frequency_number": 3,
+    "period": 15.46,
+    "train_days": 47,
+    "validation_days": 10,
+    "status": "weakening",
+    "estimated_start": "2026-07-16",
+    "confirmed_on": "2026-07-29",
+    "prior_session": "2026-07-15",
+    "latest_q": 0.4934,
+    "latest_nrmse": 1.3063,
+    "latest_residual_sigma": 0.029805,
+    "residual_trend": "falling error",
+    "observations": 445,
+    "news_sites": 3,
+    "news_articles": [
+      {
+        "source": "Yahoo Finance",
+        "title": "Netflix (NFLX): The Worst Blue Chip Stock to Buy Now - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOZFpaRTM4U25KOThYOVp5OGwxMTJoZjY1TldBT3NBeGVpeU80cVNtVG50NGdFYmV6eGhOTnlDSnNpdjlVSzMzSmlfUi1HUW1VN1V4c3d5WFZkeU5JQWNvOWVKMzZybjJ0bEhyZ2Y3R1Vtc1hsa0dxOHRDN1NwWmJFeG1IdFV4cU9ZOER3dldmWDE1NkZPQjZyMg?oc=5",
+        "published": "2026-07-15T03:00:00-04:00"
+      },
+      {
+        "source": "MarketBeat",
+        "title": "Zweig DiMenna Associates LLC Has $9.71 Million Stock Position in Netflix, Inc. $NFLX - MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQOFFMMXRUZFp2cjZWSEhSeVhGNTdnaHduQnVheTBIVVNnV285eEJhaWpWVFpsdmdCdG1CbzloLU5qRW4yNHZWbWdGRG5NNWRHOW04OWpKVkxHRl9tYzFPZk5OMXpONFlrTTVVS3k0QVBEa1k1Nnh3QjBWb3pxZWpuZ09HRWRwV051alF6NVdTQVZiQkFCR19HZFU1c3RpREJrYUN3X1pVZmpHc1Q2N2l6WGRBSEpLNGZBVWIzZy1hNFlzX1NJbTJ2Y0hmcHVra241YWRfY3JvQQ?oc=5",
+        "published": "2026-07-15T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Netflix braces for 8% post-earnings jolt as option bets pile up (NFLX:NASDAQ) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOSW80UjhNazhBcV9JdDlYRFVqUmZGRUk4MVdPS0N3cDViamgyXzVJWWhBTzBQaEpYZDRrTm1EbTAzbTBVYkZ5NUp4UkRaeGx3QndhVDVKeW9iZmpKMGkyUDNsbXRqbUwxRjJrNE1URHNCUjR6TFFGRTVKbGhXOTlaT1BNRXNPamphY25Zd1lodWhHQ1ZHdXQ5QmxHTnhDdi1LRlZicm9QdHVSbDNR?oc=5",
+        "published": "2026-07-15T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Netflix: The Market Hasn't Caught On To This Game-Changing Strategy (NASDAQ:NFLX) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNkg4cHFhaTk4cmNRWVVVQmczWWdUREZXNXNFS0dLN3dIZDJqaUdfM0ZLOVAzaEhwNUdJVzhkblZ3MlA5TW9WUWRDVE5GQlh4OGJmZ19hSEJENnhndlV1c0c5Z1lST3lmWGlrdHk5RzFyNnJQUXRENkpKUmVITi05akl1dzZnX28xQk15NDRaQk1pYjZMSF9Rc1RiSGhMWlh6bzg3ZmVCeXJOdw?oc=5",
+        "published": "2026-07-15T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Netflix Q2: This 8% Drop Is A Gift (NASDAQ:NFLX) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOUHREQUFHVjQwVXVNMnd5T3p6dmZNUlE0Z2hMRC1FRVkwbmt2Mm1Jc0RxNzR1Mk9xbG9ESmxtcU5oS1M0UW5Cd3BkUFpaWWZZSGdzZ2ctaGl0ZWhyd0VQWDBtc195UjJObHZ2NkE2MS1BQkZvVXFBallUVjVoa0VCS19jWVhKRk1E?oc=5",
+        "published": "2026-07-16T03:00:00-04:00"
+      },
+      {
+        "source": "MarketBeat",
+        "title": "Bank of New York Mellon Corp Has $2.60 Billion Stock Holdings in Netflix, Inc. $NFLX - MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNanpyLUcxVG1YMGIyV29QTlFOUTdzeW83VjJxVHA3Ql9aeldNZmlHcDFjcWtzclVLYmxBNkFFQkhPTG85TXh5Zy13UHBqUHh6R0pmRmNYVkF3NWIza2sweHdrZjVnTTFZWTdTWExIRnpyUDZueGNNazdqRi1OWldJWGVPMzZQTThLbGIxanY4RWZkdWE5OUdrMm5jQXVpUTRzb1gwZVhWZE94enJhZHVFaGpSSUtZWnVRNmZJWUhkUVNod0pkaWlYbXhTS2hXLXNpYzFUbV82MA?oc=5",
+        "published": "2026-07-16T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Netflix falls despite recording double-digit growth in every geographic region (NFLX:NASDAQ) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNEx0YWFoNkdZeWVfeE5JQ1JSX3hUQzVzMzdXVFd0UmlmV1AwTGNYTlJpSzdfeVdpb1lncHB4SlRIWjZ5U0VSY0cxa1FETXFuRmhoVGVib3lDSVEwbGlWTmhRTTE0UUItajhfRDNIX29udmpxUTJQUG1sVjFOLVVFc21MQ1RwZ1VPMG9SRWx3NW9UTVR5eWRHam5zZmNzbHlnY3NuMnZ1RE5vRm0xNnZBWHEwOUNjNWc?oc=5",
+        "published": "2026-07-16T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "PLTR",
+    "company": "Palantir Technologies",
+    "frequency_number": 1,
+    "period": 50.25,
+    "train_days": 151,
+    "validation_days": 31,
+    "status": "broken",
+    "estimated_start": "2026-03-19",
+    "confirmed_on": "2026-05-01",
+    "prior_session": "2026-03-18",
+    "latest_q": 0.5355,
+    "latest_nrmse": 1.1831,
+    "latest_residual_sigma": 0.083779,
+    "residual_trend": "stable",
+    "observations": 320,
+    "news_sites": 5,
+    "news_articles": [
+      {
+        "source": "Zacks Investment Research",
+        "title": "Can Palantir Technologies Sustain Its Growth? Narrative vs. Reality - Zacks Investment Research",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVXVIaGZzdmtRVGJWbWdYR015VkdNTHFBMkRnWTZlbEdDSTg3Z0pMNnFfcG1ZZ3lrajVsdzZUX2MyQ1JMV01teUFJWVh0RWwwY2RmZEU3SDZmSjJVdWs2Q29PNTlCOHJ5Qy1CZ3piZGNJZk1NMkVSdS1fTjVBMFVvazFzdnlLZy1GUjJUdXVNY2F6Skg0S29XZVBxazdUN1RqaloxVkRkSEREQQ?oc=5",
+        "published": "2026-03-18T03:00:00-04:00"
+      },
+      {
+        "source": "GuruFocus",
+        "title": "UBS Raises Price Target for Palantir Technologies (PLTR) to $200 - GuruFocus",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQaTZWeGdVMHJzMkVvemNXSWh5cGdETHZYZ2E0enJaTFhEdTJwZnMzTnE0aE53anhTMHczNFRYQlNxSkZPZGMxUEtlUTdCaWdFZ2NFbHZZS0wzMjFlZm1FWHVnWDU2Ri1Za2N5TTN3Q2dzS2xhLTlKQ2dnX2F0eDdGQmhmUmctalFNMXUzRzByQ1ZOYmtZSmRqNlpUWV9IMXJPVTlDSVdiODhmN0UyeF9RdGJlTWxoOUMwZ0twTTlucHduQWlUUDZR?oc=5",
+        "published": "2026-03-18T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Palantir At $150: Good Company, Bad Bet (NASDAQ:PLTR) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQWjVUcTBNVlhEbkl6bFRNQlpFQVFnQkZ3a0ttWDZIY0x5bS1iWHhiR3QxRG55QjFEUmh5S2dGVDJlOUU3eVp0VE44SWlWUHNoNmNoYVNlM0N3Y0FNVDk0ZnRHYldFM1Jzc0RnOGF0OFU5ZlEtYm1PRVNwQlVPems5VmJGMA?oc=5",
+        "published": "2026-03-18T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Data Analytics Stocks Q4 Earnings: Palantir Technologies (NASDAQ:PLTR) Firing on All Cylinders - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNWThCUDJBZm1GZF80RW9DNWllRFdZOTVqQmprejRqYzVlWnVCb2Z1cTlJcU9CSEdJaFh1TDA0Nk9SSXR0RC0tZkJNenIzMmtSLVBFOUtnTVhvXzNRSW14M2hqdlliRWJmXzRmMkxMdi0ycWZCWVVIaGxHbUxGYnktQmxBOGx0Z3UxVFVxYm51REdiS0RpMnotZ2ZkSldkelE?oc=5",
+        "published": "2026-03-19T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Palantir: Probably The Most Consequential AI Company In Our Dangerous World (NASDAQ:PLTR) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPU3RibFV2ZEVlVHlwWEdOcTFzRTRLbEI4R0RIeWJtMEVaRFZYTW5RWkJBNmRKdHZLVnJicTVtZEVUcGFkOGsxV1lteGg1YmpSQUhFN2xoam4xb3Nqd2dDcE42NjBVQU01Y0VxZHRrSUhFY1U4cWtoSzdHV2tockZjd2M1ci03QkVLd3YwODVqYkF0Y3o4TW1XU2pXT0tNV0RCclVOUmw3c0NibzlNaTFCd1BnNFhSdw?oc=5",
+        "published": "2026-03-19T03:00:00-04:00"
+      },
+      {
+        "source": "TipRanks",
+        "title": "Mizuho Stays Bullish on Palantir Stock (PLTR), Says It is ‘Unlike Anything Else in Software’ - TipRanks",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMy1MODRqOTk3aHRScDREN3kxUlRJMlc0YmRycDN1NzY3T2pab0F3MDd6MjgtU2ltdkNWTlcyRHQzR0plaFpkb1lOcjJISmlxdVVYVXdURXVWc3cxeThncFpMRnd3X2EyeEZUdHFaZm5Rdm5aMzdLc1BncTg3Ul9DdkVuUEJEUTg4RzJsRG5IU18xalN1SldNcjVJeVpGYUYzdTBXZkpFZVpkTl96eGtQTUxDYWhtV1U2?oc=5",
+        "published": "2026-03-19T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "PLTR",
+    "company": "Palantir Technologies",
+    "frequency_number": 2,
+    "period": 28.71,
+    "train_days": 87,
+    "validation_days": 18,
+    "status": "weakening",
+    "estimated_start": "2026-07-09",
+    "confirmed_on": "2026-08-03",
+    "prior_session": "2026-07-08",
+    "latest_q": 0.5171,
+    "latest_nrmse": 1.2803,
+    "latest_residual_sigma": 0.072517,
+    "residual_trend": "rising error",
+    "observations": 397,
+    "news_sites": 6,
+    "news_articles": [
+      {
+        "source": "Yahoo Finance",
+        "title": "Why Palantir Technologies Stock Just Dropped - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPUkZld19rcDVBdDNEa2t5NGpUWUxmTGZoMjl3UHRTb1VkN1pWcmtJbzVraWkzb0FydkJlOWpaS0tXbzh1OUZuRVFxRk9xSXJ6cW51ZkhYSENNYjVTcGhIWVRjb0RDajZSUUNPb0sxdVdWWDBZbDU4Tm1qN1l2U2hnWFFMYmNZX0lJZTlwSmtnallqSW5PZGdPZUN2bTVUc3g2ZEY4?oc=5",
+        "published": "2026-07-08T03:00:00-04:00"
+      },
+      {
+        "source": "The Motley Fool",
+        "title": "Why Palantir Technologies Stock Just Dropped - The Motley Fool",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNMEw5bXJVb0dkNWlSbUlOQ2RZVHljNTRNeHVjNmhxalpLeGJLa3FXWlJBcFYwWkpYRUwyZHF5bG92M2VHZzRWSHZIeGZYM2JVdmE1cVRtZ3pQa2tOMWhGcml0WDJxNzdTRVBOR1h6RmgxbUpFdnQtOVFES0U0eWFzTXVjU3NXS3BYMFFKVlZnVmM?oc=5",
+        "published": "2026-07-08T03:00:00-04:00"
+      },
+      {
+        "source": "Trefis",
+        "title": "Palantir Technologies Stock Rides A 7-Day Winning Streak To A 25% Gain - Trefis",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPd1hWQnRJZS1meU42cmlIZlRfeUlCVzY4ZU1Wb2t2Q3FNa3FoblF4cUlKeVBJcndxWDMxNW8xZGFMRFkwbGw1QnlsZlpnQmM0bEtZcXNma3FkQzJaaXVkSzVhSWRrczVGb2xaaGMtSURVeWFINjRQcmJqNkNTZWVONV9xTGdCbmVMWWZTOU95ZWEwWXN4NkRlQ09sek9NdDJSUWNCRW5CUS1YeTlpOXNVTFBVUFNDQzRJdHBCYzNVRE9GaVA0amgtRzFB?oc=5",
+        "published": "2026-07-08T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Palantir: The Bear Case Just Broke (NASDAQ:PLTR) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9pRm94S1NjWG9LNTV3S2dWdEZpeU9NaXdfQXZsNG9tendwVHZRdVhYYVVQbEFHbUVOVHhSNmVBcUhVLVU4VjFlUzQya3RCbVNiZnFqcUtNVC0wSnJzQi1oX1hiZGlTYXMzOS1VVjQ5RWdwQjlyQm5NQW1rNEJkTmc?oc=5",
+        "published": "2026-07-08T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Here is why Palantir Technologies Inc. (PLTR) is among the 12 Best Cybersecurity Stocks to Buy and Hold for the Long Term - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOa1NzOXhmcjMzSklKaUUteGdycEFERElLZ29sTmdjR3pxVVQ1RDlJQU5TQm5ZcW9xVE1sa1d3dTR4eVM1eDFKUTZJZ3ZQVFVUWm9rS2tHSWh1N3BEODdOYUtoa2RDVXRYSERScG9JYWtaMTRwWUxrNVQ1cFhKS2RnVzhzNWs5X05NWEV3QzBSUnhUTW1Ya044anBsSWpubE0?oc=5",
+        "published": "2026-07-08T03:00:00-04:00"
+      },
+      {
+        "source": "Trefis",
+        "title": "Palantir Technologies Stock Rockets 25% With 7-Day Winning Streak - Trefis",
+        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQR1hPSDBIdkVNV2s3RExaMjJBbEN3VE01eEltVE16bFhYZlNhUlB5NVVLa1p1MWZfX3NPLXM3VDU5akItS0RaVmd6b3ZjUkxqbGR6cDRJVUlDVnNCdEl5a3dQMEt2NXpjN0UwSXlRUGVmZ1dFU21XcVFrMGFUeVA3NVRVa0M2VFR1VmtoZm5qV1JGS183S3hDSW85VXhEVFMwZFphUWRDNEstd2NaUWN3QlljdnFUTlhQVUtLSFp1MDAwSzdhWjZYNkd1ZzdvQ0U?oc=5",
+        "published": "2026-07-08T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Palantir Technologies (PLTR) Looks Beaten Down Despite Expanding Its Sovereign AI Push - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNandqUjBYZW8wSDdXWlk1cGFaTFVLM2c4X3R6SEZVZnN5RkFQcEUwcUFrWFFtRFNsR0xJZExoN0FHTWpxekxPM1pTeWV2MU9pRkp2M294ODVRZ291LTV1OWpsTEM3VnhJTm1kN0pqSWNOd2JvcGQyLTVzcTF1VVpmdWZicmlISFU5a0kxUFV2dTV2TTBpV0o2QVhaNTJ5VlY4MTlOUXB3?oc=5",
+        "published": "2026-07-08T03:00:00-04:00"
+      },
+      {
+        "source": "foxbusiness.com",
+        "title": "Palantir Technologies stock performance analyzed amid Rackspace AI partnership - foxbusiness.com",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9rWkVQNkxTTVpqWmhCa1g2djFSeGNpcWhudWp6ZEc5cVFSU3gyTHJMRF9QNTM0MFA4aTBDLVNVbDFtWHgxUDFyZ2lCdTIyODBnQW1jSUVNNFFMQ1U?oc=5",
+        "published": "2026-07-09T03:00:00-04:00"
+      },
+      {
+        "source": "TradingKey",
+        "title": "Palantir Technologies Inc Stock (PLTR) Moved Down by 4.04% on Jul 9: Key Drivers Unveiled - TradingKey",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNdm40aE5XOXpJdmFwZ1NqbUNjZTRGRGhhejd2aVI4cldXOC1sOHo3U04zUmZHX1AyRkZfczdUOEVlU0U1VnBoMDhQYjNOSWJVZzlsXzZMMkRXTkExRXJWTFlMSW5pUVFER1VaWWw1VFM3bDVVd2V0NlhXT2ctckJ3NjV1Qkpuc2lqWDNN?oc=5",
+        "published": "2026-07-09T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Palantir: MilTech Cash Printer Overshadowed By AI Infrastructure (NASDAQ:PLTR) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNmMtWTBaTXVfeU1kbktqOHVWMEctejBmbHllUE1LUUFabEw1MVZTQ1V0SzZRaXEzZ1FMTXlTNy13QzBMWWhBRXFZR3ZCbFRCMzNMU0hUcFJVMS1OVk9ZeFhpOUpJWlc1UjdGOXVZQ1BkNGdzdFFCdGtZREdEVFFkekphQzVUQjNzbEdIakZ0S2ZxMHpFM3Y1cGpWNDVWOHdkTHU4aHY3aw?oc=5",
+        "published": "2026-07-09T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "PLTR",
+    "company": "Palantir Technologies",
+    "frequency_number": 3,
+    "period": 11.82,
+    "train_days": 36,
+    "validation_days": 8,
+    "status": "broken",
+    "estimated_start": "2026-04-13",
+    "confirmed_on": "2026-04-22",
+    "prior_session": "2026-04-10",
+    "latest_q": 0.0347,
+    "latest_nrmse": 1.1087,
+    "latest_residual_sigma": 0.082105,
+    "residual_trend": "falling error",
+    "observations": 458,
+    "news_sites": 6,
+    "news_articles": [
+      {
+        "source": "Yahoo Finance",
+        "title": "Why Palantir Technologies Stock Keeps Going Down - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRFRTOTR6WldyZkEyWWhzbGxaTU04UzNQaTRQUUdqUWFXb1oyT1BiU0RqWmVxMy1sYmJWU3g2QjRTN0Nkc3psWl9aWHg3TGRMNzZ0Mk83RzVXbE51cGdINzRCV05GanpMVktzSGczRmU1LTE5SWNvT002WGtVYnh2YkRpRGd6OGhmanhjRU9lYWdFWW5OQWgwZ3lpWmhvUXE1cFlvcA?oc=5",
+        "published": "2026-04-10T03:00:00-04:00"
+      },
+      {
+        "source": "Benzinga",
+        "title": "Palantir Stock Sell-Off: Burry vs Ives Sparks AI Debate - Palantir Technologies (NASDAQ:PLTR) - Benzinga",
+        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPYlZXWjNWbFVYNEZidTl4YTJzT2cxZjQwZU1pRmQzWlhleDFqck9qSE5Db2dkUUxKVVV3aGszbThfUkZabTJJS3gzeV9rYW1RYTdQVkV0aGZ0d1dlNlpqNHBQQkQyd0luQ0ZkcWU2clNQVUg3YldZY2otUkVjdjJoLUN4WGpLLW0ycVVEdW40T2hZMUhiLWZCaDJDMjlIZUtOTll6eHFLVkxYallPTDJGY2R0RktDWjdrMFUycnltNzFLSFQxb2lRcFFjVGlMUzA?oc=5",
+        "published": "2026-04-10T03:00:00-04:00"
+      },
+      {
+        "source": "TradingKey",
+        "title": "Palantir Technologies Inc Stock (PLTR) Moved Down by 4.40% on Apr 10: A Full Analysis - TradingKey",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxORWRtU2NqbEZ4cTRXMGhLSl9RZkU3eHV1WTRBcmxPSlpjTWF2a3M1bnZkZmRFQlBQQUtZZUJiQWpKUWhHaXViRjh2VWkxd3N6dUJHbUZ1cjFJcFdQdDVUdFpQdUNuWWptZ3RraUhyWDlWa0JPeFhpX0pLZURQYVdYd0d6VzM2ZmJWVnVr?oc=5",
+        "published": "2026-04-10T03:00:00-04:00"
+      },
+      {
+        "source": "Benzinga",
+        "title": "Trump Shouts-Out Palantir Stock: Signal To Buy The PLTR Dip? - Benzinga",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQQXoxOTFMQVNxZDBOOFFvenlGNjlHMGNBb3BJYkloeHBQUDhFTXFIM2ZKTzhUeGN3MkdjcnUwaDhuaVl2dGkxeGJPS1BkTFpyQU85YjdsbW1RRHMzNjBvNUdnQjlIb2NSYUgzeG5MbkxHcVpBeXZKNlJnS3pyejJHZUhOUU1MVlJIN2RlbVNLOFl4SlRVRVYyMkJ2aFg1NGhNLXd6QVNfcWFiMEhJRXU5OE1od01vS2IycXVZ?oc=5",
+        "published": "2026-04-10T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Palantir Stock Is at 6-Month Lows - Time to Buy PLTR? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOX3dhMVNxLUZleVdYU3NrMnNlVUZqMlFFSzNEeG1MUlh5emFIVndFUmdXVnE2NTZDSjVwZlEtVlBTTV9rUGhoT2VNTF80OUEwMjJpaTBsaGRkaExidjBIMzlfWW84eHJzRHJqLTU0UVUtUkxVQ05Bc0JCN2xQT0VOTVM1TDRUU0Z0TXN0RHZHV1hvT3UxTjEw?oc=5",
+        "published": "2026-04-12T03:00:00-04:00"
+      },
+      {
+        "source": "TradingView",
+        "title": "Why Palantir Technologies Shares Are Climbing Today - TradingView",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOLVZaeXUyUk9RMkJ1NVFtdzdsaDZfUFZuZHBfa2tKT0E1NFMzMm9PaHNnM0hwRHBieXJDekd3aXZZczF1VzBzanotNUNVTUlKWjlHNU5xSURWQkJoOEdrSGZhWENGVlJKVVVfSHZHaXZuNENBZlpQbVNYZ3Y3WnFncmFQNWhiczJPTEZpVXd3V3paR1loN1Z5N09aVW1HS25ONm1ldDJwTFZ4MDFsYmk2NQ?oc=5",
+        "published": "2026-04-13T03:00:00-04:00"
+      },
+      {
+        "source": "GuruFocus",
+        "title": "Palantir Technologies Inc (PLTR) Shares Surge 3.4% -- What GF Sc - GuruFocus",
+        "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPTERpclp1RFNkOFF1VGYwOC1uRURaazJaWXp3MjRJVDRxcWo5dmJtTmMtbWhBMEpqb0pQQ2o1ZHdFVEpWdmdxSFczZ1pCVWdFYTdxeFhRQXZ0ekkwVXROb0lISE9MT3hKZWFsRGV4Y1BIM05jLS1JdThfRVNYckVxd3dwU0xaTHVGQU5WMkpNcHFZTnFIQXZLVVVPWTBFVm5kY2lWWlhSMFNodTg5Zmgtbno3UzBNbTg2WkxzLXpyQmlaLVlVS3RTaW5GblFXS2VFR2pfaDE2VFpnMXUwekE4cHVoZDVJQWlXX0dicDR4R0RCNjA?oc=5",
+        "published": "2026-04-13T03:00:00-04:00"
+      },
+      {
+        "source": "TipRanks",
+        "title": "CRWV vs. PLTR vs. SMCI: Which AI Stock Could Deliver the Highest Returns in 2026, According to Analysts? - TipRanks",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUzJ1UEdhc1dxUGVVNVpfNHRHdmFaenBkeWQ4NXBZU0R3QlBCUGtNamdVUjM2YzAxYS1OcWxjbUNDVEZKdjFxRmNKVVByRm9JTnZsaTBOMGo3RVptWENVckVnYWphRGNZZEN3V1B3QS03VmJlLTJKbEZRMGsxV2tEc3FiX1JZNkQwRHRBVFVic1F3VGtJMDhkZkNtRGZIMDJuRG5lUmE2Q0QwN1IyQ29KYWF6OGRUMmQxWWw0YTN4dVdfTzFEREFMTQ?oc=5",
+        "published": "2026-04-13T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "QCOM",
+    "company": "Qualcomm",
+    "frequency_number": 1,
+    "period": 40.2,
+    "train_days": 121,
+    "validation_days": 25,
+    "status": "broken",
+    "estimated_start": null,
+    "confirmed_on": null,
+    "prior_session": null,
+    "latest_q": 0.0219,
+    "latest_nrmse": 2.7575,
+    "latest_residual_sigma": 0.072415,
+    "residual_trend": "rising error",
+    "observations": 356,
+    "news_sites": null,
+    "news_articles": []
+  },
+  {
+    "symbol": "QCOM",
+    "company": "Qualcomm",
+    "frequency_number": 2,
+    "period": 25.12,
+    "train_days": 76,
+    "validation_days": 16,
+    "status": "broken",
+    "estimated_start": "2025-12-02",
+    "confirmed_on": "2025-12-23",
+    "prior_session": "2025-12-01",
+    "latest_q": 0.0151,
+    "latest_nrmse": 4.9894,
+    "latest_residual_sigma": 0.075297,
+    "residual_trend": "falling error",
+    "observations": 410,
+    "news_sites": 2,
+    "news_articles": [
+      {
+        "source": "TradingView",
+        "title": "Key facts: Goldman Sachs, Bank of America invest in Qualcomm; shares up 9% - TradingView",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOYkl1NlV5eFdhR2xiM1M4UmxzLWVrbGlzQUNtTGtMdjJ2N0dwUWllSjdTRmMzbFgtRUxwMWk3QUY3VEZURlo2bXpVZmhBNHR2T01tdkE2Sy1hTDlsbmNCcmlvTlM4N3NnelJhN3FtVndZZ0hFZW1vXzlDcTdqcHVpVTVMbkpONXhCNzQ2eDJ5a2lBcjdTZFVKVGNCY0l4MmgyTTBhSVhVQVFMU25vbWlwT0R3MV8wSWFjUkJ5Rkc2UTFNYkRuMjRkUHRHQ2s?oc=5",
+        "published": "2025-12-01T03:00:00-05:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Here is What to Know Beyond Why QUALCOMM Incorporated (QCOM) is a Trending Stock - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQcTQ5b01NMDVaZUlLLVhjNjVpSDB0VjJGbGEtU3c3a1JZVHNsckRKSkUtUElhQW1hNllUcmQzWjJIOXRnMWd4NlIwblE0bkxTbGZOZExUc0NKQk05MnVXXy1FRkhRSXV4aHc4Mm0zSnZmMktsQ3kyeHBqam85Q0NVaklLRGE1RVNSbEtR?oc=5",
+        "published": "2025-12-02T03:00:00-05:00"
+      }
+    ]
+  },
+  {
+    "symbol": "QCOM",
+    "company": "Qualcomm",
+    "frequency_number": 3,
+    "period": 16.75,
+    "train_days": 51,
+    "validation_days": 11,
+    "status": "broken",
+    "estimated_start": "2025-08-08",
+    "confirmed_on": "2025-08-22",
+    "prior_session": "2025-08-07",
+    "latest_q": 0.0287,
+    "latest_nrmse": 1.6809,
+    "latest_residual_sigma": 0.040323,
+    "residual_trend": "falling error",
+    "observations": 440,
+    "news_sites": 2,
+    "news_articles": [
+      {
+        "source": "ts2.tech",
+        "title": "Self-Driving Supercomputer Showdown: NVIDIA Drive Thor vs Tesla FSD Hardware 4 vs Qualcomm Snapdragon Ride Flex - ts2.tech",
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNaGNwTU43V1BsLS1MT2VfaTc4MTFTZlViYzg2LXU1ZEFKWU85eVJCVzRsWlZNc2R1QkVwNmcwNE1NRUwyOVN5eVNsS18zMUg5ZFExM0xuTnlwWEplZzdjOElOVkNGMklRY0l0VlJvZkpNLVI2dGNLQ2FNWFN2TXcwZGhpWW90dzJhck43eVhjaHFPYlQ5aGFDcDgxVmJPZEFON0VSOEU2RWFNTWtwMmMtUmlfdF9USlRhV1VwRF9PMDAxVWxaWUhkWWg5RQ?oc=5",
+        "published": "2025-08-07T03:00:00-04:00"
+      },
+      {
+        "source": "TechRadar",
+        "title": "Qualcomm says it's ready to power AI data centers, but delays and rivals already crowd the path ahead - TechRadar",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOUlowMU94NXI3bnZfSko5Qlh3ZU9nMVZFUnhHNW1PNWZHQVIxNl80cnF0QlJBeW4xNzRnSXgzd1pYTXdmMEFGY25jV1JweC0weUx1a2hiODl6WWhSckRZQzFLWjlIMUpKRjhZbWJyUkxwdXlLUmdyVXE4Wnk5NHRmVzVNRV9XOVN0ejUwQ1lEWEk1VlVWNkhMN2tyaW84cjlFRkxILXRfSS1LZmU0UWlZZ2pQLUVlUUhON0hNUDE1eUFHcVV5MUJyalBVbnM?oc=5",
+        "published": "2025-08-08T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "ANET",
+    "company": "Arista Networks",
+    "frequency_number": 1,
+    "period": 28.71,
+    "train_days": 87,
+    "validation_days": 18,
+    "status": "broken",
+    "estimated_start": "2026-03-24",
+    "confirmed_on": "2026-04-17",
+    "prior_session": "2026-03-23",
+    "latest_q": 0.4396,
+    "latest_nrmse": 1.7933,
+    "latest_residual_sigma": 0.065788,
+    "residual_trend": "stable",
+    "observations": 397,
+    "news_sites": 2,
+    "news_articles": [
+      {
+        "source": "Yahoo Finance",
+        "title": "Here's How Much a $1000 Investment in Arista Networks Made 10 Years Ago Would Be Worth Today - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQNXFIREpaUEY4b1BXYmJ1T1NJeVMwaUljd2xCemVqb3M4LXM3T0E4OG9OSW4xQjlTd1hHS3dIUUp5YXRKUktTMHY3U2s2Y3cxa3RjRWZVdkVJWkZtS3dpc1VwVWJiZ0RmcTRxa0dYcldWYkRrYjg2aUtTVGt3UXEzUlRGZzVKeEdvbUUyc0JsSjc2RDFUbnMyd3E4c0lFdnM?oc=5",
+        "published": "2026-03-24T03:00:00-04:00"
+      },
+      {
+        "source": "TradingKey",
+        "title": "Arista Networks Inc Stock (ANET) Closed Down by 3.64% on Mar 24: Drivers Behind the Movement - TradingKey",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxORWxVeGdwUUJKdURMUTZxUi1xNlhUUjhlNjlJWV9ZNDY2cHRjem53VTY2OTkyc3k3MnJKdmsxbWNUSGlpaFFrZW5jVThWcjkxd0lqeG13c2g0YUZMX0VhRUw0S1lQS0R4MDVFS21UdE9Oc3ltanNCanA3TUttZEJlNWlhTVB0Qk10andv?oc=5",
+        "published": "2026-03-24T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Why Arista Networks (ANET) Dipped More Than Broader Market Today - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOS2xtUHpCRFhuN3ZSNkt6LU5hVnh2TFVxSG1CdHZzV0U1QVAwRC1wZnk0Z3V4R2l2UkRzWHNiWjhOR3R0dGo3UXkxNS1MWlMtRjRyUU9kQ0NJcFhCRElOUUdYZ2tlaEx6bkxoQ3dBNmZ5Z1AxNWhBOGVaWmlqZE5XOFNPbGNmMkdNUWtBLVN6c3BzMVRCUE1sY3NKU0g?oc=5",
+        "published": "2026-03-24T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "ANET",
+    "company": "Arista Networks",
+    "frequency_number": 2,
+    "period": 18.27,
+    "train_days": 55,
+    "validation_days": 11,
+    "status": "broken",
+    "estimated_start": "2025-10-24",
+    "confirmed_on": "2025-11-07",
+    "prior_session": "2025-10-23",
+    "latest_q": 0.0318,
+    "latest_nrmse": 1.3578,
+    "latest_residual_sigma": 0.054712,
+    "residual_trend": "falling error",
+    "observations": 436,
+    "news_sites": 0,
+    "news_articles": []
+  },
+  {
+    "symbol": "ANET",
+    "company": "Arista Networks",
+    "frequency_number": 3,
+    "period": 15.46,
+    "train_days": 47,
+    "validation_days": 10,
+    "status": "broken",
+    "estimated_start": "2026-07-07",
+    "confirmed_on": "2026-07-20",
+    "prior_session": "2026-07-06",
+    "latest_q": 0.0342,
+    "latest_nrmse": 1.1481,
+    "latest_residual_sigma": 0.044241,
+    "residual_trend": "rising error",
+    "observations": 445,
+    "news_sites": 14,
+    "news_articles": [
+      {
+        "source": "StocksToTrade",
+        "title": "Arista Networks Stock Rallies As Wall Street Chases AI Switch Boom - StocksToTrade",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBmbnZTYjU2MjRmWkhaUG5hRmVvVFc2WXFWbzF2bFF6akdDQjh6ZXBUTURJWG1laGdVMzVaMU1pYVpWaG9YMjUzQ1hVd3hmRXJZbmZxXzVxVXc4NC1qcHZTaDk2MU9hOHAyeWZrUjdJMmUwWXB6SWZxRHhQbjE?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      },
+      {
+        "source": "MarketWatch",
+        "title": "Arista Networks Inc. stock outperforms competitors on strong trading day - MarketWatch",
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQWGlENnprakpIaUk3b0dETG5YM25rc3V1cXYzdTNvT25sa2pPSUktTlNOLWdNbjlGS3lsNDlrcExrQzhqZEt3M0hENEJCcU8wbTVQSXg2RDBTNi1CLUZ6Ni1vXzNOVVNKbTR3Yy1STDBOSVBlMjFUX3MtY2QyUnpOdklUMENrTWU4WU9qdzR1c1BNQ21qbXh5ZnhGdWt3OFBYVkoxSHJOVHM3REJIWUFPUHhMVmI2VGUyYzNWVl9wMXJReUpacTZ4SmREUQ?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      },
+      {
+        "source": "MarketBeat",
+        "title": "Andreas Bechtolsheim Sells 260,000 Shares of Arista Networks (NYSE:ANET) Stock - MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPNUhtU1JiUUhMWTFxcWx0YXFyeDZSRDlkbGl2MXBERjlxaTg1ODVlMld6WWdScllRMFE0Y3FMbTVqYXFhZXUtZFFfaUhJeEg4WFRSTjYxOGN0UnNTQkd6RjFmU3dVMFprNVI5WDJvejNXVnFkWWt5eVJ3UjBEWnlvZnBJWGs5MGFEbGtUZHMwS202ajA2SXFldHJMcHlJTWtnRTdQQzh6OE5GX1FnaWNSQ1RMbzNMZzFRTzd6SWthaGJrcUd5WEZn?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      },
+      {
+        "source": "Investing.com",
+        "title": "Tesla, Arista Networks among market cap stock movers on Monday - Investing.com",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQbk83a3VLaGlvMzZtUHhkcEptZ3hIZTNMN0prNjc3OFVGaXY4M0d2WTB6RWpxdEJubkJjeGwtdlpUdlJYaFBPc2dvVzdHUTBlQ3RDc2hESDVGM1hwM0dQNjZJdXRhd0pqYkEwVmRHdkQtYkR6Q3ZtSXl6ZDZURlZBeFlGdFVMNVlCdTgyYlNxeWNoaThLTU9Vc3RaRW1mcTFGZE80c0VUR0UyTzNKelNaUjF6c21WelhoR0lrTnN4YUk?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      },
+      {
+        "source": "MarketBeat",
+        "title": "Arista Networks (NYSE:ANET) Trading Up 9.6% - What's Next? - MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQTTlTYzlKQVpETmF2OVNpOU9IT2NPSkNWTjhJRjh1ZGd5Ul96UDJ4LTFaRDNUVjQtWDJPQ2tEdUVLUnpXQklOcTNBM0tKMFJhbmdDV29FcnJtdE5ENG1DWWl3OW5QX3h4UUEyWHJGeVpmb2NEVjRjckRtLUtjUFFFZk4wUHBkdDlYWS1VYW1wbzl0NmpUTmVBS1EtRmdTSjBwQW5LREl3?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      },
+      {
+        "source": "MarketBeat",
+        "title": "HB Wealth Management LLC Acquires 7,454 Shares of Arista Networks, Inc. $ANET - MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQdHhGenJMU3JwZTBtZUFDVnVsajk3RnYybkh5elpnb1NDSlhWOUZYNGlya1VCNFZvdm8tQ0ZueU5QTFJ1Ymc5UzFUZkR0VHZqT0M4MDJ5Ukl3Rk4tUFVmeUIwckhZZVZQZnlGaGNZNW5IN2tQMmpBTW9mUG1aUFFsS0pjRk5YUnpSXzE2X2pnb0FwXzZaOEk3MU9QX210a2JFUzZ5aGdfZnc5UWRqVG5xcWpYWGhGM1F3eGp6YzJnaERjTEQxZnhwNE1CQU5aeEU?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      },
+      {
+        "source": "TradingKey",
+        "title": "Arista Networks Inc Stock (ANET) Moved Up by 7.73% on Jul 6: What Signal Does It Send? - TradingKey",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUGhxOF9waW5XbGxjYUFSR2dqaXg0M2s0aDRRODVaMkRNYzREb19paWdIRzFqZE5ockFIR3VWZnJSSkdRRDdiWHh1YVdPRmtRV2V2a2lmb3piT01EaXFWTldfcGRJaXRBSGZKekFEVDY4WEFULW1DUHYzNVY5c3lvVWxLd3ZwM0xJM2p3?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      },
+      {
+        "source": "Investing.com",
+        "title": "Arista Networks director Charles Giancarlo sells $1.34m in stock - Investing.com",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNY0NsXzAzOE9HWXAzU2IxWXY0QTFpZk1JX19VOEQxMkZtODJhWmVkNDRiS2V2Wjl1SmZUNGpzUHpxZ2FNZER1WWlLeXBOb1MyU1lrY3N6enN0TW9ZUDAxeFFseTNfQ3p1LXVOOUlIVkdQUXdlOEJOMnFsblAyVE5tclpDVnp4bk9tOXJTWHhZSHlXNVVHQVBZUFRlS2Z0QjctUzJhejNMSm0xalR3Z25Ec2xwYTBFZmRJSHA0RTZPN0FGQXlCbEE?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      },
+      {
+        "source": "timothysykes.com",
+        "title": "Arista Networks ANET Draws Fresh AI Price Target Upgrades - timothysykes.com",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9WZTdqT0E2MnVRRXFlTVJZcVJCMG1jYWtUMGMtSWFrYTVHU0pCZmJZeDg3cVU1TU9LRWlKYVhGdDhPMzlfei0wbDRZNnlfSmtwank1SVU0dFJYQmpMMFBKVzVsbTcyYlZnejVMUWpfbDlDOXo2LXFsNXRNTQ?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      },
+      {
+        "source": "Investing.com Canada",
+        "title": "Tesla, Arista Networks among market cap stock movers on Monday By Investing.com - Investing.com Canada",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMTlxX2EzWXU5MVlodEIxOThBYmQxQkIwQmpRSThtQkh4ak1aNllLVTM5WHVLTXdkRTFwdXlJR0Y3VGFfN1Z5WFYxZ0IycEVabjZHRkh4Y25qa0xrX2dCcmp3RXhNZklnV2ROS21qaVlfUHhnNjViY2lybEVMazRmQjN2MDdCaVV2OTdzeFdXYW42X3NWcmNpRmlCWGJQUVdoTkVPWEoyZGhPVjdqYkZ4enB5cjdPNy1hWlh4eDFVVQ?oc=5",
+        "published": "2026-07-06T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "GE",
+    "company": "GE Aerospace",
+    "frequency_number": 1,
+    "period": 40.2,
+    "train_days": 121,
+    "validation_days": 25,
+    "status": "broken",
+    "estimated_start": "2026-02-25",
+    "confirmed_on": "2026-03-31",
+    "prior_session": "2026-02-24",
+    "latest_q": 0.0146,
+    "latest_nrmse": 5.2369,
+    "latest_residual_sigma": 0.015204,
+    "residual_trend": "falling error",
+    "observations": 356,
+    "news_sites": 4,
+    "news_articles": [
+      {
+        "source": "TIKR.com",
+        "title": "GE Aerospace Climbed 27% in 6 Months. Here’s Where Shares Could Go Next - TIKR.com",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQSDRkT1JZLW1JSEIxSVFEU0phdEF0MFMwbEhtVEFSYUlHa3JhVmR3bU43QmFtVklrNFhERVJYanRLZ3VqbVlmYWp1M2tPSUxtZDF3TWcxeFQ3R2ItU2JFRTdFd0JGak42RFlOQ2xmQmdlT1I3RmpQR0JtSUFEWnBhRFdsZ0tFZUNTT0x5dlhpa1hDUUlvQkNyMTN3?oc=5",
+        "published": "2026-02-24T03:00:00-05:00"
+      },
+      {
+        "source": "Zacks Investment Research",
+        "title": "GE Aerospace vs. RTX: Which Aerospace & Defense Stock Should You Bet On? - Zacks Investment Research",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPRWFsVGdzckRmZDA5OEQ5NWUxcUh3TEVkWWxIZ2x3Q2RyYkhjRERXa3VXdnF0MzRxb2FOZGFvMzFlbGVOYU05Ym1tRXJwamk5bHljd3lnVjRHb0V3Tm02bGJTa2drWW1IMEE3YUQxekIzTzl2cVVxQVhnbEJSSHhqNFR6QnBjQ3FSek5tenoxNEwwb3U1MHB0aGYxeDRXZUlRU21hR2NPZ0UtcDlH?oc=5",
+        "published": "2026-02-24T03:00:00-05:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "GE Aerospace teams with Palantir on AI-driven jet-engine contract (GE:NYSE) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOTVEtLVVLTUMtTmpOZWJ3RGE1dk5mOU9OQ3pNNEZOQlRtRER5WFoxQzdDQmVPV3U5MXNCRW5hMFlNV09jTlZaZnlWTnhVeWFmdDcyVUtRTUhLOTN0WndPMmZSWHJXR0xUTHlaUGVRdWI3ZkpNSnlQZHRXX21WR242VWRuOEFKbXBnWm94RWU3RExBTlI5MWVZRG1PQzRqdUlHUEV2dWVn?oc=5",
+        "published": "2026-02-24T03:00:00-05:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "United Airlines selects GE Aerospace (GE)’s GEnx Engines for Boeing 787 - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNdzAwMnRZQ19WNXo0VzdXY3hCQjQ0bkRBWWdGcXRkcGNPSEhReS1hTVBramRwYzRKNE1qXzJJLWVsTlFxMHpWYUxPMVRWcmNqWVFMLWdDZXZpYjNiQl9HX3JrQk5HeWg3TWNUUlpaSHowZm8wZ2VERmo0emc3QkZtTXQ3OG9GMktXaGc?oc=5",
+        "published": "2026-02-24T03:00:00-05:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "How Is GE Aerospace’s Stock Performance Compared to Other Aerospace & Defense Stocks? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPcXNiQU1rNmFVVGh1cGcwemtOVnE0WFdaaEQzZms3ZV94WEEwQm5NVndHTjZrZ2h6ckZsM2hOUjY4bllsU1FraUVjMldob1kxbUlDTi0wQlgtcE51U3otVU1yTWd3cXdNcWhOaW5lYUlMWGN1d3RmNk1hSlJVekRMbDVnR2Z2bDhMNlpfVzZn?oc=5",
+        "published": "2026-02-25T03:00:00-05:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "GE Aerospace Is Linking Up with Palantir. Should You Buy GE Stock Here? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQV3BLNUNGTkF1TlZpMkNuUk5nakY0bWpGZUZMSEtCbWo4OWtjeUViUl8yVDFCUWtiMFljYVpyT0g5Q2dYc2p0bEtObHN6LXo4UmhLbkt4ZWhKeFM3NzVPRnBFRTN5ZkQ3aTlMLUJBemtFOEdLYWhJeVFaanNMcnJ1cm5FSzBZUQ?oc=5",
+        "published": "2026-02-25T03:00:00-05:00"
+      },
+      {
+        "source": "TIKR.com",
+        "title": "GE Aerospace Delivered $7.7 Billion in Free Cash Flow Last Year: Here’s Where Shares Could Go in 2026 - TIKR.com",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOOWg4OFNiTGlEWFVERXFUV3JLSk1fRmJXTnpkNTlMSmRCbzhLX3pBbzdUS0RMNnZaSlpITl9DY3BfUlhadjBIVHg0N0t6V0RxNXVqTWFBamFhLUpHRGNSZ0JrYkNlZ1hxOWQ5MTBHVUU1SXFJV19IUkhMTy1NNTFSMXdGRHlJdFFNdXJFX1RnMHJFenBYdVNGa2JGczdoZDZ2XzNkZHR1TWplYXZRaFhQY05CUC1aM0M1Q2JJMjk5aHY0Zw?oc=5",
+        "published": "2026-02-25T03:00:00-05:00"
+      }
+    ]
+  },
+  {
+    "symbol": "GE",
+    "company": "GE Aerospace",
+    "frequency_number": 2,
+    "period": 15.46,
+    "train_days": 47,
+    "validation_days": 10,
+    "status": "broken",
+    "estimated_start": null,
+    "confirmed_on": null,
+    "prior_session": null,
+    "latest_q": 0.0142,
+    "latest_nrmse": 5.4646,
+    "latest_residual_sigma": 0.015494,
+    "residual_trend": "rising error",
+    "observations": 445,
+    "news_sites": null,
+    "news_articles": []
+  },
+  {
+    "symbol": "GE",
+    "company": "GE Aerospace",
+    "frequency_number": 3,
+    "period": 7.73,
+    "train_days": 24,
+    "validation_days": 5,
+    "status": "broken",
+    "estimated_start": null,
+    "confirmed_on": null,
+    "prior_session": null,
+    "latest_q": 0.3398,
+    "latest_nrmse": 2.5822,
+    "latest_residual_sigma": 0.021807,
+    "residual_trend": "falling error",
+    "observations": 473,
+    "news_sites": null,
+    "news_articles": []
+  },
+  {
+    "symbol": "CCL",
+    "company": "Carnival Corporation",
+    "frequency_number": 1,
+    "period": 40.2,
+    "train_days": 121,
+    "validation_days": 25,
+    "status": "broken",
+    "estimated_start": "2026-04-28",
+    "confirmed_on": "2026-06-02",
+    "prior_session": "2026-04-27",
+    "latest_q": 0.3432,
+    "latest_nrmse": 2.8069,
+    "latest_residual_sigma": 0.020353,
+    "residual_trend": "stable",
+    "observations": 356,
+    "news_sites": 3,
+    "news_articles": [
+      {
+        "source": "Seeking Alpha",
+        "title": "Carnival: Near-Term Fuel Risks Mitigated By Promising FY2029 Guidance - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNS1g3NWk0MzgxSmlCRGwzc0QzM1EzNjAtdkRYMnktbU9Gdkt4MWE3Q3A2OUZzRGtQeEo5cl9JMkJ1WE85c3hhcUJsMzRoUDNKMS1XRXpscXNSbW5rNEdHdVptQ2E2dG1PclIwNmRTY1lCM1UzNVFObUNJRW9ULWtPRk8tblMydDhjWGJ6ZTNEMDZsaXZVYWVMTVVIUzh1Vm50TW0wTG14RDBLUG4tbVE?oc=5",
+        "published": "2026-04-27T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Carnival Corporation & Insiders Sold US$15m Of Shares Suggesting Hesitancy - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQU2RNbVZqLWN0NkZ2eUM5VUhIb1Ywc1VSTXZSeFdrb0UtalpDbXdIeXl6eEwybWF2eVNNRkFqNW1lVklrQ0FiSkhPbWdkRTQxNFdQdEhUREt6S056a1M2dUR6V0t4ajU4Qnc3aWVhWjVLODloTWxDZnB4eDVERkhOU2dYSkhDZzRMMXg3M3dOWW5iMkxXeEl0b2xzeWR0TnEwZXNQVw?oc=5",
+        "published": "2026-04-28T03:00:00-04:00"
+      },
+      {
+        "source": "Seeking Alpha",
+        "title": "Carnival's Core Business Is Cruising—Initiating With A Buy (NYSE:CCL) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQNlhZTXVuU1pNamUwYUVLdXhIdmNwVWx2RFJuLTVjaUlvbnJtRWhVY1dDQnpuSndGY2syRHpaZzdMNGNZMFJqM29yRmdkYmthc2kxQ3JNQWl1bDNvckxUR3ZqTGVpUjdlVHByQjBNRDdqVktodGpqb1FJTTJtbk93TTg2c0ZGZmNvekdmR1J3QXdXZENiM0FFdnhFQTZLZFE?oc=5",
+        "published": "2026-04-28T03:00:00-04:00"
+      },
+      {
+        "source": "WSB-TV",
+        "title": "Woman falls from Carnival Firenze, dies - WSB-TV",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNWWlFSklyQjlXZlF6Z21KVFlhQmxXTy1OS3V4M2l1UHl6M3haTzdMQWdQbE5Nd2tYNElfMGlnWjJjSXh5WElrWEI0S0paVXhBOFMtcVp5LWppOThrTFFQNUlGcDh5UlNER0dCNHJJNUtjQTN0d1MwT0tvb19qV3htSERtRUxxX0pHeUdHd2RoUHRMUEZsUWxWR2p5a0pIZ9IBsgFBVV95cUxOdnNtRjhKZ1I3QkJzcDRWSm40cXljUVpNZ1dtTFVSaHBPd3RseEJkaG5pNmJJU283OE1RaUotZGZZelM1ZV94TmplSmxIaWhTWklqWWx4YXc2ZUdiLVl5bUtnZ0F6RnU1VGlENFVSUnM1Unh5TXNQcTRLbjZfS3NyZUhNdnRZX0tHWXptWUpub2dpNU5Kd1lsUHR0eENfUkszVnZtaFFPOF9MdVFtUE1XTTZB?oc=5",
+        "published": "2026-04-28T03:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "symbol": "CCL",
+    "company": "Carnival Corporation",
+    "frequency_number": 2,
+    "period": 15.46,
+    "train_days": 47,
+    "validation_days": 10,
+    "status": "broken",
+    "estimated_start": null,
+    "confirmed_on": null,
+    "prior_session": null,
+    "latest_q": 0.0403,
+    "latest_nrmse": 0.7518,
+    "latest_residual_sigma": 0.029187,
+    "residual_trend": "falling error",
+    "observations": 445,
+    "news_sites": null,
+    "news_articles": []
+  },
+  {
+    "symbol": "CCL",
+    "company": "Carnival Corporation",
+    "frequency_number": 3,
+    "period": 7.18,
+    "train_days": 22,
+    "validation_days": 5,
+    "status": "broken",
+    "estimated_start": "2026-07-13",
+    "confirmed_on": "2026-07-17",
+    "prior_session": "2026-07-10",
+    "latest_q": 0.0185,
+    "latest_nrmse": 3.6303,
+    "latest_residual_sigma": 0.030554,
+    "residual_trend": "rising error",
+    "observations": 475,
+    "news_sites": 4,
+    "news_articles": [
+      {
+        "source": "dars.gov.et",
+        "title": "CCL Q2 2026 Earnings: Carnival Beats EPS Estimates by 17.3%, Shares Edge Higher - Financial Data - dars.gov.et",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOWDJFd1dCeTFVMEQ2U1M4MDgwRjYzT1Jtc3l2eG5PS0VpOVp3SHFDX0Rlc1U0ZUhyWmE5TVFEOEVpRFREQXlZNWR6RUM3c2lRRjlUUURrd1IyQnRWVzk2RVhHLVlkVHN2c3VRYzh3RFRFbFZsek1KMWUyOVRlWnp2ZG9xTU5KNXF1SVlGX2E2YWlyQklqUWhGSzBzT2JaVDlpTEdOY0dhSEo2ajlZcHRSZXJPWXhvM3diQ2lpMQ?oc=5",
+        "published": "2026-07-10T03:00:00-04:00"
+      },
+      {
+        "source": "El-Balad.com",
+        "title": "Carnival Destiny leads order for 3 Princess Cruises ships by 2039 - El-Balad.com",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE10Z0NWZklBOGxJclJOX21VZWRJeWFFLUU1VzFEV3BKSjQtMnBxUXAzTklzYXprR216eVhyY0t0TDRyMUVJX1A1RQ?oc=5",
+        "published": "2026-07-10T07:45:14-04:00"
+      },
+      {
+        "source": "Carnival Corporation",
+        "title": "Fostering Culture from Day One - Carnival Corporation",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBoZzJFVTU0TEtlQmg1NFdLME9rSUtPeFh4MWlCQ0lwN2xLUVFDQ1lGOGVMdzdsSVpWc2hBV2t2akhiZXJJLUN5dHRPQ0o5WDBjQndXMjhLU2Z2TDZRNGxUa1F5Z1RLck1GUll6aQ?oc=5",
+        "published": "2026-07-13T03:00:00-04:00"
+      },
+      {
+        "source": "Yahoo Finance",
+        "title": "Is Carnival's Alaska Business Emerging as a Key Growth Driver? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPQkN0Y3ZkZnhMai00TUtPQUtkb21DUF92VGh0Wm9wbTNLR0NtdWIyeGVIb3JXZE9sc2V1T2ItMlNQeklPWFhpX1ZURFhnbEpkd1lCbmp1T1UzTnRJM2xZbENhNWlMZTZzRHdLNkphYkpEWFJWUnNtUGR3NHFBR25DdG9pZEF1VmhyR3plcmxKU3dOU1JncVdQV1ZpUmNBbFdIRGc1ZXpR?oc=5",
+        "published": "2026-07-13T03:00:00-04:00"
+      }
+    ]
+  }
+]

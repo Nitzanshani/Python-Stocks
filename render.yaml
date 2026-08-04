@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: 2nd-law-stocks-device
+    runtime: python
+    plan: free
+    rootDir: stocks-device
+    buildCommand: pip install -r requirements.txt
+    startCommand: python market_scanner.py
+    healthCheckPath: /health
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: STOCKS_NO_BROWSER
+        value: "1"
+      - key: PYTHON_VERSION
+        value: 3.13.5

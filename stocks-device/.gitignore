@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+talk_of_day_cache*.json
+*.csv

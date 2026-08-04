@@ -638,8 +638,8 @@ HTML = r"""<!doctype html>
 </head>
 <body><main class="wrap">
   <div class="top"><div><h1>מחירי S&P 500 + QQQ</h1><div class="sub">השינוי מחושב מול סגירת יום המסחר הקודם</div></div>
-    <div class="controls"><input id="search" placeholder="חיפוש לפי סימול או חברה…"><button id="scanTalk">Scan all Talk</button><button id="refresh">רענון עכשיו</button></div></div>
-  <div id="status" class="status">טוען את רשימת המניות…</div>
+    <div class="controls"><input id="search" placeholder="חיפוש לפי סימול או חברה…"><button id="scanTalk">Scan all Talk</button><button id="refresh">חשב את כל המניות</button></div></div>
+  <div id="status" class="status">מוכן לסריקה — לחץ על “חשב את כל המניות”</div>
   <div id="talkStatus" class="status" style="display:none"></div>
   <div id="talkStatus" class="status" style="display:none"></div>
   <div class="fftfilters"><label>Oscillation / Fourier filters</label>
@@ -666,8 +666,10 @@ function render(){const q=document.getElementById('search').value.trim().toLower
  const zig=x=>`<td class="up">${x.zz_score===null?'—':x.zz_score.toFixed(3)}</td><td>${x.zz_cycles??'—'}</td><td class="up">${x.zz_avg_up===null?'—':'+'+x.zz_avg_up.toFixed(1)+'%'}</td><td class="down">${x.zz_avg_down===null?'—':'−'+x.zz_avg_down.toFixed(1)+'%'}</td><td>${x.zz_avg_days===null?'—':x.zz_avg_days.toFixed(1)+'d'}</td><td>${x.zz_last_pivot?'<span class="pivot-cell" data-symbol="'+esc(x.symbol)+'">'+esc(x.zz_last_pivot)+' · '+esc(x.zz_last_pivot_date)+'</span>':'—'}</td><td class="${x.zz_move>0?'up':x.zz_move<0?'down':'flat'}">${x.zz_move===null?'—':(x.zz_move>=0?'+':'')+x.zz_move.toFixed(1)+'%'}</td><td class="${x.zz_entry==='watch possible trough'?'up':'flat'}">${esc(x.zz_entry||'—')}</td>`;
  const fft=(x,k)=>{const q=x[`fft_quality_${k}`],phase=x[`fft_phase_${k}`];return `<td>${esc(x[`fft_periods_${k}`]||'—')}</td><td><span class="freq-cell ${q>=.6?'up':q>=.35?'flat':'down'}" data-symbol="${x.symbol}" data-k="${k}">${q===null?'—':q.toFixed(3)}</span></td><td>${phase?'<span class="phase-cell" data-symbol="'+esc(x.symbol)+'" data-k="'+k+'">'+esc(phase)+'</span>':'—'}</td><td>${x[`fft_next_turn_${k}`]===null?'—':esc(x[`fft_turn_type_${k}`])+' '+x[`fft_next_turn_${k}`].toFixed(1)+'d'}</td>`};
  document.getElementById('rows').innerHTML=shown.map(x=>{const ready=x.price!==null;const cls=!ready?'loading':x.change_pct>0?'up':x.change_pct<0?'down':'flat';return `<tr><td class="symbol">${esc(x.symbol)}</td><td class="company">${esc(x.company)}</td><td class="price ${cls}">${ready?'$'+x.price.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2}):'Loading…'}</td><td class="change ${cls}">${ready?(x.change_pct>=0?'+':'')+x.change_pct.toFixed(2)+'%':'—'}</td>${zig(x)}<td>${metric(x.first_10m_pct,8)}</td><td>${metric(x.next_50m_pct,8)}</td><td>${metric(x.after_30m_pct,5)}</td><td>${avg(x.avg_d5,x.n_d5)}</td><td>${osc(x.osc_d5,x.orank_d5,x.on_d5,'d5',x.symbol)}</td><td>${avg(x.avg_d10,x.n_d10)}</td><td>${osc(x.osc_d10,x.orank_d10,x.on_d10,'d10',x.symbol)}</td><td>${avg(x.avg_w2,x.n_w2)}</td><td>${osc(x.osc_w2,x.orank_w2,x.on_w2,'w2',x.symbol)}</td><td>${avg(x.avg_m1,x.n_m1)}</td><td>${osc(x.osc_m1,x.orank_m1,x.on_m1,'m1',x.symbol)}</td>${fft(x,1)}${fft(x,2)}${fft(x,3)}<td>${esc(x.fft_active_since||'—')}</td><td>${x.fft_cycles===null?'—':x.fft_cycles.toFixed(1)}</td><td class="regime-${esc(x.fft_regime||'')}">${esc(x.fft_regime||'—')}</td><td class="index">${esc(x.indexes)}</td></tr>`}).join('');}
-async function load(){try{const r=await fetch(API_BASE+'/api/stocks',{cache:'no-store'});const d=await r.json();stocks=d.stocks.map(x=>({...x,talk_score:talkCache[x.symbol]?.score??talkScores[x.symbol]??null}));document.getElementById('status').textContent=d.status;render()}catch(e){document.getElementById('status').textContent='שגיאת חיבור לשרת: '+e}}
-document.getElementById('search').addEventListener('input',render);document.getElementById('refresh').addEventListener('click',async()=>{await fetch(API_BASE+'/api/refresh',{method:'POST'});load()});
+async function jsonResponse(r){const type=r.headers.get('content-type')||'';if(!r.ok||!type.includes('application/json'))throw new Error(`השרת החזיר ${r.status}; נסה שוב בעוד רגע`);return r.json()}
+async function load(){try{const d=await jsonResponse(await fetch(API_BASE+'/api/stocks',{cache:'no-store'}));stocks=d.stocks.map(x=>({...x,talk_score:talkCache[x.symbol]?.score??talkScores[x.symbol]??null}));document.getElementById('status').textContent=d.status;render()}catch(e){document.getElementById('status').textContent='שגיאת חיבור לשרת: '+e.message}}
+async function pollFullScan(){const button=document.getElementById('refresh');try{const d=await jsonResponse(await fetch(API_BASE+'/api/status',{cache:'no-store'}));document.getElementById('status').textContent=d.status;button.disabled=d.running;button.textContent=d.running?`מחשב… ${d.completed}/${d.total}`:'חשב את כל המניות';if(d.running){setTimeout(pollFullScan,2000)}else{await load()}}catch(e){button.disabled=false;button.textContent='חשב את כל המניות';document.getElementById('status').textContent='שגיאת חיבור לשרת: '+e.message}}
+document.getElementById('search').addEventListener('input',render);document.getElementById('refresh').addEventListener('click',async()=>{const button=document.getElementById('refresh');button.disabled=true;try{await jsonResponse(await fetch(API_BASE+'/api/refresh',{method:'POST'}));pollFullScan()}catch(e){button.disabled=false;document.getElementById('status').textContent='לא ניתן להתחיל סריקה: '+e.message}});
 document.getElementById('scanTalk').addEventListener('click',async()=>{await fetch(API_BASE+'/api/talk-scan',{method:'POST'});pollTalkScan()});
 document.getElementById('scanTalk').addEventListener('click',async()=>{await fetch('/api/talk/scan',{method:'POST'});pollTalkScan()});
 ['zigzagFilter','periodFilter','qualityFilter','phaseFilter','turnFilter','cyclesFilter','regimeFilter'].forEach(id=>document.getElementById(id).addEventListener('input',render));
@@ -709,7 +711,7 @@ function showChart(target,e){const stock=stocks.find(x=>x.symbol===target.datase
 function moveTip(e){const gap=16,w=tip.offsetWidth||360,h=tip.offsetHeight||190;let left=e.clientX+gap,top=e.clientY+gap;if(left+w>window.innerWidth-8)left=e.clientX-w-gap;if(top+h>window.innerHeight-8)top=e.clientY-h-gap;tip.style.left=Math.max(8,left)+'px';tip.style.top=Math.max(8,top)+'px'}
 document.getElementById('rows').addEventListener('mouseover',e=>{const osc=e.target.closest('.osc-cell'),freq=e.target.closest('.freq-cell'),phase=e.target.closest('.phase-cell'),pivot=e.target.closest('.pivot-cell'),talk=e.target.closest('.talk-cell');if(osc)showChart(osc,e);else if(freq)showFrequency(freq,e);else if(phase)showFourierChart(phase,e);else if(pivot)showPivotChart(pivot,e);else if(talk)showTalk(talk,e)});document.getElementById('rows').addEventListener('mousemove',e=>{if(tip.style.display==='block')moveTip(e)});document.getElementById('rows').addEventListener('mouseout',e=>{if(e.target.closest('.osc-cell,.freq-cell,.phase-cell,.pivot-cell,.talk-cell'))tip.style.display='none'});
 document.querySelector('thead').addEventListener('mouseover',e=>{const th=e.target.closest('th');if(!th)return;const key=th.textContent.replace(/\s[▲▼]$/,'').trim(),help=headerHelp[key];if(help)showHelp(help,e)});document.querySelector('thead').addEventListener('mousemove',e=>{if(tip.style.display==='block')moveTip(e)});document.querySelector('thead').addEventListener('mouseout',()=>tip.style.display='none');
-load();setInterval(load,2000);
+load();
 </script></body></html>"""
 
 
@@ -826,12 +828,18 @@ class StockState:
         self.analytics: dict[str, Analytics] = {}
         self.loading = False
         self.updated = ""
+        self.phase = "idle"
 
     def refresh(self) -> None:
         with self.lock:
             if self.loading:
                 return
             self.loading = True
+            self.phase = "quotes"
+            # A new manual scan replaces the previous snapshot. Dropping the
+            # old one first prevents two full result sets living in RAM.
+            self.quotes = {}
+            self.analytics = {}
         threading.Thread(target=self._worker, daemon=True).start()
 
     def _worker(self) -> None:
@@ -843,6 +851,7 @@ class StockState:
             with self.lock:
                 self.quotes = result
                 self.updated = datetime.now().strftime("%H:%M:%S")
+                self.phase = "analytics"
             missing_analytics = [
                 symbol for symbol in self.symbols
                 if symbol not in self.analytics or self.analytics[symbol].fourier is None
@@ -857,17 +866,37 @@ class StockState:
         finally:
             with self.lock:
                 self.loading = False
+                self.phase = "done"
+
+    def status_payload(self) -> dict[str, object]:
+        with self.lock:
+            if self.phase == "idle":
+                status = "מוכן לסריקה — לחץ על ‘חשב את כל המניות’"
+                completed = 0
+            elif self.phase == "quotes":
+                completed = len(self.quotes)
+                status = f"מוריד מחירים… {completed} מתוך {len(self.symbols)}"
+            elif self.phase == "analytics":
+                completed = len(self.analytics)
+                status = f"מחשב סטטיסטיקה היסטורית… {completed} מתוך {len(self.symbols)}"
+            else:
+                completed = len(self.analytics)
+                status = f"הסריקה הסתיימה: {self.updated} | {len(self.quotes)} מניות"
+            return {"running": self.loading, "phase": self.phase, "completed": completed,
+                    "total": len(self.symbols), "status": status}
 
     def payload(self) -> dict[str, object]:
         with self.lock:
             count = len(self.quotes)
-            if self.loading:
+            if self.phase == "idle":
+                status = "מוכן לסריקה — לחץ על ‘חשב את כל המניות’"
+            elif self.loading:
                 if count < len(self.symbols):
                     status = f"מוריד מחירים… {count} מתוך {len(self.symbols)}"
                 else:
                     status = f"מחשב סטטיסטיקה היסטורית… {len(self.analytics)} מתוך {len(self.symbols)}"
             else:
-                status = f"עודכן: {self.updated} | {count} מניות | רענון אוטומטי כל דקה"
+                status = f"הסריקה הסתיימה: {self.updated} | {count} מניות"
             rows = []
             for symbol in self.symbols:
                 quote = self.quotes.get(symbol)
@@ -956,6 +985,9 @@ def run_web_gui() -> None:
             if self.path == "/api/stocks":
                 body = json.dumps(state.payload(), ensure_ascii=False).encode("utf-8")
                 self._send(body, "application/json; charset=utf-8")
+            elif self.path == "/api/status":
+                body = json.dumps(state.status_payload(), ensure_ascii=False).encode("utf-8")
+                self._send(body, "application/json; charset=utf-8")
             elif self.path.startswith("/api/talk?"):
                 query = urllib.parse.parse_qs(urllib.parse.urlparse(self.path).query)
                 symbol = query.get("symbol", [""])[0].upper()
@@ -988,12 +1020,6 @@ def run_web_gui() -> None:
     port = int(os.environ.get("PORT", "0"))
     server = ThreadingHTTPServer((host, port), Handler)
     url = f"http://127.0.0.1:{server.server_port}"
-    state.refresh()
-    def auto_refresh() -> None:
-        while True:
-            time.sleep(60)
-            state.refresh()
-    threading.Thread(target=auto_refresh, daemon=True).start()
     if host == "127.0.0.1" and not os.environ.get("STOCKS_NO_BROWSER"):
         threading.Thread(target=lambda: (time.sleep(0.5), webbrowser.open(url)), daemon=True).start()
     print(f"Live stock table: {url}")

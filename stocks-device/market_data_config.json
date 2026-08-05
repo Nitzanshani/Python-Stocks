@@ -1,0 +1,14 @@
+{
+  "data_root": "data",
+  "daily_initial_period": "max",
+  "overlap_bars": 3,
+  "request_pause_seconds": 0.15,
+  "max_workers": 2,
+  "intervals": {
+    "1d": {"directory": "market/daily", "lookback_days": null},
+    "60m": {"directory": "market/hourly", "lookback_days": 60},
+    "30m": {"directory": "market/30m", "lookback_days": 60},
+    "15m": {"directory": "market/15m", "lookback_days": 60},
+    "5m": {"directory": "market/5m", "lookback_days": 60}
+  }
+}

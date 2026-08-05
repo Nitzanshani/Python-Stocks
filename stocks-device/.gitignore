@@ -1,6 +1,7 @@
 data/
 reports/
 research/
+research_intraday/
 __pycache__/
 *.py[cod]
 .DS_Store

@@ -14,3 +14,9 @@ returns. Raw, market-only and market+sector results will all be retained.
 
 Synthetic tests will include A leading B, no reverse link, a false common-market
 link that disappears after controls, a true residual link, and known decay.
+
+For horizon `h`, the cumulative response is `exp(sum(log_return[t+1:t+h]))-1`;
+the point response is the return at exactly the h-th observed target session.
+Missing target sessions are not filled. Maximum/minimum excursions are stored
+only as descriptive outcomes and are prohibited from predictive features.
+Self-responses are excluded from the main response table.

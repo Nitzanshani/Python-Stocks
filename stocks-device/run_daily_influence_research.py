@@ -15,8 +15,13 @@ from zoneinfo import ZoneInfo
 import pandas as pd
 
 from event_engine import cluster_daily_events, detect_daily_events
+from event_study import select_control_days, summarize_event_study
 from influence_features import build_feature_panel
+from influence_report import build_phase3a_report
+from influence_statistics import (apply_fdr_families, build_relationships,
+                                  run_granger_all_directions)
 from market_data_api import load_aligned_market_data
+from predictive_influence import run_all_pairs_walk_forward
 from residual_returns import build_residual_returns
 from response_engine import measure_daily_responses
 
@@ -130,6 +135,64 @@ def build_interim_report(root: Path, config: dict, values: dict) -> dict:
     return summary
 
 
+def run_full_research(config_path: Path, start=None, end=None, resume=False) -> dict:
+    config = load_influence_config(config_path); root = BASE / config["output_root"]
+    first_paths = {"residuals": root/"residuals/daily_residual_returns.parquet",
+        "events": root/"events/daily_events.parquet",
+        "clusters": root/"events/daily_event_clusters.parquet",
+        "representatives": root/"events/daily_representative_events.parquet",
+        "responses": root/"responses/daily_responses.parquet"}
+    if resume and all(path.exists() for path in first_paths.values()):
+        first = {name: pd.read_parquet(path) for name,path in first_paths.items()}
+    else:
+        first = run_foundation_through_responses(config_path, start, end)
+    residuals, representatives, responses = (first[x] for x in
+        ("residuals", "representatives", "responses"))
+    controls_path = root/"responses/event_study_controls.parquet"
+    controls = pd.read_parquet(controls_path) if resume and controls_path.exists() else pd.DataFrame()
+    if controls.empty or "event_id" not in controls:
+        controls = select_control_days(representatives, responses, residuals,
+            int(config.get("control_matches_per_event", 5)))
+    controls_path.parent.mkdir(parents=True, exist_ok=True)
+    controls.to_parquet(controls_path, index=False, compression="zstd")
+    event_summary = summarize_event_study(representatives, responses, controls,
+        int(config["bootstrap_iterations"]), int(config["block_bootstrap_length"]),
+        int(config["random_seed"]))
+    if not event_summary.empty:
+        event_summary["response_metric"] = "target_residual_return"
+        event_summary["analysis_window"] = "full_phase3a_history"
+        event_summary = apply_fdr_families(event_summary, "permutation_p_value",
+            ["event_type", "horizon", "response_metric", "analysis_window"],
+            float(config["fdr_alpha"]), "adjusted_p_value")
+    event_summary.to_parquet(root/"responses/event_study_summary.parquet", index=False)
+
+    influence = root/"influence"; influence.mkdir(parents=True, exist_ok=True)
+    folds_path = influence/"predictive_model_folds.parquet"
+    folds = pd.read_parquet(folds_path) if resume and folds_path.exists() else \
+        run_all_pairs_walk_forward(residuals, representatives,
+                                   config["research_symbols"], config["walk_forward"])
+    folds.to_parquet(folds_path, index=False, compression="zstd")
+    granger = run_granger_all_directions(residuals, config["research_symbols"],
+                                         config["granger_lags"], config["fdr_alpha"])
+    granger.to_parquet(influence/"granger_results.parquet", index=False, compression="zstd")
+    relationships = build_relationships(event_summary, folds, granger, config)
+    relationships.to_parquet(influence/"influence_relationships.parquet", index=False,
+                             compression="zstd")
+    build_phase3a_report(root, config, residuals, representatives, responses,
+                         folds, granger, relationships)
+    return {**first, "controls": controls, "event_summary": event_summary,
+            "folds": folds, "granger": granger, "relationships": relationships}
+
+
+def rebuild_reports(config_path: Path) -> None:
+    config=load_influence_config(config_path); root=BASE/config["output_root"]
+    read=lambda p: pd.read_parquet(root/p)
+    build_phase3a_report(root, config, read("residuals/daily_residual_returns.parquet"),
+        read("events/daily_representative_events.parquet"), read("responses/daily_responses.parquet"),
+        read("influence/predictive_model_folds.parquet"), read("influence/granger_results.parquet"),
+        read("influence/influence_relationships.parquet"))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, default=BASE / "influence_config.json")
@@ -158,8 +221,12 @@ def main() -> int:
         temporary = BASE / "research" / ".runtime_config.json"
         temporary.parent.mkdir(exist_ok=True); temporary.write_text(json.dumps(config))
         args.config = temporary
-    result = run_foundation_through_responses(args.config, args.start, args.end)
-    print(json.dumps(result["summary"], indent=2))
+    if args.report_only:
+        rebuild_reports(args.config); print("Reports rebuilt from saved research outputs"); return 0
+    result = run_full_research(args.config, args.start, args.end, args.resume)
+    print(json.dumps({"relationships": len(result["relationships"]),
+        "status": result["relationships"].relationship_status.value_counts().to_dict(),
+        "folds": len(result["folds"]), "granger_tests": len(result["granger"])}, indent=2))
     return 0
 
 

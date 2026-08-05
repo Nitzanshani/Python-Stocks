@@ -53,7 +53,9 @@ python3 update_market_data.py --symbols AAOI,COHR --intervals 1d,60m,5m
 2. Phase 2.5: full daily universe, resilient checkpoints, universe mapping,
    benchmark/sector ETF synchronization and quality audit. Completed locally;
    no analytical formula or dashboard reader was changed.
-3. Phase 3: daily Event/Response Engines and causal market/sector residuals.
+3. Phase 3A: completed small-universe daily Event/Response Engines, causal
+   residuals, matched controls, purged walk-forward, Granger/FDR and static
+   research reports. Controls remain outside the central target ranking.
 4. Phase 4: candidate pair screening, baseline-vs-extended walk-forward and FDR.
 5. Phase 5: intraday events/responses after data-availability validation.
 6. Phase 6: Influence Matrix, network snapshots and evolution.

@@ -48,6 +48,12 @@ log-returns מותאמים, residuals באמצעות Rolling OLS שנאמד עד
 מעורבבות. בשלב זה הדירוג מוגבל לתשע מניות המחקר וארבע סדרות הבקרה אינן יעדי
 דירוג. הפירוט נמצא ב־`PHASE3A_DAILY_INFLUENCE.md`.
 
+המחקר משווה Event Study מול ימי בקרה שנשמרים במפורש, משתמש ב־simple bootstrap,
+block bootstrap ו־permutation, ומריץ Purged Walk-Forward שבו scaling ובחירת
+Ridge נעשים בתוך כל fold. כל lag של Granger וכל כיוון נשמרים, ו־FDR מחושב
+במשפחות נפרדות. הציון הכולל אינו מדד ייצור: מוצגים שישה רכיבים ושלוש רגישויות
+משקל. ממצאים `rejected`,‏ `unstable` ו־`no_evidence` נשמרים בדוח לצד מועמדים.
+
 בנוסף קיימת רשימת מעקב קבועה עבור `AAOI` ו־`COHR`. אם מניה כבר נמצאת במדד, כמו `COHR`, היא אינה מוכפלת ומוצגת גם עם התווית `Watchlist`.
 
 ## Talk of the Day

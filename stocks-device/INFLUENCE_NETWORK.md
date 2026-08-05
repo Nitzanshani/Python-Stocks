@@ -14,3 +14,10 @@ walk-forward improvement, stability and sample size. Network snapshots will be
 stored by window; graph metrics and visualization remain a separate page and
 are never presented as trading signals. DMD, Matrix Pencil, Prony and state-space
 models remain a later research layer and will not modify Fourier `Freq Q`.
+
+Phase 3A implements the small-universe directed comparison, not a dynamic
+network. Its walk-forward split is purged and embargoed; preprocessing and
+hyperparameter selection are fold-local. Event-study and Granger p-values use
+separate declared FDR families. All Granger lags and both directions are kept.
+The component scores and three weight sensitivities are experimental diagnostics
+only; no production Overall Score has been adopted.

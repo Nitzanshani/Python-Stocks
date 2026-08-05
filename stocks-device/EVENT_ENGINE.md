@@ -17,3 +17,9 @@ will not be reused as event labels unless a later experiment explicitly opts in.
 Tests must cover threshold boundaries, missing bars, splits, early closes,
 timezone conversion and events whose detection becomes possible only at a bar's
 close. Full formulas and dashboard hover text will be added with Phase 3.
+
+The implemented daily thresholds live in `influence_config.json`. Rolling
+residual standard deviation and relative-volume baselines exclude the current
+session. An event becomes knowable at 16:00 New York. Clustering never deletes
+raw events; one representative points back to the strongest raw event in each
+same-ticker/type/direction cooldown cluster.

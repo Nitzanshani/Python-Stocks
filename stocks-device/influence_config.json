@@ -32,6 +32,7 @@
   "minimum_folds": 3,
   "bootstrap_iterations": 500,
   "block_bootstrap_length": 5,
+  "control_matches_per_event": 5,
   "random_seed": 20260805,
   "output_root": "research"
 }

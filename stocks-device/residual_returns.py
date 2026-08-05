@@ -50,5 +50,9 @@ def build_residual_returns(feature_panel: pd.DataFrame, market: str = "SPY",
         result = common.join(sector_fit, how="left").join(market_fit, how="left")
         result.insert(0, "ticker", ticker)
         result["residual_model"] = "market_and_sector"
+        own_features = feature_panel.loc[feature_panel.ticker == ticker,
+            ["timestamp", "relative_volume", "rolling_volatility", "rolling_z_score"]
+        ].set_index("timestamp")
+        result = result.join(own_features, how="left")
         output.append(result.reset_index())
     return pd.concat(output, ignore_index=True).sort_values(["ticker", "timestamp"])

@@ -7,7 +7,7 @@ Phase 2 builds and validates the local source before existing readers migrate.
 from __future__ import annotations
 
 import json
-import math
+import random
 import time
 from dataclasses import asdict, dataclass
 from datetime import datetime, timedelta, timezone
@@ -38,8 +38,11 @@ class UpdateMetadata:
     rows_added: int
     duplicates_removed: int
     invalid_rows_removed: int
+    invalid_rows_removed_total: int = 0
     source: str = "Yahoo Finance via yfinance"
+    error_type: str | None = None
     error: str | None = None
+    attempts: int = 1
 
 
 def load_config(path: Path = CONFIG_FILE) -> dict[str, object]:
@@ -162,35 +165,89 @@ class MarketDataStore:
             arguments["period"] = initial_daily_period
         else:
             arguments.update(start=start, end=end)
-        return yf.download(ticker, **arguments)
+        try:
+            result = yf.download(ticker, **arguments)
+        except Exception:
+            arguments["repair"] = False
+            return yf.download(ticker, **arguments)
+        if result is None or result.empty:
+            # yfinance sometimes records a repair/parsing failure as an empty
+            # frame instead of raising. A raw retry can still recover the data.
+            arguments["repair"] = False
+            return yf.download(ticker, **arguments)
+        return result
+
+    @staticmethod
+    def classify_error(exc: Exception) -> str:
+        text = f"{type(exc).__name__} {exc}".casefold()
+        if "rate limit" in text or "too many requests" in text or "429" in text:
+            return "rate_limit"
+        if "timeout" in text or "timed out" in text:
+            return "timeout"
+        if "delisted" in text or "no price data" in text or "not found" in text:
+            return "not_found"
+        if ("parse" in text or "json" in text or "schema" in text or
+                "multi-ticker" in text or "typeerror" in text):
+            return "parsing"
+        return "source_error"
 
     def update(self, ticker: str, interval: str,
-               downloader: Callable | None = None, now: datetime | None = None) -> UpdateMetadata:
+               downloader: Callable | None = None, now: datetime | None = None,
+               force_refresh: bool = False, max_attempts: int | None = None,
+               backoff_seconds: float | None = None) -> UpdateMetadata:
         ticker = normalize_symbol(ticker)
         now = now or datetime.now(timezone.utc)
         existing = self.read(ticker, interval)
-        start, end = self._request_range(existing, interval, now)
-        download = downloader or self.yahoo_download
         try:
-            raw = download(ticker, interval, start, end,
-                           str(self.config.get("daily_initial_period", "max")))
-            normalized = self.normalize(raw, interval)
-            normalized, invalid = self.validate(normalized)
+            previous_metadata = json.loads(
+                self.metadata_path(ticker, interval).read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            previous_metadata = {}
+        request_base = existing.iloc[0:0] if force_refresh else existing
+        start, end = self._request_range(request_base, interval, now)
+        download = downloader or self.yahoo_download
+        attempts_limit = max_attempts or int(self.config.get("max_attempts", 3))
+        backoff = backoff_seconds if backoff_seconds is not None else float(
+            self.config.get("backoff_seconds", 1.0))
+        raw = None; normalized = existing.iloc[0:0]; invalid = 0
+        last_error = None; attempts = 0
+        for attempts in range(1, attempts_limit + 1):
+            try:
+                raw = download(ticker, interval, start, end,
+                               str(self.config.get("daily_initial_period", "max")))
+                if raw is None or raw.empty:
+                    raise ValueError("no price data returned")
+                normalized = self.normalize(raw, interval)
+                normalized, invalid = self.validate(normalized)
+                last_error = None
+                break
+            except Exception as exc:
+                last_error = exc
+                if attempts < attempts_limit:
+                    time.sleep(backoff * (2 ** (attempts - 1)) + random.uniform(0, backoff * 0.25))
+        try:
+            if last_error is not None:
+                raise last_error
             merged, duplicates, added = self.merge(existing, normalized)
-            if merged.empty:
-                status = "empty"
-            else:
-                path = self.data_path(ticker, interval)
-                path.parent.mkdir(parents=True, exist_ok=True)
+            path = self.data_path(ticker, interval)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            # Keep a truly current store byte-for-byte stable. Besides making
+            # repeated runs idempotent, this avoids needless SSD writes for the
+            # hundreds of symbols whose overlap bars did not change.
+            should_write = not path.exists() or not merged.equals(existing)
+            if should_write:
                 temporary = path.with_suffix(".parquet.tmp")
                 merged.to_parquet(temporary, engine="pyarrow", compression="zstd")
                 temporary.replace(path)
-                status = "updated" if added else "current"
-            error = None
+            status = "updated" if added else "current"
+            error = error_type = None
         except Exception as exc:
             merged, normalized = existing, existing.iloc[0:0]
             duplicates = added = invalid = 0
-            status, error = "failed", f"{type(exc).__name__}: {exc}"
+            status, error_type = "failed", self.classify_error(exc)
+            error = f"{type(exc).__name__}: {exc}"
+        previous_invalid_total = int(previous_metadata.get(
+            "invalid_rows_removed_total", previous_metadata.get("invalid_rows_removed", 0)) or 0)
         metadata = UpdateMetadata(
             ticker=ticker, interval=interval, updated_at=now.astimezone(timezone.utc).isoformat(),
             first_timestamp=merged.index[0].isoformat() if len(merged) else None,
@@ -198,19 +255,35 @@ class MarketDataStore:
             rows=len(merged), status=status,
             requested_start=start.isoformat() if start else None, requested_end=end.isoformat(),
             rows_downloaded=len(normalized), rows_added=added,
-            duplicates_removed=duplicates, invalid_rows_removed=invalid, error=error)
+            duplicates_removed=duplicates, invalid_rows_removed=invalid,
+            invalid_rows_removed_total=previous_invalid_total + invalid,
+            error_type=error_type, error=error, attempts=attempts)
         _atomic_json(self.metadata_path(ticker, interval), asdict(metadata))
         return metadata
 
 
-def update_many(tickers: list[str], intervals: list[str], root: Path | None = None) -> list[UpdateMetadata]:
+def update_many(tickers: list[str], intervals: list[str], root: Path | None = None,
+                max_workers: int | None = None, force_refresh: bool = False,
+                batch_size: int = 25) -> list[UpdateMetadata]:
+    from concurrent.futures import ThreadPoolExecutor, as_completed
     store = MarketDataStore(root=root)
     results = []
     pause = float(store.config.get("request_pause_seconds", 0.15))
-    for ticker in tickers:
-        for interval in intervals:
-            result = store.update(ticker, interval)
-            results.append(result)
-            print(f"{ticker:6} {interval:3} {result.status:7} rows={result.rows} +{result.rows_added}")
-            time.sleep(pause)
+    workers = max(1, max_workers or int(store.config.get("max_workers", 2)))
+    jobs = [(ticker, interval) for ticker in tickers for interval in intervals]
+    for offset in range(0, len(jobs), max(1, batch_size)):
+        batch = jobs[offset:offset + max(1, batch_size)]
+        with ThreadPoolExecutor(max_workers=workers) as executor:
+            futures = {executor.submit(store.update, ticker, interval, None, None,
+                                       force_refresh): (ticker, interval)
+                       for ticker, interval in batch}
+            for future in as_completed(futures):
+                ticker, interval = futures[future]
+                result = future.result()
+                results.append(result)
+                detail = f" error={result.error_type}" if result.error_type else ""
+                print(f"{ticker:6} {interval:3} {result.status:7} rows={result.rows} "
+                      f"+{result.rows_added} attempts={result.attempts}{detail}", flush=True)
+        if offset + len(batch) < len(jobs):
+            time.sleep(pause + random.uniform(0, max(pause, 0.01)))
     return results

@@ -1,2 +1,3 @@
 -r requirements.txt
 pyarrow>=15,<24
+pandas-market-calendars>=4.4,<5

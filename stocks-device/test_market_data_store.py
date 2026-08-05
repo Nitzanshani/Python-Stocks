@@ -6,7 +6,9 @@ import unittest
 
 import pandas as pd
 
+from data_quality import build_daily_quality_report, quality_score
 from market_data_store import MarketDataStore
+from update_market_data import select_failed_symbols
 
 
 CONFIG = {
@@ -70,6 +72,19 @@ class MarketDataStoreTests(unittest.TestCase):
         self.assertEqual(removed, 2)
         self.assertEqual(len(valid), 1)
 
+    def test_invalid_row_audit_is_cumulative_across_clean_refresh(self):
+        dirty = bars(["2026-08-03", "2026-08-04"], [100, 101])
+        dirty.iloc[1, dirty.columns.get_loc("High")] = 50
+        clean = bars(["2026-08-03", "2026-08-04"], [100, 101])
+        calls = []
+        def downloader(*_):
+            calls.append(1); return dirty if len(calls) == 1 else clean
+        now = datetime(2026, 8, 5, tzinfo=timezone.utc)
+        self.store.update("AUDIT", "1d", downloader, now, max_attempts=1)
+        result = self.store.update("AUDIT", "1d", downloader, now, max_attempts=1)
+        self.assertEqual(result.invalid_rows_removed, 0)
+        self.assertEqual(result.invalid_rows_removed_total, 1)
+
     def test_full_then_incremental_matches_one_full_merge_and_writes_metadata(self):
         calls = []
         first = bars(["2026-08-03", "2026-08-04"], [100, 101])
@@ -103,10 +118,71 @@ class MarketDataStoreTests(unittest.TestCase):
 
         now = datetime(2026, 8, 5, tzinfo=timezone.utc)
         self.store.update("AAOI", "1d", good, now)
-        failed = self.store.update("AAOI", "1d", bad, now)
+        failed = self.store.update("AAOI", "1d", bad, now, max_attempts=1)
         self.assertEqual(failed.status, "failed")
         self.assertEqual(len(self.store.read("AAOI", "1d")), 1)
         self.assertIn("TimeoutError", failed.error)
+
+    def test_temporary_failure_is_retried_then_succeeds(self):
+        calls = []
+        def flaky(*_):
+            calls.append(1)
+            if len(calls) == 1:
+                raise TimeoutError("temporary")
+            return bars(["2026-08-03"], [100])
+        result = self.store.update("NEW", "1d", flaky,
+            datetime(2026, 8, 5, tzinfo=timezone.utc), max_attempts=2, backoff_seconds=0)
+        self.assertEqual(result.status, "updated")
+        self.assertEqual(result.attempts, 2)
+
+    def test_identical_refresh_does_not_rewrite_parquet(self):
+        frame = bars(["2026-08-03"], [100])
+        now = datetime(2026, 8, 5, tzinfo=timezone.utc)
+        self.store.update("AAOI", "1d", lambda *_: frame, now)
+        path = self.store.data_path("AAOI", "1d")
+        before = path.read_bytes()
+        result = self.store.update("AAOI", "1d", lambda *_: frame, now)
+        self.assertEqual(result.status, "current")
+        self.assertEqual(path.read_bytes(), before)
+
+    def test_nonexistent_ticker_records_failure_checkpoint(self):
+        def missing(*_):
+            raise ValueError("no price data returned; possibly delisted")
+        result = self.store.update("NONE", "1d", missing,
+            datetime(2026, 8, 5, tzinfo=timezone.utc), max_attempts=1)
+        self.assertEqual(result.error_type, "not_found")
+        self.assertTrue(self.store.metadata_path("NONE", "1d").exists())
+
+    def test_retry_selection_uses_only_failed_checkpoints(self):
+        now = datetime(2026, 8, 5, tzinfo=timezone.utc)
+        self.store.update("GOOD", "1d", lambda *_: bars(["2026-08-03"], [100]), now)
+        self.store.update("BAD", "1d", lambda *_: (_ for _ in ()).throw(
+            TimeoutError("temporary")), now, max_attempts=1)
+        self.assertEqual(select_failed_symbols(
+            self.store, ["GOOD", "BAD", "UNKNOWN"], ["1d"]), ["BAD"])
+
+    def test_quality_score_rewards_complete_current_data(self):
+        good = quality_score(1, 0, 0, 1, 0, True, 100)
+        poor = quality_score(.7, 4, 3, .8, 10, False, 100)
+        self.assertEqual(good, 1.0)
+        self.assertLess(poor, good)
+
+    def test_report_is_created_with_partial_failure_and_benchmark_sync(self):
+        now = datetime.now(timezone.utc)
+        dates = pd.bdate_range(end=now.date(), periods=10)
+        def good(*_): return bars(dates, list(range(100, 110)))
+        def bad(*_): raise TimeoutError("temporary")
+        self.store.update("SPY", "1d", good, now, max_attempts=1)
+        self.store.update("AAOI", "1d", good, now, max_attempts=1)
+        self.store.update("FAIL", "1d", bad, now, max_attempts=1)
+        report_dir = Path(self.temp.name) / "reports"
+        report, summary = build_daily_quality_report(
+            self.store, ["SPY", "AAOI", "FAIL"], report_dir)
+        self.assertEqual(summary["tickers"], 3)
+        self.assertEqual(summary["failed"], 1)
+        self.assertEqual(float(report.loc[report.ticker == "AAOI", "spy_overlap_ratio"].iloc[0]), 1.0)
+        for suffix in ("parquet", "csv", "html"):
+            self.assertTrue((report_dir / f"data_quality_daily.{suffix}").exists())
 
 
 if __name__ == "__main__":

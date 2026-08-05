@@ -3,7 +3,14 @@
   "daily_initial_period": "max",
   "overlap_bars": 3,
   "request_pause_seconds": 0.15,
-  "max_workers": 2,
+  "max_workers": 1,
+  "max_attempts": 3,
+  "backoff_seconds": 1.0,
+  "benchmarks": ["SPY", "QQQ", "IWM", "SMH", "SOXX"],
+  "sector_etfs": ["XLB", "XLC", "XLE", "XLF", "XLI", "XLK", "XLP", "XLRE", "XLU", "XLV", "XLY"],
+  "manual_profiles": {
+    "AAOI": {"sector": "Technology", "industry": "Communication Equipment"}
+  },
   "intervals": {
     "1d": {"directory": "market/daily", "lookback_days": null},
     "60m": {"directory": "market/hourly", "lookback_days": 60},

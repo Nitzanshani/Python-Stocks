@@ -25,6 +25,9 @@ Reusable components:
 - `market_data_config.json`: intervals, paths and resource limits.
 - `market_data_store.py`: Parquet IO, validation, merge and incremental update.
 - `update_market_data.py`: independently runnable Phase 2 CLI.
+- `universe_metadata.py`: Phase 2.5 company/sector/index membership snapshot.
+- `data_quality.py`: NYSE-calendar audit and Parquet/CSV/HTML reports.
+- `verify_daily_idempotency.py`: repeat-run validation for the daily store.
 - `event_engine.py` and `response_engine.py`: Phase 3 only.
 - `pairwise_plugins.py`, `influence_matrix.py`: Phase 4–6 only.
 - `influence_jobs.py`: resumable job/checkpoint layer before dashboard wiring.
@@ -32,7 +35,7 @@ Reusable components:
 
 ## Minimal changes to existing files
 
-Phase 2 changes only `requirements.txt` and documentation. No current Yahoo
+Phase 2.5 remains additive. No current Yahoo
 reader is replaced yet. Migration will happen reader by reader after parity
 tests: daily analytics first, hourly reference series second, five-minute
 opening analytics third, and live one-minute quotes last (or never, because
@@ -47,12 +50,15 @@ python3 update_market_data.py --symbols AAOI,COHR --intervals 1d,60m,5m
 ## Milestones
 
 1. Phase 2: validated Parquet storage, metadata, overlap refresh and tests.
-2. Phase 3: daily Event/Response Engines and causal market/sector residuals.
-3. Phase 4: candidate pair screening, baseline-vs-extended walk-forward and FDR.
-4. Phase 5: intraday events/responses after data-availability validation.
-5. Phase 6: Influence Matrix, network snapshots and evolution.
-6. Phase 7: separate dashboard page, animation and reports.
-7. Phase 8: DMD/Prony/Matrix Pencil/state-space research, isolated from Freq Q.
+2. Phase 2.5: full daily universe, resilient checkpoints, universe mapping,
+   benchmark/sector ETF synchronization and quality audit. Completed locally;
+   no analytical formula or dashboard reader was changed.
+3. Phase 3: daily Event/Response Engines and causal market/sector residuals.
+4. Phase 4: candidate pair screening, baseline-vs-extended walk-forward and FDR.
+5. Phase 5: intraday events/responses after data-availability validation.
+6. Phase 6: Influence Matrix, network snapshots and evolution.
+7. Phase 7: separate dashboard page, animation and reports.
+8. Phase 8: DMD/Prony/Matrix Pencil/state-space research, isolated from Freq Q.
 
 ## Technical risks
 

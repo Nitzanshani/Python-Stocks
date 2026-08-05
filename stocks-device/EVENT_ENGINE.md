@@ -1,7 +1,8 @@
 # Event Engine (Phase 3 Design)
 
-`event_engine.py` will convert abnormal moves into immutable, uniquely
-identified research events. It is not implemented in Phase 2.
+`event_engine.py` converts abnormal daily moves into immutable, uniquely
+identified research events. Phase 3A preserves raw events, cooldown clusters
+and representative events as separate datasets.
 
 Inputs will come from the validated local store. Thresholds, horizons and
 minimum completeness will live in configuration rather than source code.

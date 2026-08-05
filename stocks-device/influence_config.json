@@ -1,0 +1,37 @@
+{
+  "engine_version": "3A.1",
+  "research_symbols": ["NVDA", "MRVL", "AMD", "AVGO", "COHR", "AAOI", "QCOM", "ANET", "MU"],
+  "control_symbols": ["SPY", "QQQ", "SMH", "SOXX"],
+  "market_benchmark": "SPY",
+  "sector_benchmark": "SMH",
+  "sector_alternative": "SOXX",
+  "feature_window": 63,
+  "residual_windows": [63, 126, 252],
+  "residual_window": 126,
+  "minimum_residual_observations": 63,
+  "events": {
+    "raw_return_threshold": 0.10,
+    "residual_z_threshold": 3.0,
+    "relative_volume_threshold": 2.0,
+    "cooldown_trading_days": 3,
+    "mode": "clustered",
+    "threshold_version": "daily-v1"
+  },
+  "horizons": [1, 2, 3, 5, 10],
+  "walk_forward": {
+    "train_days": 504,
+    "test_days": 63,
+    "step_days": 21,
+    "purge_days": 10,
+    "embargo_days": 5,
+    "ridge_alphas": [0.01, 0.1, 1.0, 10.0]
+  },
+  "granger_lags": [1, 2, 3, 5],
+  "fdr_alpha": 0.05,
+  "minimum_event_count": 5,
+  "minimum_folds": 3,
+  "bootstrap_iterations": 500,
+  "block_bootstrap_length": 5,
+  "random_seed": 20260805,
+  "output_root": "research"
+}

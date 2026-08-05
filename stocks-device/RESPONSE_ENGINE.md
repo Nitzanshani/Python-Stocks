@@ -1,7 +1,7 @@
 # Response Engine (Phase 3 Design)
 
-`response_engine.py` will measure target-stock behavior after a source event.
-It is not implemented in Phase 2.
+`response_engine.py` measures target-stock behavior after a source event.
+Point and cumulative responses are explicit separate fields.
 
 Daily horizons begin with 1, 2, 3, 5 and 10 trading sessions. Intraday horizons
 of 5, 15, 30 and 60 minutes are Phase 5. Every response begins at the event's

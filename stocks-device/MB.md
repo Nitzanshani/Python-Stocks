@@ -395,6 +395,13 @@ clusters ו־representative events בנפרד. תגובות נמדדות ב־5�
 python3 run_intraday_influence_research.py --config intraday_influence_config.json
 ```
 
+## Phase 3C — שחזור Out-of-Time
+
+מפרט Phase 3B הוקפא ב־`PHASE3B_FROZEN_SPEC.json` וב־SHA-256 נפרד. Discovery
+מסתיים ב־5 באוגוסט 2026, Confirmation כולל את 60 ה־sessions הבאים, ולאחריו
+Holdout נעול. עדכון הנתונים והמחקר הם פקודות נפרדות; אם אין 60 sessions חדשים
+המערכת מפיקה דוח צבירה בלבד ואינה מסיקה מסקנת שחזור.
+
 ## בדיקות
 
 קיימות בדיקות עבור:

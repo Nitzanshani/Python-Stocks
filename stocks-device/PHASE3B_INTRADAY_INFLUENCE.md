@@ -68,3 +68,10 @@ python3 -m unittest test_phase3b_intraday.py
 
 The manifest records code/configuration/input hashes and dependency versions.
 Reports are static HTML, CSV and Markdown and compare Phase 3A with Phase 3B.
+
+## Frozen replication baseline
+
+Phase 3B was frozen at commit `420fbd9` and tag
+`phase3b-intraday-baseline`. `PHASE3B_FROZEN_SPEC.json` and its canonical SHA-256
+lock every analytical choice. Discovery ends on 2026-08-05; confirmation is the
+next 60 scheduled NYSE sessions, and the subsequent holdout is locked by default.

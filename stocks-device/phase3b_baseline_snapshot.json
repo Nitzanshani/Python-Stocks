@@ -1,0 +1,10 @@
+{
+  "tag": "phase3b-intraday-baseline",
+  "commit": "420fbd9",
+  "data_cutoff_utc": "2026-08-05T19:55:00+00:00",
+  "data_cutoff_session": "2026-08-05",
+  "frozen_spec_hash": "fdc1eaab9f8c3df12a1c02f8993edfe6a54a70e08bdf50a0e8d766c3b9c6c5ee",
+  "phase3a_report": "research/reports/phase3a_influence_research.html",
+  "phase3b_report": "research_intraday/reports/phase3b_intraday_influence.html",
+  "phase3b_manifest": "research_intraday/manifests/latest_manifest.json"
+}

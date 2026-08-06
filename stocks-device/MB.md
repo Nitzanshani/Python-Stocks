@@ -383,6 +383,18 @@ python market_scanner.py --cli --date 2026-07-31 --symbols-file symbols.txt
 
 הפלט המלא נשמר ב־`scan_results.csv`.
 
+## Phase 3B — מחקר השפעות תוך־יומיות
+
+נוספה שכבת מחקר מבודדת לתשע מניות ול־SPY, QQQ, SMH ו־SOXX כבקרות בלבד.
+היא מנתחת 5/15/30/60 דקות, מנרמלת לפי שעת היום, ושומרת raw events,
+clusters ו־representative events בנפרד. תגובות נמדדות ב־5–120 דקות ועד
+הסגירה, עם בקרות מותאמות ובלתי־מותאמות, block bootstrap, FDR ו־walk-forward
+של 20/5 סשנים עם purge ו־embargo. לא שונו הדשבורד או נוסחאות קיימות.
+
+```bash
+python3 run_intraday_influence_research.py --config intraday_influence_config.json
+```
+
 ## בדיקות
 
 קיימות בדיקות עבור:

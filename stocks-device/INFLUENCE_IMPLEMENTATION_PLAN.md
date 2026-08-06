@@ -56,8 +56,10 @@ python3 update_market_data.py --symbols AAOI,COHR --intervals 1d,60m,5m
 3. Phase 3A: completed small-universe daily Event/Response Engines, causal
    residuals, matched controls, purged walk-forward, Granger/FDR and static
    research reports. Controls remain outside the central target ranking.
-4. Phase 4: candidate pair screening, baseline-vs-extended walk-forward and FDR.
-5. Phase 5: intraday events/responses after data-availability validation.
+4. Phase 3B: completed isolated intraday event/response research, matched and
+   unconditional controls, session walk-forward, response decay, Phase 3A
+   comparison and static reports for the same small universe.
+5. Phase 4: candidate pair screening, baseline-vs-extended walk-forward and FDR.
 6. Phase 6: Influence Matrix, network snapshots and evolution.
 7. Phase 7: separate dashboard page, animation and reports.
 8. Phase 8: DMD/Prony/Matrix Pencil/state-space research, isolated from Freq Q.

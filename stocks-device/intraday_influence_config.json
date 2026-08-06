@@ -19,7 +19,8 @@
     "cluster_minutes": 15,
     "threshold_version": "intraday-v1"
   },
-  "response_horizons_minutes": [5, 10, 15, 30, 60, 120],
+  "response_horizons_minutes": [5, 10, 15, 30, 60, 120, "session_close"],
+  "response_threshold": 0.003,
   "walk_forward": {"train_sessions": 20, "test_sessions": 5, "step_sessions": 5,
     "purge_minutes": 30, "embargo_sessions": 1, "ridge_alphas": [0.01, 0.1, 1.0, 10.0]},
   "fdr_alpha": 0.05,

@@ -1,0 +1,13 @@
+"""Static Phase 3B report with NVDA directions and Phase 3A comparison."""
+from pathlib import Path
+import pandas as pd
+
+def build_intraday_report(root,config,audit,events,responses,event_study,folds,relationships,comparison,curves,decay):
+ reports=Path(root)/"reports";reports.mkdir(parents=True,exist_ok=True);relationships.to_csv(reports/"phase3b_intraday_influence.csv",index=False)
+ nvda=relationships[(relationships.source_ticker=="NVDA")|(relationships.target_ticker=="NVDA")]
+ summary={"sessions_min":audit.complete_sessions.min(),"events":len(events),"responses":int(responses.response_available.sum()),"directed_results":len(relationships),"folds":len(folds),"fdr_significant":int(event_study.fdr_significant.sum()),"same_bar_rate":float((responses.lead_lag_classification=="same_bar").mean())}
+ md=["# Phase 3B Intraday Predictive Influence","","> Research only; no causal or trading claim.","",*(f"- {k}: {v}" for k,v in summary.items()),"","## NVDA both directions","",nvda.to_csv(index=False),"","## Phase 3A comparison","",comparison.to_csv(index=False),"","## Negative findings","",relationships[relationships.intraday_status.isin(["rejected","unstable","no_evidence","insufficient_data"])].to_csv(index=False),"","## Limitations","","41-session Yahoo retention sample; daily and intraday survivorship bias; same-bar ambiguity; multiple testing; no economic causality claim."]
+ (reports/"phase3b_intraday_influence.md").write_text("\n".join(md))
+ cards="".join(f"<div><b>{v}</b><span>{k}</span></div>" for k,v in summary.items())
+ html=f'''<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><style>body{{font:14px system-ui;background:#0b1117;color:#dce7f2;padding:24px}}.cards{{display:flex;gap:8px;flex-wrap:wrap}}.cards div{{background:#172433;padding:10px;border-radius:8px}}b,span{{display:block}}b{{color:#35d07f}}table{{border-collapse:collapse;width:100%;font-size:10px}}td,th{{border:1px solid #29394a;padding:5px}}.box{{overflow:auto;max-height:550px}}</style><h1>Phase 3B Intraday Influence</h1><p>Experimental research, not causality or a trading signal.</p><div class="cards">{cards}</div><h2>NVDA ↔ peers</h2><div class="box">{nvda.to_html(index=False)}</div><h2>Average response curves</h2><div class="box">{curves.to_html(index=False)}</div><h2>Amplitude / decay map</h2><div class="box">{decay.to_html(index=False)}</div><h2>Phase 3A comparison</h2><div class="box">{comparison.to_html(index=False)}</div><h2>All directed results</h2><div class="box">{relationships.to_html(index=False)}</div>'''
+ (reports/"phase3b_intraday_influence.html").write_text(html)

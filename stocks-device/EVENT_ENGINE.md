@@ -23,3 +23,8 @@ residual standard deviation and relative-volume baselines exclude the current
 session. An event becomes knowable at 16:00 New York. Clustering never deletes
 raw events; one representative points back to the strongest raw event in each
 same-ticker/type/direction cooldown cluster.
+
+Phase 3B adds a separate intraday engine for 5m/15m/30m/60m bars. A bar event is
+available only at `bar_end`; same-slot baselines use prior sessions only. Raw
+events, clusters and earliest-detection representatives are stored separately.
+A later maximum is metadata and never replaces the causal representative.

@@ -20,3 +20,7 @@ the point response is the return at exactly the h-th observed target session.
 Missing target sessions are not filled. Maximum/minimum excursions are stored
 only as descriptive outcomes and are prohibited from predictive features.
 Self-responses are excluded from the main response table.
+
+Phase 3B implements fixed same-session horizons 5/10/15/30/60/120 minutes and
+`session_close`. Missing bars are rejected, never filled. Point and cumulative
+responses remain separate; same-bar cases are retained as ambiguity metadata.

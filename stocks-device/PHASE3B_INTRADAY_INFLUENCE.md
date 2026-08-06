@@ -33,3 +33,38 @@ stored only as cluster metadata. Responses expose point and cumulative returns,
 excursions, reversal, amplitude ratio and explicit missing reasons.
 
 Generated files live under `research_intraday/` and are ignored by Git.
+
+## Validation and inference
+
+Each directed pair is evaluated in non-overlapping session folds: 20 training
+sessions, 5 test sessions and a 5-session step. The last 30 minutes of the final
+training session are purged and one session is embargoed. Scaling, ridge-alpha
+selection and every fitted coefficient are learned inside the training fold.
+The baseline contains only lagged target/market/sector state; the extended model
+adds lagged source residuals, source volume and causally available source-event
+state. Excursions and other future outcomes are never features.
+
+Event studies preserve two baselines. `unconditional` controls share only clock
+slot and weekday. `matched` controls additionally use contemporaneously known
+SPY/SMH direction and magnitude plus source/target state up to the event time.
+Every selected control-bar identifier is stored and
+`target_future_used_for_matching` is always false. Simple permutation and
+session-block bootstrap estimates are retained. Benjamini-Hochberg correction
+uses declared families split by analysis type, interval, horizon, event type,
+residual model and test period.
+
+Responses use fixed trading-minute horizons 5, 10, 15, 30, 60 and 120, plus an
+explicit `session_close` horizon. The latter participates in event studies but
+is excluded from fixed-minute decay fitting. `same_bar` is ambiguity metadata,
+not evidence of direction. Relationship statuses remain experimental.
+
+## Reproduction
+
+```bash
+python3 update_intraday_research_data.py --config intraday_influence_config.json
+python3 run_intraday_influence_research.py --config intraday_influence_config.json
+python3 -m unittest test_phase3b_intraday.py
+```
+
+The manifest records code/configuration/input hashes and dependency versions.
+Reports are static HTML, CSV and Markdown and compare Phase 3A with Phase 3B.

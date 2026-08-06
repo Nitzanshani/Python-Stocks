@@ -21,3 +21,8 @@ hyperparameter selection are fold-local. Event-study and Granger p-values use
 separate declared FDR families. All Granger lags and both directions are kept.
 The component scores and three weight sensitivities are experimental diagnostics
 only; no production Overall Score has been adopted.
+
+Phase 3B is the isolated intraday counterpart on the same nine targets and four
+control ETFs. It compares matched and unconditional baselines, uses purged
+session walk-forward folds, and retains each direction separately. It does not
+modify the dashboard, Fourier scores or a production ranking.

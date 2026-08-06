@@ -4,6 +4,8 @@ import pandas as pd
 from phase3c_periods import canonical_hash,load_frozen_spec,period_bounds,slice_period,assert_non_overlapping
 from intraday_quality_monitor import require_quality_gate
 from phase3c_analysis import relative_rmse_improvement,practical_effect_classification,leave_one_event_out,rolling_stability,generate_placebos,spread_proxy_bps,pending_relationships
+from phase3c_operations import write_operational_status
+from update_intraday_research_data import revision_rows
 
 BASE=Path(__file__).resolve().parent
 
@@ -67,5 +69,17 @@ class Phase3CFoundationTests(unittest.TestCase):
  def test_fixed_nvda_anet_relationship_definition_is_unchanged(self):
   spec=load_frozen_spec(BASE/"PHASE3B_FROZEN_SPEC.json");fixed=spec["replication"]["fixed_relationship"]
   self.assertEqual(fixed,{"source":"NVDA","target":"ANET","interval":"5m","horizon":5})
+
+ def test_blind_operational_report_contains_no_research_metrics(self):
+  status={"current_date":"2026-08-06","confirmation_sessions_complete":0,"confirmation_sessions_required":60,"sessions_remaining":60,"latest_complete_session":None,"partial_sessions":0,"failed_symbols":[],"failed_intervals":[],"quality_gate_status":"passed","holdout_locked":True,"frozen_spec_hash":"abc","git_commit":"def"}
+  with tempfile.TemporaryDirectory() as d:
+   milestones=write_operational_status(d,status,pd.DataFrame(columns=["ticker","interval","session_date","reason"]));text=(Path(d)/"reports/daily_accumulation_status.json").read_text()
+   self.assertEqual(milestones,[]);self.assertNotIn("p_value",text);self.assertNotIn("prediction_improvement",text);self.assertNotIn("NVDA",text)
+
+ def test_yahoo_bar_revision_is_audited_and_discovery_flagged(self):
+  index=pd.DatetimeIndex(["2026-08-05 19:55Z"]);columns=["Open","High","Low","Close","Adj Close","Volume","Dividends","Stock Splits"]
+  old=pd.DataFrame([[100.,101.,99.,100.,100.,1000.,0.,0.]],index=index,columns=columns);new=old.copy();new.loc[index[0],"Close"]=100.5
+  rows=revision_rows("NVDA","5m",old,new,"2026-08-06T00:00:00Z")
+  self.assertEqual(len(rows),1);self.assertTrue(rows[0]["discovery_input_changed"]);self.assertEqual(rows[0]["change_type"],"partial_bar_replaced")
 
 if __name__=="__main__":unittest.main()

@@ -10,6 +10,20 @@ from intraday_quality_monitor import build_quality_monitor
 
 BASE=Path(__file__).resolve().parent
 
+def revision_rows(ticker,interval,old,new,detected_at):
+    columns=["Open","High","Low","Close","Adj Close","Volume","Dividends","Stock Splits"];common=old.index.intersection(new.index);rows=[]
+    for timestamp in common:
+        a=old.loc[timestamp,columns];b=new.loc[timestamp,columns]
+        changed=[c for c in columns if not (pd.isna(a[c]) and pd.isna(b[c])) and a[c]!=b[c]]
+        if not changed:continue
+        if any(c in changed for c in ["Dividends","Stock Splits"]):kind="corporate_action"
+        elif changed==["Volume"]:kind="volume_correction"
+        elif timestamp==old.index.max():kind="partial_bar_replaced"
+        elif any(c in changed for c in ["Open","High","Low","Close","Adj Close"]):kind="ohlc_correction"
+        else:kind="unexplained"
+        rows.append({"ticker":ticker,"interval":interval,"timestamp":timestamp.isoformat(),"old_values":json.dumps({c:None if pd.isna(a[c]) else float(a[c]) for c in changed}),"new_values":json.dumps({c:None if pd.isna(b[c]) else float(b[c]) for c in changed}),"detected_at":detected_at,"change_type":kind,"discovery_input_changed":timestamp.tz_convert("America/New_York").date()<=pd.Timestamp("2026-08-05").date()})
+    return rows
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config",type=Path,default=BASE/"intraday_influence_config.json")
@@ -41,9 +55,9 @@ def main():
         checkpoint.write_text(json.dumps({"run_date":datetime.now(timezone.utc).isoformat(),"completed":completed},indent=2))
     quality=build_quality_monitor(symbols,intervals,BASE/"research_intraday",previous_quality) if (args.quality_report or args.verify_sessions) else None
     quality_map={(r.ticker,r.interval):r for r in quality.itertuples()} if quality is not None else {}
-    log_rows=[]
+    log_rows=[];revision_log=[]
     for result in results:
-        old=before[(result.ticker,result.interval)];q=quality_map.get((result.ticker,result.interval))
+        old=before[(result.ticker,result.interval)];current=store.read(result.ticker,result.interval);q=quality_map.get((result.ticker,result.interval));revision_log.extend(revision_rows(result.ticker,result.interval,old,current,result.updated_at))
         log_rows.append({"run_date":result.updated_at,"ticker":result.ticker,"interval":result.interval,
           "old_last_timestamp":old.index.max().isoformat() if len(old) else None,"new_last_timestamp":result.last_timestamp,
           "new_rows":result.rows_added,"replaced_overlap_rows":result.duplicates_removed,
@@ -52,6 +66,9 @@ def main():
     log_path=BASE/"research_intraday/update_runs.csv";new=pd.DataFrame(log_rows)
     if log_path.exists() and not new.empty:new=pd.concat([pd.read_csv(log_path),new],ignore_index=True)
     if not new.empty:new.to_csv(log_path,index=False)
+    revisions_path=BASE/"research_intraday/yahoo_bar_revisions.csv";revisions=pd.DataFrame(revision_log)
+    if revisions_path.exists() and not revisions.empty:revisions=pd.concat([pd.read_csv(revisions_path),revisions],ignore_index=True)
+    if not revisions.empty:revisions.to_csv(revisions_path,index=False)
     summary={"updates":len(results),"failed":sum(x.status=="failed" for x in results),
              "rows_added":sum(x.rows_added for x in results),
              "overlap_rows_replaced":sum(x.duplicates_removed for x in results)}

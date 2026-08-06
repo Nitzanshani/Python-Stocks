@@ -41,3 +41,24 @@ python3 run_intraday_replication.py --frozen-spec PHASE3B_FROZEN_SPEC.json --per
 ```
 
 Data update and research execution are deliberately separate commands.
+
+## Blind operational accumulation
+
+During the 60-session waiting period, use:
+
+```bash
+python3 run_intraday_replication.py --period confirmation --accumulation-only
+```
+
+This mode intersects completed sessions across all 13 symbols and all four
+intervals. It writes only operational counts, rejected-session reasons, quality
+state, the frozen hash, repository revision and a manifest. It never runs pair
+models or emits interim relationship metrics. A weekly operational audit is
+available with `--weekly-integrity-audit`.
+
+Yahoo overlap revisions are recorded at bar level with old/new values, change
+type and a `discovery_input_changed` flag. Revisions never silently recompute
+the frozen Discovery result. Milestone reports at 10/20/30/40/50 sessions are
+blind; full Confirmation additionally requires all of
+`--all-relationships --rolling-stability --placebo` and first writes a
+`confirmation_unlock` manifest. Holdout remains separately locked.

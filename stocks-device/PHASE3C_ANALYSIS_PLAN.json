@@ -1,0 +1,20 @@
+{
+  "version": "3C-preconfirmation-1",
+  "created_before_confirmation_results": true,
+  "rolling": {"window_sessions": 20, "step_sessions": 5},
+  "regimes": {
+    "spy_direction": "sign of SPY cumulative return known through event bar",
+    "smh_direction": "sign of SMH cumulative return known through event bar",
+    "market_volatility": "high when causal 20-session same-slot volatility exceeds its prior-session median, otherwise low",
+    "day_shape": "trend when causal efficiency ratio through event bar is at least 0.60, otherwise range",
+    "time_bucket_minutes": {"open": [0, 60], "middle": [60, 300], "close": [300, 390]},
+    "vix": "not used because frozen local inputs do not include VIX"
+  },
+  "placebo": {
+    "iterations": 100,
+    "tests": ["shuffled_source_sessions", "random_lag_4_to_12_bars", "wrong_day_source", "unrelated_pair", "future_to_past_diagnostic"],
+    "success": "real confirmation improvement exceeds the 95th percentile of placebo improvement and future-to-past is not accepted as legitimate evidence"
+  },
+  "leave_one_event_out": {"event_concentrated_if": "sign/classification changes or maximum single-event contribution exceeds 50 percent of full absolute effect"},
+  "holdout": {"locked": true, "minimum_sessions": 60}
+}

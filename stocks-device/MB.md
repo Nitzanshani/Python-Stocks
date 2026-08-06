@@ -402,6 +402,11 @@ python3 run_intraday_influence_research.py --config intraday_influence_config.js
 Holdout נעול. עדכון הנתונים והמחקר הם פקודות נפרדות; אם אין 60 sessions חדשים
 המערכת מפיקה דוח צבירה בלבד ואינה מסיקה מסקנת שחזור.
 
+ה־replication מודד RMSE/MAE וכיוון, effect ב־basis points, proxy מתועד לעלות,
+יציבות מתגלגלת, regimes, סוגי אירועים, Leave-One-Event-Out ו־placebo tests.
+נכון לנקודת ההקפאה קיימים 0 מתוך 60 sessions של Confirmation, ולכן כל 432
+הקשרים מסומנים `insufficient_data`; ה־Holdout לא נפתח.
+
 ## בדיקות
 
 קיימות בדיקות עבור:

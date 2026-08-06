@@ -7,6 +7,9 @@ from pathlib import Path
 import pandas as pd
 from intraday_quality_monitor import build_quality_monitor,require_quality_gate
 from phase3c_periods import load_frozen_spec,period_bounds
+from phase3c_analysis import pending_relationships
+from phase3c_report import build_pending_reports,build_final_reports
+from phase3c_confirmation import run_confirmation
 
 BASE=Path(__file__).resolve().parent
 EXPECTED_HASH=(BASE/"PHASE3B_FROZEN_SPEC.sha256").read_text().strip()
@@ -59,6 +62,14 @@ def main():
  old.parent.mkdir(parents=True,exist_ok=True);quality.to_csv(old,index=False);require_quality_gate(quality)
  sessions=period_session_count(spec,args.period,quality);required=spec["periods"]["confirmation_min_sessions" if args.period=="confirmation" else "future_holdout_min_sessions"] if args.period!="discovery" else 1
  status=accumulation_report(root,spec,args.period,sessions,required,quality);warnings=[] if status=="ready" else ["Minimum sessions not reached; accumulation report only"]
+ if status!="ready":
+  discovery_path=BASE/"research_intraday/influence/intraday_relationships.parquet"
+  if discovery_path.exists():build_pending_reports(root,pending_relationships(pd.read_parquet(discovery_path),sessions),sessions,required)
+ if status=="ready" and not args.report_only:
+  if args.period!="confirmation":warnings.append("Only confirmation execution is implemented; discovery is immutable and holdout remains separately governed")
+  else:
+   relationships,run_stats=run_confirmation(spec,root);build_final_reports(root,relationships,run_stats)
+   warnings.append("Confirmation was evaluated with the frozen specification");status="analyzed"
  write_manifest(root,spec,args.period,args.unlock_holdout,warnings,{"quality_gate":"passed","period_status":status})
  if status!="ready":print(json.dumps({"status":status,"sessions":sessions,"required":required},indent=2));return 0
  print(json.dumps({"status":"ready_for_replication","period":args.period,"sessions":sessions},indent=2));return 0

@@ -29,6 +29,7 @@ def main():
     if args.retry_failed:
         jobs=[(s,i) for s,i in jobs if store.metadata_path(s,i).exists() and json.loads(store.metadata_path(s,i).read_text()).get("status")=="failed"]
     checkpoint=BASE/"research_intraday/update_checkpoint.json"
+    done=set()
     if args.resume and checkpoint.exists():
         done={tuple(x) for x in json.loads(checkpoint.read_text()).get("completed",[])};jobs=[x for x in jobs if x not in done]
     before={(s,i):store.read(s,i) for s,i in jobs};old_audit_path=BASE/"research_intraday/reports/intraday_data_quality.csv"
@@ -36,7 +37,7 @@ def main():
     results=[]
     for s,i in jobs:
         result=update_many([s],[i],max_workers=args.max_workers,batch_size=args.batch_size,force_refresh=args.force_refresh)[0];results.append(result)
-        checkpoint.parent.mkdir(parents=True,exist_ok=True);completed=[[x.ticker,x.interval] for x in results if x.status!="failed"]
+        checkpoint.parent.mkdir(parents=True,exist_ok=True);completed=[list(x) for x in sorted(done|{(x.ticker,x.interval) for x in results if x.status!="failed"})]
         checkpoint.write_text(json.dumps({"run_date":datetime.now(timezone.utc).isoformat(),"completed":completed},indent=2))
     quality=build_quality_monitor(symbols,intervals,BASE/"research_intraday",previous_quality) if (args.quality_report or args.verify_sessions) else None
     quality_map={(r.ticker,r.interval):r for r in quality.itertuples()} if quality is not None else {}
